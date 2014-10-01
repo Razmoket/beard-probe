@@ -1,4 +1,4 @@
-package fr.fryscop.monitoring;
+package fr.fryscop.probe.monitoring;
 
 public enum HeartBeatParameter {
 // liste des parametres fournit à la page beat.php

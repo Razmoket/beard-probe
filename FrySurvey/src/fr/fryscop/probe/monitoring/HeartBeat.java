@@ -1,4 +1,4 @@
-package fr.fryscop.monitoring;
+package fr.fryscop.probe.monitoring;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,6 +8,8 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLEncoder;
 import java.util.List;
+
+import fr.fryscop.probe.Probe;
 
 public class HeartBeat {
 	// appel la page de gestion des heartbeat en donnant l'état de la sonde

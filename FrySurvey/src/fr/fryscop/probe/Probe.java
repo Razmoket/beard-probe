@@ -1,4 +1,4 @@
-package fr.fryscop.monitoring;
+package fr.fryscop.probe;
 
 public class Probe {
 	private String name;
