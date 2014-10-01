@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema targetNamespace="urn:afilias:params:xml:ns:asia-1.0"
+        xmlns:asia="urn:afilias:params:xml:ns:asia-1.0"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        elementFormDefault="qualified">
+
+  <annotation>
+    <documentation>
+      Extensible Provisioning Protocol v1.0
+      domain and contact extension schemas for 
+      .asia processing.
+    </documentation>
+  </annotation>
+
+  <!--
+   Child elements found in EPP commands.
+  -->
+  <element name="create" type="asia:createType"/>
+  <element name="info" type="asia:infoType"/>
+  <element name="update" type="asia:updateType"/>
+
+  <!--
+    Child elements of the request commands 
+  -->
+  <complexType name="createType">
+    <sequence> 
+       <element name="maintainerUrl" type="asia:maintainerType"
+          minOccurs="0" />
+       <element name="contact" type="asia:contactType"
+       minOccurs="0" maxOccurs="unbounded"/>
+       <element name="cedData" type="asia:cedDataType"
+       minOccurs="0"/>
+    </sequence>
+  </complexType>
+
+  <complexType name="infoType">
+    <sequence>
+       <element name="domainRoid" type="asia:roidType"
+       minOccurs="0"/>
+    </sequence>
+  </complexType>
+
+  <complexType name="updateType">
+    <sequence>
+       <element name="domainRoid" type="asia:roidType"
+       minOccurs="0"/>
+       <element name="chg" type="asia:chgType"
+       minOccurs="0"/>
+    </sequence>
+  </complexType>
+
+  <!--
+  Data elements that can be added or removed.
+  -->
+  <complexType name="chgType">
+    <sequence>
+       <element name="maintainerUrl" type="asia:maintainerType"
+        minOccurs="0"/>
+       <element name="contact" type="asia:contactType"
+       minOccurs="0" maxOccurs="unbounded"/>
+       <element name="cedData" type="asia:cedDataType"
+        minOccurs="0"/>
+    </sequence>
+  </complexType>
+
+  <!--
+    Child response elements
+  -->
+
+  <element name="infData" type="asia:infDataType"/>
+  <element name="creData" type="asia:creDataType"/>
+
+  <!--
+    Response elements
+  -->
+
+  <complexType name="infDataType">
+    <sequence>
+      <element name="maintainerUrl" type="asia:maintainerType"
+       minOccurs="0" />
+      <element name="contact" type="asia:contactType"
+       minOccurs="0" maxOccurs="unbounded"/>  
+      <element name="cedData" type="asia:cedDataType"
+       minOccurs="0"/>   
+    </sequence>
+  </complexType>
+
+  <complexType name="creDataType">
+    <sequence>
+      <element name="domainRoid" type="asia:roidType"
+       minOccurs="0" maxOccurs="1"/>
+    </sequence>
+  </complexType>
+
+  <simpleType name="roidType">
+     <restriction base="token">
+       <pattern value="(\w|_){1,80}-\w{1,8}"/>
+     </restriction>
+  </simpleType>
+
+  <simpleType name="asiaIDType">
+     <restriction base="token">
+       <minLength value="0"/>
+       <maxLength value="16"/>
+     </restriction>
+   </simpleType>
+
+  <simpleType name="cedStringType">
+       <restriction base="normalizedString">
+         <minLength value="0"/>
+         <maxLength value="255"/>
+       </restriction>
+  </simpleType>
+
+
+  <complexType name="contactType">
+   <simpleContent>
+    <extension base="asia:asiaIDType">
+       <attribute name="type" type="asia:asiaContactAttrType"/>
+    </extension>
+   </simpleContent> 
+  </complexType>
+
+  <simpleType name="asiaContactAttrType">
+      <restriction base="token">
+         <enumeration value="ced"/>
+         <enumeration value="opn"/>
+         <enumeration value="regAgent"/>
+      </restriction>
+  </simpleType>
+
+  <simpleType name="maintainerType">
+       <restriction base="normalizedString">
+         <minLength value="0"/>
+         <maxLength value="255"/>
+       </restriction>
+  </simpleType>
+
+  <complexType name="cedDataType">
+    <sequence>
+      <element name="ccLocality" type="asia:ccType"
+       minOccurs="0" maxOccurs="1"/>
+      <element name="localitySp" type="asia:cedStringType"
+       minOccurs="0" maxOccurs="1"/>
+      <element name="localityCity" type="asia:cedStringType"
+       minOccurs="0" maxOccurs="1"/>
+      <element name="legalEntityType" type="asia:legalEntityTypeType"
+       minOccurs="0" maxOccurs="1"/>
+      <element name="identForm" type="asia:identFormType"
+       minOccurs="0" maxOccurs="1"/>
+      <element name="identNumber" type="asia:cedStringType"
+       minOccurs="0" maxOccurs="1"/>
+      <element name="otherLEType" type="asia:cedStringType"
+       minOccurs="0" maxOccurs="1"/>
+      <element name="otherIdentForm" type="asia:cedStringType"
+       minOccurs="0" maxOccurs="1"/>
+    </sequence>
+  </complexType>
+
+  <simpleType name="ccType">
+     <restriction base="token">
+       <length value="2"/>
+     </restriction>
+  </simpleType>
+
+  <simpleType name="legalEntityTypeType">
+     <restriction base="normalizedString">
+       <enumeration value="naturalPerson"/>
+       <enumeration value="corporation"/>
+       <enumeration value="cooperative"/>
+       <enumeration value="partnership"/>
+       <enumeration value="government"/>
+       <enumeration value="politicalParty"/>
+       <enumeration value="society"/>
+       <enumeration value="institution"/>
+       <enumeration value="other"/>
+     </restriction>
+  </simpleType>
+ 
+  <simpleType name="identFormType">
+     <restriction base="normalizedString">
+       <enumeration value="passport"/>
+       <enumeration value="certificate"/>
+       <enumeration value="legislation"/>
+       <enumeration value="societyRegistry"/>
+       <enumeration value="politicalPartyRegistry"/>
+       <enumeration value="other"/>
+     </restriction>
+  </simpleType>
+
+  <!--
+   End of schema.
+  -->
+
+</schema>
+   

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema targetNamespace="urn:ietf:params:xml:ns:registrar-info-1.0"
+        xmlns:registrar-info="urn:ietf:params:xml:ns:registrar-info-1.0"
+        xmlns:eppcom="urn:ietf:params:xml:ns:eppcom-1.0"
+        xmlns:domain="urn:ietf:params:xml:ns:domain-1.0"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        elementFormDefault="qualified" xmlns:h="http://www.w3.org/2001/XMLSchema">
+
+    <import namespace="urn:ietf:params:xml:ns:eppcom-1.0"/>
+    <import namespace="urn:ietf:params:xml:ns:epp-1.0"/>
+    <import namespace="urn:ietf:params:xml:ns:contact-1.0"/>
+    <import namespace="urn:ietf:params:xml:ns:domain-1.0"/>
+
+    <annotation>
+        <documentation>Extensible Provisioning Protocol v1.0 registrar info schema.</documentation>
+    </annotation>
+
+    <element name="info" type="registrar-info:infoRequestType"/>
+    <element name="infData" type="registrar-info:infDataType"/>
+
+    <complexType name="infoPortfolioType">
+        <sequence>
+            <element name="balance" type="registrar-info:money"/>
+            <element name="threshold" type="registrar-info:money"/>
+        </sequence>
+        <attribute name="name" type="token"/>
+    </complexType>
+
+    <complexType name="infDataType">
+        <annotation>
+            <documentation>
+                <h:p>The infData type contains the info response data.</h:p>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="id" type="eppcom:clIDType"/>
+            <element name="roid" type="eppcom:roidType"/>
+            <element name="user" type="eppcom:clIDType"/>
+            <element name="guid" type="int" minOccurs="0"/>
+            <element name="ctID" type="eppcom:clIDType"/>
+            <element name="contact" type="domain:contactType" minOccurs="0" maxOccurs="unbounded"/>
+            <element name="url" type="token" minOccurs="0"/>           
+            <element name="crID" type="eppcom:clIDType"/>
+            <element name="crDate" type="dateTime"/>
+            <element name="upID" type="eppcom:clIDType" minOccurs="0"/>
+            <element name="upDate" type="dateTime" minOccurs="0"/>
+            <element name="status" type="registrar-info:statusType"/>
+            <element name="email" type="token" minOccurs="0"/>
+            <element name="portfolio" type="registrar-info:infoPortfolioType" minOccurs="0" maxOccurs="unbounded"/>
+            <element name="category" type="registrar-info:categoryType" minOccurs="0"/>            
+            <element name="groupLeadRole" type="domain:contactType"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="statusType">
+        <attribute name="s" type="registrar-info:statusValueType"/>
+    </complexType>
+
+    <simpleType name="statusValueType">
+        <restriction base="token">
+            <enumeration value="ok"/>
+            <enumeration value="lock"/>
+        </restriction>
+    </simpleType>
+
+    <complexType name="infoRequestType">
+        <annotation>
+            <documentation>
+                <h:p>The info request type definition. The registrar id is needed to fetch the info response.</h:p>
+            </documentation>
+        </annotation>
+        <sequence>
+            <element name="id" type="eppcom:clIDType"/>
+        </sequence>
+    </complexType>
+
+    <simpleType name="money">
+        <annotation>
+            <documentation>
+                <h:p>A currency type that restricts the number of decimal digits to two.</h:p>
+            </documentation>
+        </annotation>
+        <restriction base="decimal">
+            <fractionDigits value="2"/>
+        </restriction>
+    </simpleType>
+    
+   <simpleType name="categoryType">
+       <restriction base="token">
+         <enumeration value="A"/>
+         <enumeration value="N"/>
+         <enumeration value="T"/>
+       </restriction>
+   </simpleType>
+
+</schema>

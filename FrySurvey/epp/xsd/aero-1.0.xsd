@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="urn:afilias:params:xml:ns:ext:aero-1.0"
+        xmlns:aero="urn:afilias:params:xml:ns:ext:aero-1.0"
+        elementFormDefault="qualified">
+
+  <annotation>
+    <documentation>
+      Extensible Provisioning Protocol v1.0
+      domain name extension schema for aero registry.
+    </documentation>
+  </annotation>
+
+  <!--
+   Child elements found in EPP commands.
+  -->
+  <element name="create" type="aero:createType"/>
+  <element name="update" type="aero:updateType"/>
+
+  <!--
+    Utility Types
+  -->
+
+  <complexType name="createType">
+     <choice>
+         <element name="ensInfo" type="aero:ensInfoType" />
+         <element name="maintainerUrl" type="normalizedString" />
+         <group ref="aero:ensAuthGroup"/>
+     </choice>
+  </complexType>
+
+  <group name="ensAuthGroup">
+     <sequence>
+       <element name="ensAuthID" type="normalizedString" />
+       <element name="ensAuthKey" type="normalizedString" />
+     </sequence>
+  </group>
+
+  <complexType name="updateType">
+     <sequence>
+       <element name="chg" type="aero:changeType"/>
+     </sequence>
+  </complexType>
+
+  <complexType name="ensInfoType">
+   <sequence>
+     <element name="ensClass" type="normalizedString" minOccurs="0" maxOccurs="unbounded"/>
+     <element name="registrantGroup" type="normalizedString" minOccurs="0" maxOccurs="1"/>
+     <element name="ensO" type="normalizedString" minOccurs="0" maxOccurs="1"/>
+     <element name="requestType" type="normalizedString" minOccurs="0" maxOccurs="1"/>
+     <element name="registrationType" type="normalizedString" minOccurs="0" maxOccurs="1"/>
+     <element name="credentialsType" type="normalizedString" minOccurs="0" maxOccurs="1"/>
+     <element name="credentialsValue" type="normalizedString" minOccurs="0" maxOccurs="1"/>
+     <element name="codeValue" type="normalizedString" minOccurs="0" maxOccurs="1"/>
+     <element name="uniqueIdentifier" type="normalizedString" minOccurs="0" maxOccurs="1"/>
+     <element name="lastCheckedDate" type="normalizedString" minOccurs="0" maxOccurs="1"/>
+   </sequence>
+  </complexType>
+
+  <!--
+    response elements
+  -->
+  <complexType name="changeType">
+     <choice>
+       <element name="maintainerUrl" type="normalizedString" />
+       <group ref="aero:ensAuthGroup"/>
+     </choice>
+  </complexType>
+
+  <element name="infData" type="aero:infDataType"/>
+
+  <complexType name="infDataType">
+      <choice>
+          <element name="ensAuthID" type="normalizedString"/>
+          <element name="maintainerUrl" type="normalizedString"/>
+          <element name="ensInfo" type="aero:ensInfoType"/>
+      </choice>
+  </complexType>
+
+  <!--
+   End of schema.
+  -->
+
+</schema>

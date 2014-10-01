@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="urn:afilias:params:xml:ns:ext:in-trademark-1.0"
+        xmlns:in-trademark="urn:afilias:params:xml:ns:ext:in-trademark-1.0"
+        elementFormDefault="qualified">
+
+  <annotation>
+    <documentation>
+      Extensible Provisioning Protocol v1.0
+      domain name extension schema for trademark processing.
+    </documentation>
+  </annotation>
+
+  <!--
+   Child elements found in EPP commands.
+  -->
+  <element name="create" type="in-trademark:createType"/>
+  <element name="update" type="in-trademark:updateType"/>
+
+  <!--
+    Utility Types
+  -->
+
+  <complexType name="createType">
+      <group ref="in-trademark:domainTrademark"/>
+  </complexType>
+
+  <complexType name="updateType">
+     <choice>
+       <element name="rem"/>
+       <group ref="in-trademark:domainTrademark"/>
+     </choice>
+  </complexType>
+
+  <group name="domainTrademark">
+     <sequence>
+       <element name="name" type="in-trademark:trademarkType" minOccurs="0" maxOccurs="1"/>
+       <element name="number" type="in-trademark:trademarkType" minOccurs="0" maxOccurs="1"/>
+       <element name="country" type="in-trademark:trademarkCountry" minOccurs="0" maxOccurs="1"/>
+       <element name="date" type="in-trademark:trademarkDate" minOccurs="0" maxOccurs="1"/>
+       <element name="ownerCountry" type="in-trademark:ccType" minOccurs="0" maxOccurs="1"/>
+     </sequence>
+  </group>
+
+  <simpleType name="trademarkDate">
+     <restriction base="token">
+       <pattern value="[0-2][0-9][0-9][0-9]-[0-1][0-9]-[0-3][0-9]"/>
+     </restriction>
+  </simpleType>
+
+  <simpleType name="ccType">
+     <restriction base="token">
+       <length value="2"/>
+     </restriction>
+  </simpleType>
+
+  <simpleType name="trademarkType">
+     <restriction base="normalizedString">
+       <minLength value="0"/>
+       <maxLength value="128"/>
+     </restriction>
+  </simpleType>
+
+  <simpleType name="trademarkCountry">
+     <restriction base="normalizedString">
+       <minLength value="1"/>
+       <maxLength value="128"/>
+     </restriction>
+  </simpleType>
+
+  <!--
+    response elements
+  -->
+
+  <element name="infData" type="in-trademark:infDataType"/>
+
+  <complexType name="infDataType">
+     <group ref="in-trademark:domainTrademark"/>
+  </complexType>
+
+  <!--
+   End of schema.
+  -->
+
+</schema>

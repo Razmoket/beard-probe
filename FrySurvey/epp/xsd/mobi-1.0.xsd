@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema targetNamespace="urn:afilias:params:xml:ns:mobi-1.0"
+        xmlns:mobi="urn:afilias:params:xml:ns:mobi-1.0"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        elementFormDefault="qualified">
+
+  <annotation>
+    <documentation>
+      Extensible Provisioning Protocol v1.0
+      domain and contact extension schemas for 
+      .mobi processing.
+    </documentation>
+  </annotation>
+
+  <!--
+   Child elements found in EPP commands.
+  -->
+  <element name="create" type="mobi:cmdType"/>
+  <element name="update" type="mobi:cmdType"/>
+
+  <!--
+    Child elements of the request commands 
+  -->
+  <complexType name="cmdType">
+    <sequence> 
+       <element name="maintainerUrl" type="mobi:maintainerType"/>
+    </sequence>
+  </complexType>
+
+  <!--
+    Child response elements
+  -->
+
+  <element name="infData" type="mobi:infDataType"/>
+
+  <!--
+    Response elements
+  -->
+
+  <complexType name="infDataType">
+    <sequence>
+      <element name="maintainerUrl" type="mobi:maintainerType"
+       minOccurs="0" maxOccurs="1"/>
+    </sequence>
+  </complexType>
+
+  <simpleType name="maintainerType">
+       <restriction base="normalizedString">
+         <minLength value="0"/>
+         <maxLength value="255"/>
+       </restriction>
+  </simpleType>
+
+  <!--
+   End of schema.
+  -->
+
+</schema>
+   

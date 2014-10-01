@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema targetNamespace="urn:afilias:params:xml:ns:idn-1.0"
+        xmlns:idn="urn:afilias:params:xml:ns:idn-1.0"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        elementFormDefault="qualified">
+
+  <annotation>
+    <documentation>
+      Extensible Provisioning Protocol v1.0
+      domain name extension schema for Internationalized Domain
+      Names (IDN) processing.
+    </documentation>
+  </annotation>
+
+  <!--
+   Child elements found in EPP commands.
+  -->
+  <element name="check" type="idn:cmdType"/>
+  <element name="info" type="idn:cmdType"/>
+  <element name="create" type="idn:cmdType"/>
+  <element name="update" type="idn:updateType"/>
+
+  <!--
+    Utility Types
+  -->
+
+  <complexType name="cmdType">
+    <sequence>
+      <element name="script" type="idn:scriptType"
+       minOccurs="1" maxOccurs="1"/>
+    </sequence>
+  </complexType>
+
+  <complexType name="updateType">
+    <sequence>
+      <element name="chg" type="idn:chgType"
+       minOccurs="1" maxOccurs="1"/>
+    </sequence>
+  </complexType>
+
+  <simpleType name="scriptType">
+    <restriction base="token">
+      <minLength value="2"/>
+      <maxLength value="17"/>
+    </restriction>
+  </simpleType>
+
+  <complexType name="chgType">
+    <sequence>
+      <element name="script" type="idn:scriptType"
+       minOccurs="1" maxOccurs="1"/>
+    </sequence>
+  </complexType>
+
+  <!--
+    Child response elements
+  -->
+
+  <element name="infData" type="idn:infDataType"/>
+
+  <!--
+    Response elements
+  -->
+
+  <complexType name="infDataType">
+    <sequence>
+      <element name="script" type="idn:scriptType"
+       minOccurs="1" maxOccurs="1"/>
+    </sequence>
+  </complexType>
+
+  <!--
+   End of schema.
+  -->
+
+</schema>
+   

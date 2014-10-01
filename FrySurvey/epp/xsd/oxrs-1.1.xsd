@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema targetNamespace="urn:afilias:params:xml:ns:oxrs-1.1"
+        xmlns:oxrs="urn:afilias:params:xml:ns:oxrs-1.1"
+        xmlns:eppcom="urn:ietf:params:xml:ns:eppcom-1.0"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        elementFormDefault="qualified">
+
+  <!--
+     Import common element types.
+  -->
+  <import namespace="urn:ietf:params:xml:ns:eppcom-1.0"/>
+
+  <annotation>
+    <documentation>
+      Extensible Provisioning Protocol v1.1
+      domain extension schemas for 
+      oxrs system processing.
+    </documentation>
+  </annotation>
+
+  <!--
+   Child elements found in EPP commands.
+  -->
+  <element name="create" type="oxrs:createType"/>
+  <element name="info" type="oxrs:infoType"/>
+  <element name="update" type="oxrs:updateType"/>
+  <element name="xcp" type="oxrs:xcpType"/>
+
+  <!--
+    Child elements of the request commands 
+  -->
+  <complexType name="createType">
+    <sequence> 
+       <element name="maintainerUrl" type="oxrs:maintainerUrlType" minOccurs="0" maxOccurs="1"/>
+    </sequence>
+  </complexType>
+
+  <complexType name="infoType">
+    <sequence>
+       <element name="domainRoid" type="eppcom:roidType"
+       minOccurs="0"/>
+    </sequence>
+  </complexType>
+
+  <complexType name="updateType">
+    <sequence>
+       <element name="domainRoid" type="eppcom:roidType"
+       minOccurs="0"/>
+       <element name="chg" type="oxrs:chgType"
+       minOccurs="0"/>
+    </sequence>
+  </complexType>
+
+  <!--
+    Data elements that can be added or removed.
+  -->
+  <complexType name="chgType">
+    <sequence>
+       <element name="maintainerUrl" type="oxrs:maintainerUrlType" minOccurs="0" maxOccurs="1"/>
+    </sequence>
+  </complexType>
+
+  <simpleType name="maintainerUrlType">
+       <restriction base="normalizedString">
+         <minLength value="0"/>
+         <maxLength value="255"/>
+       </restriction>
+  </simpleType>
+
+  <!--
+    Child response elements
+  -->
+
+  <element name="infData" type="oxrs:infDataType"/>
+  <element name="creData" type="oxrs:creDataType"/>
+
+  <!--
+    Response elements
+  -->
+
+  <complexType name="infDataType">
+    <sequence>
+      <element name="maintainerUrl" type="oxrs:maintainerUrlType"
+       minOccurs="0" maxOccurs="1"/>
+    </sequence>
+  </complexType>
+
+  <complexType name="creDataType">
+    <sequence>
+      <element name="domainRoid" type="eppcom:roidType"
+       minOccurs="0"/>
+    </sequence>
+  </complexType>
+
+  <simpleType name="xcpType">
+     <restriction base="normalizedString">
+        <minLength value="0"/>  <maxLength value="255"/>
+     </restriction>
+  </simpleType>
+
+  <!--
+   End of schema.
+  -->
+
+</schema>
+   
