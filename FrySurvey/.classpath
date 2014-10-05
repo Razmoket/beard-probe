@@ -19,5 +19,8 @@
 	<classpathentry kind="lib" path="lib/IDNSDK.jar"/>
 	<classpathentry kind="lib" path="lib/commons-net-3.3.jar"/>
 	<classpathentry kind="lib" path="lib/org.xbill.dns_2.1.6.jar"/>
+	<classpathentry kind="lib" path="lib/logback/logback-access-1.1.2.jar"/>
+	<classpathentry kind="lib" path="lib/logback/logback-classic-1.1.2.jar"/>
+	<classpathentry kind="lib" path="lib/logback/logback-core-1.1.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
