@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<import resource="classpath*:surveyContext.xml"/>
+	<import resource="classpath*:eppConfiguration.xml"/>
+	
+		
+	<bean id="DnsProbe.fr" class="fr.fryscop.probe.test.dns.DnsProbe">
+	    <property name="name" value="dns"/>
+	    <property name="probe" ref="dns"/>
+	    <property name="digNdd" value="fryprobe-afnic.fr"/>
+	    <list>
+	        <bean id="serverFront" class="String" p:nom="B.NIC.fr" />
+	        <bean id="serverFront" class="String" p:nom="C.NIC.fr" />
+	    </list>
+	    <property name="eppServer" ref="eppServerConf.fr" /> 
+	</bean>
+	
+	<bean id="RddsProbe.fr" class="fr.fryscop.probe.test.rdds.RddsProbe">
+	    <property name="name" value="rdds"/>
+	    <property name="probe" ref="rdds"/>
+	    <property name="serverName" value="whois.nic.fr"/>
+	    <property name="eppServer" ref="eppServerConf.fr" />
+	    <property name="ndd" value="fryprobe-afnic.fr"/>
+	</bean>
+	
+	<bean id="EppProbe.fr" class="fr.fryscop.probe.test.rdds.RddsProbe">
+	    <property name="name" value="epp"/>
+	    <property name="probe" ref="epp"/>
+	    <property name="eppServer" ref="eppServerConf.fr" />
+	    <property name="ndd" value="fryprobe-afnic.fr"/>
+	</bean>
+</beans>
