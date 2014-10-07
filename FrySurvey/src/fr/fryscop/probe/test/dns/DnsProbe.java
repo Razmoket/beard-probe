@@ -1,5 +1,9 @@
 package fr.fryscop.probe.test.dns;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import fr.fryscop.probe.configuration.log.ProbeLogger;
 import fr.fryscop.probe.test.ProbeTest;
 
 /*
@@ -12,6 +16,7 @@ import fr.fryscop.probe.test.ProbeTest;
  */
 public class DnsProbe implements ProbeTest {
 
+	private static final Logger logger = LoggerFactory.getLogger(DnsProbe.class);
 	@Override
     public void launchTest() {
 	    // TODO Auto-generated method stub
@@ -21,6 +26,8 @@ public class DnsProbe implements ProbeTest {
 	@Override
     public String getTestResult() {
 	    // TODO Auto-generated method stub
+		
+		ProbeLogger.getInstance();
 	    return null;
     }
 
