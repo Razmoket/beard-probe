@@ -30,21 +30,15 @@
 	    	<property name="name" value="RDDS" />
 	    	<property name="type" ref="probeTypeRdds" />
 	    	<property name="status" ref="probeStatusOk" />
-	    	<property name="tld" ref="" />
 	</bean>
 	<bean id="dns" class="fr.fryscop.probe.Probe">
 	    	<property name="name" value="DNS" />
 	    	<property name="type" ref="probeTypeDns" />
 	    	<property name="status" ref="probeStatusOk" />
-	    	<property name="tld" ref="" />
 	</bean>
 	<bean id="epp" class="fr.fryscop.probe.Probe">
 	    	<property name="name" value="EPP" />
 	    	<property name="type" ref="probeTypeEpp" />
 	    	<property name="status" ref="probeStatusOk" />
-	    	<property name="tld" ref="" />
 	</bean>
-	
-	
-			
 </beans>

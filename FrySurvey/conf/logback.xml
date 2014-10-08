@@ -14,7 +14,19 @@
    <file>log-probe/probe-log-file.log</file>
    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
       <!-- rotate every day for log collection and archiving -->
-      <fileNamePattern>probe-log-file.%d{yyyyMMdd}.log</fileNamePattern>
+      <fileNamePattern>archive-log-probe/probe-log-file.%d{yyyyMMdd}.log</fileNamePattern>
+   </rollingPolicy>
+   <encoder>
+      <!-- only log 2 lines of stack trace per cause of an exception -->
+      <pattern>[%d{yyyy/MM/dd HH:mm:ss,SSS}]%m%n</pattern>
+   </encoder>
+</appender>
+
+<appender name="log-file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+   <file>log/log-file.log</file>
+   <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <!-- rotate every day for log collection and archiving -->
+      <fileNamePattern>archive-log/log-file.%d{yyyyMMdd}.log</fileNamePattern>
    </rollingPolicy>
    <encoder>
       <!-- only log 2 lines of stack trace per cause of an exception -->
@@ -22,11 +34,12 @@
    </encoder>
 </appender>
 
-  <logger name="fr.fryscop" level="INFO" additivity="false">
+  <logger name="fr.fryscop" additivity="false" level="DEBUG">
+  	<appender-ref ref="log-file" />
   	<appender-ref ref="STDOUT" />
   </logger>
 
-  <logger name="fr.fryscop.probe.configuration.log.ProbeLogger">
+  <logger name="fr.fryscop.probe.configuration.log.ProbeLogger" level="TRACE" additivity="false" >
   	<appender-ref ref="probe-log-file" />
   </logger>
   

@@ -1,4 +1,4 @@
-package fr.fryscop.probe.test.dns;
+package fr.fryscop.network.protocole.dns;
 
 import java.io.IOException;
 import java.net.InetAddress;
@@ -17,11 +17,11 @@ import org.xbill.DNS.Type;
 
 /** @author Brian Wellington &lt;bwelling@xbill.org&gt; */
 
-public class Dig {
+public class ProbeDig {
 
-	static Name	name	= null;
-	static int	type	= Type.A, dclass = DClass.IN;
-
+	static Name name = null;
+	static int type = Type.A, dclass = DClass.IN;
+	
 	static void usage() {
 		System.out.println("Usage: dig [@server] name [<type>] [<class>] " + "[options]");
 		System.exit(0);
@@ -38,7 +38,8 @@ public class Dig {
 		System.out.println("; java dig 0.0 <> " + name + " axfr");
 		if (response.isSigned()) {
 			System.out.print(";; TSIG ");
-			if (response.isVerified()) System.out.println("ok");
+			if (response.isVerified())
+				System.out.println("ok");
 			else
 				System.out.println("failed");
 		}
@@ -59,7 +60,8 @@ public class Dig {
 		System.out.println(" additional)");
 	}
 
-	public static long request(String argv[]) throws IOException {
+	public static long request(String argv[], boolean doTrace) throws IOException {
+		
 		String server = null;
 		int arg;
 		Message query, response;
@@ -74,9 +76,11 @@ public class Dig {
 
 		try {
 			arg = 0;
-			if (argv[arg].startsWith("@")) server = argv[arg++].substring(1);
+			if (argv[arg].startsWith("@"))
+				server = argv[arg++].substring(1);
 
-			if (server != null) res = new SimpleResolver(server);
+			if (server != null)
+				res = new SimpleResolver(server);
 			else
 				res = new SimpleResolver();
 
@@ -88,12 +92,14 @@ public class Dig {
 			} else {
 				name = Name.fromString(nameString, Name.root);
 				type = Type.value(argv[arg]);
-				if (type < 0) type = Type.A;
+				if (type < 0)
+					type = Type.A;
 				else
 					arg++;
 
 				dclass = DClass.value(argv[arg]);
-				if (dclass < 0) dclass = DClass.IN;
+				if (dclass < 0)
+					dclass = DClass.IN;
 				else
 					arg++;
 			}
@@ -103,7 +109,8 @@ public class Dig {
 					case 'p':
 						String portStr;
 						int port;
-						if (argv[arg].length() > 2) portStr = argv[arg].substring(2);
+						if (argv[arg].length() > 2)
+							portStr = argv[arg].substring(2);
 						else
 							portStr = argv[++arg];
 						port = Integer.parseInt(portStr);
@@ -116,7 +123,8 @@ public class Dig {
 
 					case 'b':
 						String addrStr;
-						if (argv[arg].length() > 2) addrStr = argv[arg].substring(2);
+						if (argv[arg].length() > 2)
+							addrStr = argv[arg].substring(2);
 						else
 							addrStr = argv[++arg];
 						InetAddress addr;
@@ -131,7 +139,8 @@ public class Dig {
 
 					case 'k':
 						String key;
-						if (argv[arg].length() > 2) key = argv[arg].substring(2);
+						if (argv[arg].length() > 2)
+							key = argv[arg].substring(2);
 						else
 							key = argv[++arg];
 						res.setTSIGKey(TSIG.fromString(key));
@@ -148,7 +157,8 @@ public class Dig {
 					case 'e':
 						String ednsStr;
 						int edns;
-						if (argv[arg].length() > 2) ednsStr = argv[arg].substring(2);
+						if (argv[arg].length() > 2)
+							ednsStr = argv[arg].substring(2);
 						else
 							ednsStr = argv[++arg];
 						edns = Integer.parseInt(ednsStr);
@@ -175,22 +185,27 @@ public class Dig {
 			}
 
 		} catch (ArrayIndexOutOfBoundsException e) {
-			if (name == null) usage();
+			if (name == null)
+				usage();
 		}
-		if (res == null) res = new SimpleResolver();
+		if (res == null)
+			res = new SimpleResolver();
 
 		rec = Record.newRecord(name, type, dclass);
 		query = Message.newQuery(rec);
-		if (printQuery) System.out.println(query);
+		if (printQuery)
+			System.out.println(query);
 		startTime = System.currentTimeMillis();
 		response = res.send(query);
 		endTime = System.currentTimeMillis();
 
-		long ms = -1;
-		if (type == Type.AXFR) doAXFR(response);
-		else
-			ms = doQuery(response, endTime - startTime);
-		return ms;
+		if (doTrace) {
+			if (type == Type.AXFR)
+				doAXFR(response);
+			else
+				doQuery(response, endTime - startTime);
+		}
+		return endTime - startTime;
 	}
 
 }

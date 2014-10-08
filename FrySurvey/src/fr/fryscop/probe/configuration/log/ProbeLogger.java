@@ -16,8 +16,8 @@ public class ProbeLogger {
 		return instance;
 	}
 	
-	public Logger getLogger() {
-		return getInstance().logger;
+	public static Logger getLogger() {
+		return logger;
 	}
 
 }
