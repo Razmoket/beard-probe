@@ -508,6 +508,7 @@ public class EPPClient extends RTKBase implements epp_Session {
 		if (transport_ != null) { return transport_; }
 
 		transport_str = (String) RTKBase.getRTKProperties().getProperty("rtk.transport", DEFAULT_TRANSPORT_CLASS);
+		System.err.println("==> transport_str:"+transport_str);
 
 		if (transport_str.indexOf('.') == -1) {
 			transport_str = DEFAULT_TRANSPORT_PACKAGE + "." + transport_str;

@@ -122,13 +122,9 @@ public class EPPTransportTCPTLS extends EPPTransportTCP {
 
 				// SSL Performance improvement from wessorh
 				try {
-					byte seed[] = new byte[1024];
-					FileInputStream is = new FileInputStream("/dev/urandom");
-					is.read(seed);
-					is.close();
-
+					SecureRandom random = new SecureRandom();
 					rnd_ = java.security.SecureRandom.getInstance("SHA1PRNG");
-					rnd_.setSeed(seed);
+					rnd_.setSeed(random.generateSeed(1024));
 					debug(DEBUG_LEVEL_TWO, method_name, "SecureRandom seed set.");
 
 				} catch (Exception xcp) {
@@ -138,6 +134,7 @@ public class EPPTransportTCPTLS extends EPPTransportTCP {
 
 				ctx_.init(kmf_.getKeyManagers(), null, rnd_);
 				ssl_factory = ctx_.getSocketFactory();
+				
 			} catch (Exception xcp) {
 				xcp.printStackTrace();
 				throw new IOException(xcp.getMessage());

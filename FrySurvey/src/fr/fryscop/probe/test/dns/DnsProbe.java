@@ -134,9 +134,9 @@ public class DnsProbe implements ProbeTest, Runnable {
 		if (requestTime < 0)
 			return;
 		if (requestTime > (TCP_DNS_RTT * 5)) {
-			ProbeLogger.getLogger().trace(this.probe.toString() + "|" + tcpDnsResolutionParam.getTestName() + "|" + ProbeStatus.Unavailable.getDescription());
+			ProbeLogger.getLogger().trace(this.probe.toString() + "|" + tcpDnsResolutionParam.getTestName() + "|" + ProbeStatus.Unavailable.getDescription()+ "|" + requestTime);
 		} else if (requestTime > TCP_DNS_RTT) {
-			ProbeLogger.getLogger().trace(this.probe.toString() + "|" + tcpDnsResolutionParam.getTestName() + "|" + ProbeStatus.Ko.getDescription());
+			ProbeLogger.getLogger().trace(this.probe.toString() + "|" + tcpDnsResolutionParam.getTestName() + "|" + ProbeStatus.Ko.getDescription()+ "|" + requestTime);
 		} else {
 			ProbeLogger.getLogger().trace(this.probe.toString() + "|" + tcpDnsResolutionParam.getTestName() + "|" + requestTime);
 		}
@@ -148,9 +148,9 @@ public class DnsProbe implements ProbeTest, Runnable {
 		if (requestTime < 0)
 			return;
 		if (requestTime > (UDP_DNS_RTT * 5)) {
-			ProbeLogger.getLogger().trace(this.probe.toString() + "|" + udpDnsResolutionParam.getTestName() + "|" + ProbeStatus.Unavailable.getDescription());
+			ProbeLogger.getLogger().trace(this.probe.toString() + "|" + udpDnsResolutionParam.getTestName() + "|" + ProbeStatus.Unavailable.getDescription()+ "|" + requestTime);
 		} else if (requestTime > UDP_DNS_RTT) {
-			ProbeLogger.getLogger().trace(this.probe.toString() + "|" + udpDnsResolutionParam.getTestName() + "|" + ProbeStatus.Ko.getDescription());
+			ProbeLogger.getLogger().trace(this.probe.toString() + "|" + udpDnsResolutionParam.getTestName() + "|" + ProbeStatus.Ko.getDescription()+ "|" + requestTime);
 		} else {
 			ProbeLogger.getLogger().trace(this.probe.toString() + "|" + udpDnsResolutionParam.getTestName() + "|" + requestTime);
 		}
