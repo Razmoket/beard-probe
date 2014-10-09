@@ -164,7 +164,8 @@ public class RddsProbe implements ProbeTest {
 	}
 
 	// FIXME TEST
-	public static void main(String arg[]) {
+
+	public static RddsProbe getMockProbe() {
 		// init de la sonde
 		Probe probe = new Probe();
 		probe.setName("test_rdds");
@@ -181,7 +182,12 @@ public class RddsProbe implements ProbeTest {
 		rddsProbe.setTld("fr");
 
 		rddsProbe.initParam();
+		return rddsProbe;
+	}
 
+/*	public static void main(String arg[]) {
+
+		RddsProbe rddsProbe = getMockProbe();
 		// démarrage sonde
 		Thread probeTest = new Thread(rddsProbe);
 		probeTest.start();
@@ -192,11 +198,9 @@ public class RddsProbe implements ProbeTest {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		logger.info("Stopping " + rddsProbe.getName());
-		rddsProbe.getProbe().setStatus(ProbeStatus.Stopped);
-		HeartBeat.sendBeat(rddsProbe.getProbe());
-
+		
+		rddsProbe.getProbe().stop();
 		// dnsProbe.launchTest();
-	}
+	}*/
 	// fin TEST
 }

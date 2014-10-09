@@ -1,8 +1,14 @@
 package fr.fryscop.probe;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import fr.fryscop.probe.monitoring.HeartBeat;
 
 public class Probe {
+
+	private static final Logger logger = LoggerFactory.getLogger(Probe.class);
+
 	private String name;
 	private String tld;
 	private ProbeType type;
@@ -38,11 +44,17 @@ public class Probe {
 
 	public void setStatus(ProbeStatus status) {
 		this.status = status;
-		//HeartBeat.sendBeat(this);
+		// HeartBeat.sendBeat(this);
 	}
 
 	public String toString() {
 		return this.name + "|" + this.tld + "|" + type.getValue();
 	}
+
+	public void stop() {
+		logger.info("Stopping " + this.toString());
+		this.setStatus(ProbeStatus.Stopped);
+		HeartBeat.sendBeat(this);
+	}	
 
 }

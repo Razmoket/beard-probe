@@ -1,6 +1,5 @@
 package fr.fryscop.probe.test.dns;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,9 +13,9 @@ import fr.fryscop.probe.ProbeType;
 import fr.fryscop.probe.configuration.log.ProbeLogger;
 import fr.fryscop.probe.monitoring.HeartBeat;
 import fr.fryscop.probe.test.ProbeTest;
+import fr.fryscop.probe.test.dns.parameters.AbstractDnsTestParameters;
 import fr.fryscop.probe.test.dns.parameters.DnsNameServerAvailabilityParam;
 import fr.fryscop.probe.test.dns.parameters.DnsServiceAvailabilityParam;
-import fr.fryscop.probe.test.dns.parameters.AbstractDnsTestParameters;
 import fr.fryscop.probe.test.dns.parameters.TcpDnsResolutionParam;
 import fr.fryscop.probe.test.dns.parameters.UdpDnsResolutionParam;
 
@@ -134,9 +133,9 @@ public class DnsProbe implements ProbeTest {
 		if (requestTime < 0)
 			return;
 		if (requestTime > (TCP_DNS_RTT * 5)) {
-			ProbeLogger.getLogger().trace(this.probe.toString() + "|" + tcpDnsResolutionParam.getTestName() + "|" + ProbeStatus.Unavailable.getDescription()+ "|" + requestTime);
+			ProbeLogger.getLogger().trace(this.probe.toString() + "|" + tcpDnsResolutionParam.getTestName() + "|" + ProbeStatus.Unavailable.getDescription() + "|" + requestTime);
 		} else if (requestTime > TCP_DNS_RTT) {
-			ProbeLogger.getLogger().trace(this.probe.toString() + "|" + tcpDnsResolutionParam.getTestName() + "|" + ProbeStatus.Ko.getDescription()+ "|" + requestTime);
+			ProbeLogger.getLogger().trace(this.probe.toString() + "|" + tcpDnsResolutionParam.getTestName() + "|" + ProbeStatus.Ko.getDescription() + "|" + requestTime);
 		} else {
 			ProbeLogger.getLogger().trace(this.probe.toString() + "|" + tcpDnsResolutionParam.getTestName() + "|" + requestTime);
 		}
@@ -148,9 +147,9 @@ public class DnsProbe implements ProbeTest {
 		if (requestTime < 0)
 			return;
 		if (requestTime > (UDP_DNS_RTT * 5)) {
-			ProbeLogger.getLogger().trace(this.probe.toString() + "|" + udpDnsResolutionParam.getTestName() + "|" + ProbeStatus.Unavailable.getDescription()+ "|" + requestTime);
+			ProbeLogger.getLogger().trace(this.probe.toString() + "|" + udpDnsResolutionParam.getTestName() + "|" + ProbeStatus.Unavailable.getDescription() + "|" + requestTime);
 		} else if (requestTime > UDP_DNS_RTT) {
-			ProbeLogger.getLogger().trace(this.probe.toString() + "|" + udpDnsResolutionParam.getTestName() + "|" + ProbeStatus.Ko.getDescription()+ "|" + requestTime);
+			ProbeLogger.getLogger().trace(this.probe.toString() + "|" + udpDnsResolutionParam.getTestName() + "|" + ProbeStatus.Ko.getDescription() + "|" + requestTime);
 		} else {
 			ProbeLogger.getLogger().trace(this.probe.toString() + "|" + udpDnsResolutionParam.getTestName() + "|" + requestTime);
 		}
@@ -205,16 +204,16 @@ public class DnsProbe implements ProbeTest {
 		this.serverList = serverList;
 	}
 
-	
-	/*FIXME  TEST */
-	public static void main(String arg[]) throws IOException {
-		//init de la sonde
+	/* FIXME TEST */
+
+	public static DnsProbe getMockProbe() {
+		// init de la sonde
 		Probe probe = new Probe();
 		probe.setName("test_dns");
 		probe.setTld("fr");
 		probe.setType(ProbeType.Dns);
 		probe.setStatus(ProbeStatus.Ok);
-		
+
 		DnsProbe dnsProbe = new DnsProbe();
 		dnsProbe.setDigNdd("afnic.fr");
 		dnsProbe.setProbe(probe);
@@ -230,20 +229,15 @@ public class DnsProbe implements ProbeTest {
 
 		dnsProbe.initParam();
 
-		// démarrage sonde
-		Thread probeTest = new Thread(dnsProbe);
-		probeTest.start();
-
-		// arret de la sonde
-		try {
-			Thread.sleep(600000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		logger.info("Stopping " + dnsProbe.getName());
-		dnsProbe.getProbe().setStatus(ProbeStatus.Stopped);
-		HeartBeat.sendBeat(dnsProbe.getProbe());
-		// dnsProbe.launchTest();
+		return dnsProbe;
 	}
+	/*
+	 * public static void main(String arg[]) throws IOException { DnsProbe dnsProbe = getMockProbe();
+	 * 
+	 * // démarrage sonde Thread probeTest = new Thread(dnsProbe); probeTest.start();
+	 * 
+	 * // arret de la sonde try { Thread.sleep(600000); } catch (InterruptedException e) { e.printStackTrace(); } dnsProbe.getProbe().stop(); //
+	 * dnsProbe.launchTest(); }
+	 */
 	/* TEST */
 }

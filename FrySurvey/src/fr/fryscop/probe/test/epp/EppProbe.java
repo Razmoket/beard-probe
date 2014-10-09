@@ -1,5 +1,6 @@
 package fr.fryscop.probe.test.epp;
 
+import fr.fryscop.probe.Probe;
 import fr.fryscop.probe.test.ProbeTest;
 
 /*
@@ -28,6 +29,12 @@ public class EppProbe implements ProbeTest	{
     public void run() {
 	    // TODO Auto-generated method stub
 	    
+    }
+
+	@Override
+    public Probe getProbe() {
+	    // TODO Auto-generated method stub
+	    return null;
     }
 
 	
