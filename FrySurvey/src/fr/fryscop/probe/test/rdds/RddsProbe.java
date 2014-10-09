@@ -46,7 +46,7 @@ public class RddsProbe implements ProbeTest, Runnable {
 	private String tld;
 	private String whoisNdd;
 	private String server;
-	private int frequenceTest = 50000; /* 5 minutes */
+	private int frequenceTest = 300000; /* 5 minutes */
 
 	private static final long RDDS_QUERY_RTT = 2000;
 
@@ -188,7 +188,7 @@ public class RddsProbe implements ProbeTest, Runnable {
 
 		// arret de la sonde
 		try {
-			Thread.sleep(600000);
+			Thread.sleep(660000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
