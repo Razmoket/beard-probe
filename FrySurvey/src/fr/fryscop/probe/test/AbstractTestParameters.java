@@ -1,21 +1,20 @@
-package fr.fryscop.probe.test.dns.parameters;
+package fr.fryscop.probe.test;
 
 import fr.fryscop.probe.ProbeStatus;
 
-public abstract class DnsTestParameters {
+public abstract class AbstractTestParameters {
 
-	public DnsTestParameters(String testName, String serverName, String digNdd) {
+	
+	public AbstractTestParameters(String testName, String digNdd) {
 	    super();
 	    this.testName = testName;
-	    this.serverName = serverName;
 	    this.digNdd = digNdd;
     }
 
-	String testName;
-	String serverName = null;
-	String digNdd;
+	protected String testName;
+	protected String digNdd;
 
-	ProbeStatus status =  ProbeStatus.Ok;
+	private ProbeStatus status =  ProbeStatus.Ok;
 	private long startUnavaibility = 0;
 	private long unavaibilityDuration = 0;
 
@@ -46,14 +45,6 @@ public abstract class DnsTestParameters {
 		this.testName = testName;
 	}
 
-	public String getServerName() {
-		return serverName;
-	}
-
-	public void setServerName(String serverName) {
-		this.serverName = serverName;
-	}
-
 	public String getDigNdd() {
 		return digNdd;
 	}
@@ -70,7 +61,7 @@ public abstract class DnsTestParameters {
 		this.status = status;
 	}
 
-	public abstract String[] getDigArg();
+	public abstract String[] getTestArg();
 
 	public long getUnavaibilityDuration() {
 		return unavaibilityDuration;

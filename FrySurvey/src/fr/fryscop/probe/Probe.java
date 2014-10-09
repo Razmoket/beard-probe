@@ -1,5 +1,7 @@
 package fr.fryscop.probe;
 
+import fr.fryscop.probe.monitoring.HeartBeat;
+
 public class Probe {
 	private String name;
 	private String tld;
@@ -36,6 +38,7 @@ public class Probe {
 
 	public void setStatus(ProbeStatus status) {
 		this.status = status;
+		//HeartBeat.sendBeat(this);
 	}
 
 	public String toString() {

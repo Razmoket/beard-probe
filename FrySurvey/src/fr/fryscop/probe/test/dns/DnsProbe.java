@@ -16,7 +16,7 @@ import fr.fryscop.probe.monitoring.HeartBeat;
 import fr.fryscop.probe.test.ProbeTest;
 import fr.fryscop.probe.test.dns.parameters.DnsNameServerAvailabilityParam;
 import fr.fryscop.probe.test.dns.parameters.DnsServiceAvailabilityParam;
-import fr.fryscop.probe.test.dns.parameters.DnsTestParameters;
+import fr.fryscop.probe.test.dns.parameters.AbstractDnsTestParameters;
 import fr.fryscop.probe.test.dns.parameters.TcpDnsResolutionParam;
 import fr.fryscop.probe.test.dns.parameters.UdpDnsResolutionParam;
 
@@ -36,7 +36,7 @@ public class DnsProbe implements ProbeTest, Runnable {
 	private String tld;
 	private String digNdd;
 	private List<String> serverList;
-	private int frequenceTest = 10000; /* 1 minute */
+	private int frequenceTest = 60000; /* 1 minute */
 
 	private static final long TCP_DNS_RTT = 1500;
 	private static final long UDP_DNS_RTT = 500;
@@ -156,10 +156,10 @@ public class DnsProbe implements ProbeTest, Runnable {
 		}
 	}
 
-	private long dnsTest(DnsTestParameters param) {
+	private long dnsTest(AbstractDnsTestParameters param) {
 		long requestTime = -1;
 		try {
-			requestTime = ProbeDig.request(param.getDigArg(), false);
+			requestTime = ProbeDig.request(param.getTestArg(), false);
 			param.stopUnavaibility();
 		} catch (Exception e) {
 			logger.error(e.getMessage(), e);
@@ -168,45 +168,6 @@ public class DnsProbe implements ProbeTest, Runnable {
 		}
 		return requestTime;
 	}
-
-	/* TEST */
-	public static void main(String arg[]) throws IOException {
-		Probe probe = new Probe();
-		probe.setName("test");
-		probe.setTld("fr");
-		probe.setType(ProbeType.Dns);
-		probe.setStatus(ProbeStatus.Ok);
-
-		DnsProbe dnsProbe = new DnsProbe();
-		dnsProbe.setDigNdd("afnic.fr");
-		dnsProbe.setProbe(probe);
-
-		ArrayList<String> serverList = new ArrayList<String>();
-		serverList.add("d.nic.fr");
-		serverList.add("f.ext.nic.fr");
-		serverList.add("g.ext.nic.fr");
-		serverList.add("turlututu.nic.fr");
-		dnsProbe.setServerList(serverList);
-
-		dnsProbe.setTld("fr");
-
-		dnsProbe.initParam();
-
-		Thread probeTest = new Thread(dnsProbe);
-		probeTest.start();
-
-		try {
-			Thread.sleep(60000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		logger.info("Stopping " + dnsProbe.getName());
-		dnsProbe.getProbe().setStatus(ProbeStatus.Stopped);
-
-		// dnsProbe.launchTest();
-	}
-
-	/* TEST */
 
 	public String getName() {
 		return this.probe.toString();
@@ -244,4 +205,45 @@ public class DnsProbe implements ProbeTest, Runnable {
 		this.serverList = serverList;
 	}
 
+	
+	/*FIXME  TEST */
+	public static void main(String arg[]) throws IOException {
+		//init de la sonde
+		Probe probe = new Probe();
+		probe.setName("test_dns");
+		probe.setTld("fr");
+		probe.setType(ProbeType.Dns);
+		probe.setStatus(ProbeStatus.Ok);
+		
+		DnsProbe dnsProbe = new DnsProbe();
+		dnsProbe.setDigNdd("afnic.fr");
+		dnsProbe.setProbe(probe);
+
+		ArrayList<String> serverList = new ArrayList<String>();
+		serverList.add("d.nic.fr");
+		serverList.add("f.ext.nic.fr");
+		serverList.add("g.ext.nic.fr");
+		serverList.add("turlututu.nic.fr");
+		dnsProbe.setServerList(serverList);
+
+		dnsProbe.setTld("fr");
+
+		dnsProbe.initParam();
+
+		// démarrage sonde
+		Thread probeTest = new Thread(dnsProbe);
+		probeTest.start();
+
+		// arret de la sonde
+		try {
+			Thread.sleep(600000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		logger.info("Stopping " + dnsProbe.getName());
+		dnsProbe.getProbe().setStatus(ProbeStatus.Stopped);
+		HeartBeat.sendBeat(dnsProbe.getProbe());
+		// dnsProbe.launchTest();
+	}
+	/* TEST */
 }

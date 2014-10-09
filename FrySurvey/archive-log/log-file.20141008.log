@@ -1,0 +1,45 @@
+2014/10/08 15:04:08 [Thread-0] ERROR fr.fryscop.probe.test.dns.DnsProbe - turlututu.nic.fr java.net.UnknownHostException: turlututu.nic.fr
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:894)
+
+2014/10/08 15:04:08 [Thread-0] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=test&tld=fr&type=DNS&status=1 
+2014/10/08 15:04:18 [Thread-0] ERROR fr.fryscop.probe.test.dns.DnsProbe - turlututu.nic.fr java.net.UnknownHostException: turlututu.nic.fr
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:894)
+
+2014/10/08 15:04:18 [Thread-0] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=test&tld=fr&type=DNS&status=1 
+2014/10/08 15:04:18 [Thread-0] DEBUG fr.fryscop.probe.test.dns.DnsProbe - dnsNameServerAvailability|turlututu.nic.fr.getUnavaibilityDuration(): 10096 
+2014/10/08 15:04:28 [Thread-0] ERROR fr.fryscop.probe.test.dns.DnsProbe - turlututu.nic.fr java.net.UnknownHostException: turlututu.nic.fr
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:894)
+
+2014/10/08 15:04:28 [Thread-0] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=test&tld=fr&type=DNS&status=1 
+2014/10/08 15:04:28 [Thread-0] DEBUG fr.fryscop.probe.test.dns.DnsProbe - dnsNameServerAvailability|turlututu.nic.fr.getUnavaibilityDuration(): 20133 
+2014/10/08 15:04:38 [Thread-0] ERROR fr.fryscop.probe.test.dns.DnsProbe - turlututu.nic.fr java.net.UnknownHostException: turlututu.nic.fr
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:894)
+
+2014/10/08 15:04:38 [Thread-0] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=test&tld=fr&type=DNS&status=1 
+2014/10/08 15:04:38 [Thread-0] DEBUG fr.fryscop.probe.test.dns.DnsProbe - dnsNameServerAvailability|turlututu.nic.fr.getUnavaibilityDuration(): 30201 
+2014/10/08 15:04:49 [Thread-0] ERROR fr.fryscop.probe.test.dns.DnsProbe - turlututu.nic.fr java.net.UnknownHostException: turlututu.nic.fr
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:894)
+
+2014/10/08 15:04:49 [Thread-0] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=test&tld=fr&type=DNS&status=1 
+2014/10/08 15:04:49 [Thread-0] DEBUG fr.fryscop.probe.test.dns.DnsProbe - dnsNameServerAvailability|turlututu.nic.fr.getUnavaibilityDuration(): 40240 
+2014/10/08 15:04:59 [Thread-0] ERROR fr.fryscop.probe.test.dns.DnsProbe - turlututu.nic.fr java.net.UnknownHostException: turlututu.nic.fr
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:894)
+
+2014/10/08 15:04:59 [Thread-0] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=test&tld=fr&type=DNS&status=1 
+2014/10/08 15:04:59 [Thread-0] DEBUG fr.fryscop.probe.test.dns.DnsProbe - dnsNameServerAvailability|turlututu.nic.fr.getUnavaibilityDuration(): 50277 
+2014/10/08 15:05:08 [main] INFO  fr.fryscop.probe.test.dns.DnsProbe - Stopping test|fr|DNS 
+2014/10/08 15:24:55 [main] INFO  fr.fryscop.FrySurvey - ssl.props.location=C:\Developpement\workspace\hubiC\Developpement\FrySurvey\ssl 
+2014/10/08 15:26:31 [main] INFO  fr.fryscop.FrySurvey - ssl.props.location=.\ssl 
+2014/10/08 15:26:56 [main] INFO  fr.fryscop.FrySurvey - ssl.props.location=.\ssl 
+2014/10/08 15:29:50 [main] INFO  fr.fryscop.FrySurvey - ssl.props.location=.\ssl 
+2014/10/08 15:30:20 [main] INFO  fr.fryscop.FrySurvey - ssl.props.location=.\ssl 
+2014/10/08 15:38:59 [main] INFO  fr.fryscop.FrySurvey - ssl.props.location=.\ssl 
+2014/10/08 15:39:17 [main] INFO  fr.fryscop.FrySurvey - ssl.props.location=.\ssl 
+2014/10/08 15:47:21 [main] INFO  fr.fryscop.FrySurvey - ssl.props.location=.\ssl 
+2014/10/08 15:50:28 [main] INFO  fr.fryscop.FrySurvey - ssl.props.location=.\ssl 

@@ -1,6 +1,6 @@
 package fr.fryscop.probe.test.dns.parameters;
 
-public class TcpDnsResolutionParam extends DnsTestParameters {
+public class TcpDnsResolutionParam extends AbstractDnsTestParameters {
 
 	public TcpDnsResolutionParam( String digNdd) {
 		super("tcpDnsResolution", null, digNdd);
@@ -11,7 +11,7 @@ public class TcpDnsResolutionParam extends DnsTestParameters {
 	}
 
 	@Override
-	public String[] getDigArg() {
+	public String[] getTestArg() {
 		String argDig[] = { digNdd, "+tcp" };
 		return argDig;
 	}

@@ -24,7 +24,7 @@ public class ProbeDig {
 	
 	static void usage() {
 		System.out.println("Usage: dig [@server] name [<type>] [<class>] " + "[options]");
-		System.exit(0);
+//		System.exit(0);
 	}
 
 	static long doQuery(Message response, long ms) throws IOException {
@@ -72,6 +72,7 @@ public class ProbeDig {
 
 		if (argv.length < 1) {
 			usage();
+			return 0;
 		}
 
 		try {

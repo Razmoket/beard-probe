@@ -1,6 +1,6 @@
 package fr.fryscop.probe.test.dns.parameters;
 
-public class DnsServiceAvailabilityParam extends DnsTestParameters {
+public class DnsServiceAvailabilityParam extends AbstractDnsTestParameters {
 
 	public DnsServiceAvailabilityParam(String digNdd){
 		this("dnsServiceAvailability", null, digNdd);
@@ -11,7 +11,7 @@ public class DnsServiceAvailabilityParam extends DnsTestParameters {
     }
 
 	@Override
-	public String[] getDigArg() {
+	public String[] getTestArg() {
 		String argDig[] = { this.getDigNdd() };
 		return argDig;
 	}

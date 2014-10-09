@@ -1,45 +1,75 @@
-2014/10/08 15:04:08 [Thread-0] ERROR fr.fryscop.probe.test.dns.DnsProbe - turlututu.nic.fr java.net.UnknownHostException: turlututu.nic.fr
+2014/10/09 07:06:59 [Thread-0] ERROR fr.fryscop.probe.test.dns.DnsProbe - turlututu.nic.fr java.net.UnknownHostException: turlututu.nic.fr
 	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
 	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:894)
 
-2014/10/08 15:04:08 [Thread-0] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=test&tld=fr&type=DNS&status=1 
-2014/10/08 15:04:18 [Thread-0] ERROR fr.fryscop.probe.test.dns.DnsProbe - turlututu.nic.fr java.net.UnknownHostException: turlututu.nic.fr
+2014/10/09 07:06:59 [Thread-0] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=test_dns&tld=fr&type=DNS&status=1 
+2014/10/09 07:07:02 [Thread-0] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=test_rdds&tld=fr&type=RDDS&status=1 
+2014/10/09 07:07:53 [Thread-0] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=test_rdds&tld=fr&type=RDDS&status=1 
+2014/10/09 07:07:59 [Thread-0] ERROR fr.fryscop.probe.test.dns.DnsProbe - turlututu.nic.fr java.net.UnknownHostException: turlututu.nic.fr
 	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
 	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:894)
 
-2014/10/08 15:04:18 [Thread-0] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=test&tld=fr&type=DNS&status=1 
-2014/10/08 15:04:18 [Thread-0] DEBUG fr.fryscop.probe.test.dns.DnsProbe - dnsNameServerAvailability|turlututu.nic.fr.getUnavaibilityDuration(): 10096 
-2014/10/08 15:04:28 [Thread-0] ERROR fr.fryscop.probe.test.dns.DnsProbe - turlututu.nic.fr java.net.UnknownHostException: turlututu.nic.fr
+2014/10/09 07:07:59 [Thread-0] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=test_dns&tld=fr&type=DNS&status=1 
+2014/10/09 07:07:59 [Thread-0] DEBUG fr.fryscop.probe.test.dns.DnsProbe - dnsNameServerAvailability|turlututu.nic.fr.getUnavaibilityDuration(): 60052 
+2014/10/09 07:08:43 [Thread-0] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=test_rdds&tld=fr&type=RDDS&status=1 
+2014/10/09 07:08:59 [Thread-0] ERROR fr.fryscop.probe.test.dns.DnsProbe - turlututu.nic.fr java.net.UnknownHostException: turlututu.nic.fr
 	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
 	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:894)
 
-2014/10/08 15:04:28 [Thread-0] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=test&tld=fr&type=DNS&status=1 
-2014/10/08 15:04:28 [Thread-0] DEBUG fr.fryscop.probe.test.dns.DnsProbe - dnsNameServerAvailability|turlututu.nic.fr.getUnavaibilityDuration(): 20133 
-2014/10/08 15:04:38 [Thread-0] ERROR fr.fryscop.probe.test.dns.DnsProbe - turlututu.nic.fr java.net.UnknownHostException: turlututu.nic.fr
+2014/10/09 07:08:59 [Thread-0] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=test_dns&tld=fr&type=DNS&status=1 
+2014/10/09 07:08:59 [Thread-0] DEBUG fr.fryscop.probe.test.dns.DnsProbe - dnsNameServerAvailability|turlututu.nic.fr.getUnavaibilityDuration(): 120095 
+2014/10/09 07:09:33 [Thread-0] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=test_rdds&tld=fr&type=RDDS&status=1 
+2014/10/09 07:09:59 [Thread-0] ERROR fr.fryscop.probe.test.dns.DnsProbe - turlututu.nic.fr java.net.UnknownHostException: turlututu.nic.fr
 	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
 	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:894)
 
-2014/10/08 15:04:38 [Thread-0] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=test&tld=fr&type=DNS&status=1 
-2014/10/08 15:04:38 [Thread-0] DEBUG fr.fryscop.probe.test.dns.DnsProbe - dnsNameServerAvailability|turlututu.nic.fr.getUnavaibilityDuration(): 30201 
-2014/10/08 15:04:49 [Thread-0] ERROR fr.fryscop.probe.test.dns.DnsProbe - turlututu.nic.fr java.net.UnknownHostException: turlututu.nic.fr
+2014/10/09 07:09:59 [Thread-0] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=test_dns&tld=fr&type=DNS&status=1 
+2014/10/09 07:09:59 [Thread-0] DEBUG fr.fryscop.probe.test.dns.DnsProbe - dnsNameServerAvailability|turlututu.nic.fr.getUnavaibilityDuration(): 180169 
+2014/10/09 07:10:24 [Thread-0] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=test_rdds&tld=fr&type=RDDS&status=1 
+2014/10/09 07:10:59 [Thread-0] ERROR fr.fryscop.probe.test.dns.DnsProbe - turlututu.nic.fr java.net.UnknownHostException: turlututu.nic.fr
 	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
 	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:894)
 
-2014/10/08 15:04:49 [Thread-0] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=test&tld=fr&type=DNS&status=1 
-2014/10/08 15:04:49 [Thread-0] DEBUG fr.fryscop.probe.test.dns.DnsProbe - dnsNameServerAvailability|turlututu.nic.fr.getUnavaibilityDuration(): 40240 
-2014/10/08 15:04:59 [Thread-0] ERROR fr.fryscop.probe.test.dns.DnsProbe - turlututu.nic.fr java.net.UnknownHostException: turlututu.nic.fr
+2014/10/09 07:10:59 [Thread-0] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=test_dns&tld=fr&type=DNS&status=1 
+2014/10/09 07:10:59 [Thread-0] DEBUG fr.fryscop.probe.test.dns.DnsProbe - dnsNameServerAvailability|turlututu.nic.fr.getUnavaibilityDuration(): 240215 
+2014/10/09 07:11:14 [Thread-0] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=test_rdds&tld=fr&type=RDDS&status=1 
+2014/10/09 07:11:59 [Thread-0] ERROR fr.fryscop.probe.test.dns.DnsProbe - turlututu.nic.fr java.net.UnknownHostException: turlututu.nic.fr
 	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
 	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:894)
 
-2014/10/08 15:04:59 [Thread-0] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=test&tld=fr&type=DNS&status=1 
-2014/10/08 15:04:59 [Thread-0] DEBUG fr.fryscop.probe.test.dns.DnsProbe - dnsNameServerAvailability|turlututu.nic.fr.getUnavaibilityDuration(): 50277 
-2014/10/08 15:05:08 [main] INFO  fr.fryscop.probe.test.dns.DnsProbe - Stopping test|fr|DNS 
-2014/10/08 15:24:55 [main] INFO  fr.fryscop.FrySurvey - ssl.props.location=C:\Developpement\workspace\hubiC\Developpement\FrySurvey\ssl 
-2014/10/08 15:26:31 [main] INFO  fr.fryscop.FrySurvey - ssl.props.location=.\ssl 
-2014/10/08 15:26:56 [main] INFO  fr.fryscop.FrySurvey - ssl.props.location=.\ssl 
-2014/10/08 15:29:50 [main] INFO  fr.fryscop.FrySurvey - ssl.props.location=.\ssl 
-2014/10/08 15:30:20 [main] INFO  fr.fryscop.FrySurvey - ssl.props.location=.\ssl 
-2014/10/08 15:38:59 [main] INFO  fr.fryscop.FrySurvey - ssl.props.location=.\ssl 
-2014/10/08 15:39:17 [main] INFO  fr.fryscop.FrySurvey - ssl.props.location=.\ssl 
-2014/10/08 15:47:21 [main] INFO  fr.fryscop.FrySurvey - ssl.props.location=.\ssl 
-2014/10/08 15:50:28 [main] INFO  fr.fryscop.FrySurvey - ssl.props.location=.\ssl 
+2014/10/09 07:11:59 [Thread-0] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=test_dns&tld=fr&type=DNS&status=1 
+2014/10/09 07:11:59 [Thread-0] DEBUG fr.fryscop.probe.test.dns.DnsProbe - dnsNameServerAvailability|turlututu.nic.fr.getUnavaibilityDuration(): 300288 
+2014/10/09 07:12:05 [Thread-0] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=test_rdds&tld=fr&type=RDDS&status=1 
+2014/10/09 07:12:55 [Thread-0] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=test_rdds&tld=fr&type=RDDS&status=1 
+2014/10/09 07:12:59 [Thread-0] ERROR fr.fryscop.probe.test.dns.DnsProbe - turlututu.nic.fr java.net.UnknownHostException: turlututu.nic.fr
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:894)
+
+2014/10/09 07:12:59 [Thread-0] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=test_dns&tld=fr&type=DNS&status=1 
+2014/10/09 07:12:59 [Thread-0] DEBUG fr.fryscop.probe.test.dns.DnsProbe - dnsNameServerAvailability|turlututu.nic.fr.getUnavaibilityDuration(): 360384 
+2014/10/09 07:13:46 [Thread-0] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=test_rdds&tld=fr&type=RDDS&status=1 
+2014/10/09 07:13:59 [Thread-0] ERROR fr.fryscop.probe.test.dns.DnsProbe - turlututu.nic.fr java.net.UnknownHostException: turlututu.nic.fr
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:894)
+
+2014/10/09 07:13:59 [Thread-0] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=test_dns&tld=fr&type=DNS&status=1 
+2014/10/09 07:13:59 [Thread-0] DEBUG fr.fryscop.probe.test.dns.DnsProbe - dnsNameServerAvailability|turlututu.nic.fr.getUnavaibilityDuration(): 420425 
+2014/10/09 07:14:36 [Thread-0] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=test_rdds&tld=fr&type=RDDS&status=1 
+2014/10/09 07:14:59 [Thread-0] ERROR fr.fryscop.probe.test.dns.DnsProbe - turlututu.nic.fr java.net.UnknownHostException: turlututu.nic.fr
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:894)
+
+2014/10/09 07:14:59 [Thread-0] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=test_dns&tld=fr&type=DNS&status=1 
+2014/10/09 07:14:59 [Thread-0] DEBUG fr.fryscop.probe.test.dns.DnsProbe - dnsNameServerAvailability|turlututu.nic.fr.getUnavaibilityDuration(): 480527 
+2014/10/09 07:15:26 [Thread-0] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=test_rdds&tld=fr&type=RDDS&status=1 
+2014/10/09 07:15:59 [Thread-0] ERROR fr.fryscop.probe.test.dns.DnsProbe - turlututu.nic.fr java.net.UnknownHostException: turlututu.nic.fr
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$1.lookupAllHostAddr(InetAddress.java:894)
+
+2014/10/09 07:15:59 [Thread-0] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=test_dns&tld=fr&type=DNS&status=1 
+2014/10/09 07:15:59 [Thread-0] DEBUG fr.fryscop.probe.test.dns.DnsProbe - dnsNameServerAvailability|turlututu.nic.fr.getUnavaibilityDuration(): 540574 
+2014/10/09 07:16:17 [Thread-0] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=test_rdds&tld=fr&type=RDDS&status=1 
+2014/10/09 07:16:59 [main] INFO  fr.fryscop.probe.test.dns.DnsProbe - Stopping test_dns|fr|DNS 
+2014/10/09 07:16:59 [main] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=test_dns&tld=fr&type=DNS&status=5 
+2014/10/09 07:17:02 [main] INFO  fr.fryscop.probe.test.rdds.RddsProbe - Stopping test_rdds|fr|RDDS 
+2014/10/09 07:17:02 [main] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=test_rdds&tld=fr&type=RDDS&status=5 

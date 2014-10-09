@@ -6,17 +6,19 @@ import java.net.UnknownHostException;
 
 import org.apache.commons.net.whois.WhoisClient;
 
-public class FWhois {
-
-	public static void main(String[] args) {
+public class ProbeWhois {
+	
+	public static long request(String[] args) {
 		int index;
 		String handle, host;
 		InetAddress address = null;
 		WhoisClient whois;
+		long startTime, endTime;
+		
 
 		if (args.length != 1) {
 			System.err.println("usage: fwhois handle[@<server>]");
-			System.exit(1);
+			return -1;
 		}
 
 		index = args[0].lastIndexOf("@");
@@ -33,12 +35,14 @@ public class FWhois {
 			host = args[0].substring(index + 1);
 		}
 
+		startTime = System.currentTimeMillis();
 		try {
 			address = InetAddress.getByName(host);
 			System.out.println("[" + address.getHostName() + "]");
 		} catch (UnknownHostException e) {
 			System.err.println("Error unknown host: " + e.getMessage());
-			System.exit(1);
+			endTime = System.currentTimeMillis();
+			return endTime - startTime;
 		}
 
 		try {
@@ -47,7 +51,10 @@ public class FWhois {
 			whois.disconnect();
 		} catch (IOException e) {
 			System.err.println("Error I/O exception: " + e.getMessage());
-			System.exit(1);
+			endTime = System.currentTimeMillis();
+			return endTime - startTime;
 		}
+		endTime = System.currentTimeMillis();
+		return endTime - startTime;
 	}
 }
