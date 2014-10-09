@@ -139,3 +139,4 @@
 2014/10/09 12:40:43 [Thread-0] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=test_rdds&tld=fr&type=RDDS&status=1 
 2014/10/09 12:41:42 [main] INFO  fr.fryscop.probe.test.rdds.RddsProbe - Stopping test_rdds|fr|RDDS 
 2014/10/09 12:41:42 [main] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=test_rdds&tld=fr&type=RDDS&status=5 
+2014/10/09 13:10:48 [Thread-0] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=test_rdds&tld=fr&type=RDDS&status=1 

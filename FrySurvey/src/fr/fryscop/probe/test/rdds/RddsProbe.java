@@ -14,7 +14,7 @@ import fr.fryscop.probe.test.rdds.parameters.AbstractRddsTestParameters;
 import fr.fryscop.probe.test.rdds.parameters.RddsQueryRttParam;
 import fr.fryscop.probe.test.rdds.parameters.RddsServiceAvailabilityParam;
 
-public class RddsProbe implements ProbeTest, Runnable {
+public class RddsProbe implements ProbeTest {
 
 	/*
 	 * RDDS --> 10 sondes world wide / toutes les 5 min RDDS availability <--- pas d'erreur lors de requete RDDS si non début du compteur jusqu'à

@@ -168,3 +168,5 @@
 [2014/10/09 12:39:43]test_dns|fr|DNS|UdpDnsResolution|2
 [2014/10/09 12:40:43]test_rdds|fr|RDDS|RddsServiceAvailabilityParam|whois.nic.fr|96
 [2014/10/09 12:40:43]test_rdds|fr|RDDS|RddsQueryRttParam|whois.nic.fr|92
+[2014/10/09 13:10:47]test_rdds|fr|RDDS|RddsServiceAvailabilityParam|whois.nic.fr|216
+[2014/10/09 13:10:48]test_rdds|fr|RDDS|RddsQueryRttParam|whois.nic.fr|138

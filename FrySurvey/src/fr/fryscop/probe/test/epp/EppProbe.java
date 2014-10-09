@@ -24,5 +24,11 @@ public class EppProbe implements ProbeTest	{
 	    return null;
     }
 
+	@Override
+    public void run() {
+	    // TODO Auto-generated method stub
+	    
+    }
+
 	
 }

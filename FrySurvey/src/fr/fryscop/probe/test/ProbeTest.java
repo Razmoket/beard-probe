@@ -1,6 +1,6 @@
 package fr.fryscop.probe.test;
 
-public interface ProbeTest {
+public interface ProbeTest extends Runnable{
 
 	public void launchTest() ;
 	

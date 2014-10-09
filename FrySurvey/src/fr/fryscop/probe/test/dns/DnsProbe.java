@@ -29,7 +29,7 @@ import fr.fryscop.probe.test.dns.parameters.UdpDnsResolutionParam;
  *   DNS update time <--- temps entre acquittement d'une modification EPP et la prise en compte effective dans le dns (valider les données visible dans le dns à modifier) 
  *  ==> si RTT 5 fois supérieur au temps SLR alors service unavailable pour la sonde
  */
-public class DnsProbe implements ProbeTest, Runnable {
+public class DnsProbe implements ProbeTest {
 	private static final Logger logger = LoggerFactory.getLogger(DnsProbe.class);
 
 	private Probe probe;
