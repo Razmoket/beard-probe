@@ -54,6 +54,7 @@ import org.openrtk.idl.epprtk.contact.*;
 **/
 public class SessionExample
 {
+	// 10.4.3.1 6666 -hinpizyz334-.ne 9qPv6MVYX2h1sudR nic.next P15 P15
 
     private static String USAGE = "Usage: com.tucows.oxrs.epprtk.rtk.example.SessionExample epp_host_name epp_host_port epp_client_id epp_password domain_name [contact_id1] [contact_id2]";
 
@@ -64,7 +65,8 @@ public class SessionExample
     public static void main(String args[])
     {
 
-        System.out.println("Start of the Session example");
+    	System.setProperty("rtk.props.file",".\\conf\\rtk.properties");
+    	System.out.println("Start of the Session example");
 
         Date domain_exp_date = null;
         epp_AuthInfo domain_auth_info = null;
@@ -116,6 +118,8 @@ public class SessionExample
                                                  epp_password);
 
             epp_client.setLang("en");
+            String [] extensions =  {"urn:ietf:params:xml:ns:rgp-1.0"};
+            epp_client.setEPPServiceExtensions(extensions);
             
             System.out.println("Connecting to the EPP Server and getting the greeting");
 
@@ -161,6 +165,7 @@ public class SessionExample
                 // validation before sending to the server, or the server's
                 // response was either unparsable or missing some required data.
                 System.err.println("epp_XMLException! ["+xcp.getErrorMessage()+"]");
+                xcp.printStackTrace();
             }
             catch ( epp_Exception xcp )
             {
@@ -173,6 +178,7 @@ public class SessionExample
                 {
                     System.err.println("\tvalue: ["+results[0].getValues()[0]+"]");
                 }
+                xcp.printStackTrace();
             }
             catch ( Exception xcp )
             {
@@ -966,7 +972,8 @@ public class SessionExample
                 }
                 catch ( epp_Exception xcp )
                 {
-                    // If an exception was thrown to this command, then maybe
+                	xcp.printStackTrace();
+                	// If an exception was thrown to this command, then maybe
                     // the auth info we used was wrong, or maybe someone
                     // transfered the domain away from us, or maybe
                     // there is not transfer information to report on.
@@ -1099,6 +1106,7 @@ public class SessionExample
                 // validation before sending to the server, or the server's
                 // response was either unparsable or missing some required data.
                 System.err.println("epp_XMLException! ["+xcp.getErrorMessage()+"]");
+                xcp.printStackTrace();
             }
             catch ( epp_Exception xcp )
             {
@@ -1107,6 +1115,7 @@ public class SessionExample
                 System.err.println("epp_Exception!");
                 epp_Result[] results = xcp.getDetails();
                 System.err.println("\t"+results[0]);
+                xcp.printStackTrace();
             }
             catch ( Exception xcp )
             {
@@ -1128,6 +1137,7 @@ public class SessionExample
         catch ( epp_XMLException xcp )
         {
             System.err.println("epp_XMLException! ["+xcp.getErrorMessage()+"]");
+            xcp.printStackTrace();
         }
         catch ( epp_Exception xcp )
         {
@@ -1137,6 +1147,7 @@ public class SessionExample
             // for debugging.  Take a look at the javadocs for
             // the full list of attributes in the class.
             System.err.println("\tresult: ["+results[0]+"]");
+            xcp.printStackTrace();
         }
         catch ( Exception xcp )
         {

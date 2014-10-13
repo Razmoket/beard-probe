@@ -34,6 +34,7 @@ import org.openrtk.idl.epprtk.epp_PollRsp;
 import org.openrtk.idl.epprtk.epp_Session;
 import org.openrtk.idl.epprtk.epp_XMLException;
 
+import com.liberty.rtk.extension.epprtk.Rgp;
 import com.tucows.oxrs.epprtk.rtk.transport.EPPTransportBase;
 import com.tucows.oxrs.epprtk.rtk.transport.EPPTransportException;
 import com.tucows.oxrs.epprtk.rtk.transport.EPPTransportTCP;
@@ -96,7 +97,7 @@ public class EPPClient extends RTKBase implements epp_Session {
 	private boolean	           isValid	                  = false;
 
 	// Is RTK version number included as extension in login
-	private boolean	           sendver_;
+	private boolean	           sendver_=true;
 
 	/**
 	 * Default constructor -- uses default version, lang values.
@@ -858,6 +859,7 @@ public class EPPClient extends RTKBase implements epp_Session {
 		if (sendver_) {
 			epp_Extension exts[] = new epp_Extension[1];
 			exts[0] = new com.tucows.oxrs.epprtk.rtk.xml.extension.RTKVersion();
+		//	exts[1] = new com.liberty.rtk.extension.epprtk.Rgp();
 			command_data.setExtensions(exts);
 		}
 
@@ -869,6 +871,7 @@ public class EPPClient extends RTKBase implements epp_Session {
 			services[0] = "urn:ietf:params:xml:ns:contact-1.0";
 			services[1] = "urn:ietf:params:xml:ns:domain-1.0";
 			services[2] = "urn:ietf:params:xml:ns:host-1.0";
+		//	services[3] = "urn:ietf:params:xml:ns:rgp-1.0";
 			login_req.setServices(services);
 		}
 

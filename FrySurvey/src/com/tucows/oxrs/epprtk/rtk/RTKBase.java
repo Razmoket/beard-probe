@@ -33,7 +33,10 @@ package com.tucows.oxrs.epprtk.rtk;
 import java.text.*;
 import java.util.*;
 import java.io.*;
+
 import org.apache.log4j.*;
+
+import fr.fryscop.tools.ISO8601Utils;
 
 /**
  * RTK Base -- Base of the registrar tool kit.  All RTK classes inherit from this one.
@@ -97,7 +100,7 @@ public abstract class RTKBase extends org.omg.CORBA.portable.ObjectImpl
      * to convert String dates into Date objects. eg:</P>
      * <PRE>java.util.Date date_object = UTC_FMT.parse(date_string); </PRE>
      */
-    public static final DateFormat UTC_FMT = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.S'Z'");
+    public static final ISO8601Utils UTC_FMT = new ISO8601Utils();
 
     /**
      * DateFormat for "yyyy-MM-dd".
