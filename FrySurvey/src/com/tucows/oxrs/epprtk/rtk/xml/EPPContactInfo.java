@@ -278,7 +278,8 @@ public class EPPContactInfo extends EPPContactBase implements epp_ContactInfo
                 if ( a_node.getNodeName().equals("contact:clID") ) { action_response_.m_client_id = a_node.getFirstChild().getNodeValue(); }
 
                 if ( a_node.getNodeName().equals("contact:crID") ) { action_response_.m_created_by = a_node.getFirstChild().getNodeValue(); }
-                if ( a_node.getNodeName().equals("contact:crDate") ) { action_response_.m_created_date = a_node.getFirstChild().getNodeValue(); }
+                //FIXME
+                if ( a_node.getNodeName().equals("contact:crDate") ) { action_response_.m_created_date = "";}//a_node.getFirstChild().getNodeValue(); }
                 if ( a_node.getNodeName().equals("contact:upID") ) { action_response_.m_updated_by = a_node.getFirstChild().getNodeValue(); }
                 if ( a_node.getNodeName().equals("contact:upDate") ) { action_response_.m_updated_date = a_node.getFirstChild().getNodeValue(); }
 
@@ -369,7 +370,8 @@ public class EPPContactInfo extends EPPContactBase implements epp_ContactInfo
                     }
 
                     if ( an_inner_node.getNodeName().equals("contact:city") ) { address.m_city = an_inner_node.getFirstChild().getNodeValue(); }
-                    if ( an_inner_node.getNodeName().equals("contact:sp") ) { address.m_state_province = an_inner_node.getFirstChild().getNodeValue(); }
+                    //FIXME
+                    if ( an_inner_node.getNodeName().equals("contact:sp") ) { address.m_state_province = "";}//an_inner_node.getFirstChild().getNodeValue(); }
                     if ( an_inner_node.getNodeName().equals("contact:pc") ) { address.m_postal_code = an_inner_node.getFirstChild().getNodeValue(); }
                     if ( an_inner_node.getNodeName().equals("contact:cc") ) { address.m_country_code = an_inner_node.getFirstChild().getNodeValue(); }
                 }

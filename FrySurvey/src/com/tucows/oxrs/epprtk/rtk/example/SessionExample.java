@@ -860,12 +860,13 @@ public class SessionExample
                 System.out.println("ContactInfo results: address street 3 ["+contact_info_response.getAddresses()[0].getAddress().getStreet3()+"]");
                 System.out.println("ContactInfo results: fax ["+contact_info_response.getFax()+"]");
 
-                System.out.println("ContactInfo Results: status count ["+contact_info_response.getStatus().length+"]");
+                //FIXME
+                /*System.out.println("ContactInfo Results: status count ["+contact_info_response.getStatus().length+"]");
                 for ( int i = 0; i < contact_info_response.getStatus().length; i++ )
                 {
                     System.out.println("\tstatus["+i+"] string ["+EPPContactBase.contactStatusToString( contact_info_response.getStatus()[i].getType() )+"]");
                     System.out.println("\tstatus["+i+"] note ["+contact_info_response.getStatus()[i].getValue()+"]");
-                }
+                }*/
 
 
                 // ***************************
