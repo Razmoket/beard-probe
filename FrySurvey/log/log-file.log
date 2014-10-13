@@ -87,3 +87,7 @@
 2014/10/13 11:29:18 [main] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=test_rdds&tld=fr&type=RDDS&status=5 
 2014/10/13 11:29:18 [main] INFO  fr.fryscop.probe.Probe - Stopping test_dns|fr|DNS 
 2014/10/13 11:29:18 [main] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=test_dns&tld=fr&type=DNS&status=5 
+2014/10/13 14:15:53 [main] INFO  fr.fryscop.FrySurvey - ssl.props.location=.\ssl 
+2014/10/13 14:18:51 [main] INFO  fr.fryscop.FrySurvey - ssl.props.location=.\ssl 
+2014/10/13 14:25:18 [main] INFO  fr.fryscop.FrySurvey - ssl.props.location=.\ssl 
+2014/10/13 14:26:05 [main] INFO  fr.fryscop.FrySurvey - ssl.props.location=.\ssl 

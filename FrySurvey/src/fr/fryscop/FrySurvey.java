@@ -17,6 +17,7 @@ public class FrySurvey {
 	 */
 	public static void main(String[] args) {
 		System.setProperty("ssl.props.location", ".\\ssl");
+		System.setProperty("rtk.props.file",".\\conf\\rtk.properties");
 		logger.info("ssl.props.location=" + System.getProperty("ssl.props.location"));
 		SurveyConnection surveyConnection = new SurveyConnection(args);
 		surveyConnection.session();
