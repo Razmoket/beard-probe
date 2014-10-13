@@ -19,4 +19,6 @@ public abstract class AbstractDnsTestParameters extends AbstractTestParameters {
 	public void setServerName(String serverName) {
 		this.serverName = serverName;
 	}
+	
+	
 }

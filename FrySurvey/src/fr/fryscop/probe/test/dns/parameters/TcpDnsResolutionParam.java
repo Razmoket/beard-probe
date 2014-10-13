@@ -16,4 +16,8 @@ public class TcpDnsResolutionParam extends AbstractDnsTestParameters {
 		return argDig;
 	}
 
+	@Override
+    public String getTestName() {
+	    return super.getTestName()+ "| " ;
+    }
 }
