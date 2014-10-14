@@ -5,19 +5,21 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 
 import org.apache.commons.net.whois.WhoisClient;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class ProbeWhois {
-	
+	private static final Logger logger = LoggerFactory.getLogger(ProbeWhois.class);
+
 	public static long request(String[] args) {
 		int index;
 		String handle, host;
 		InetAddress address = null;
 		WhoisClient whois;
 		long startTime, endTime;
-		
 
 		if (args.length != 1) {
-			System.err.println("usage: fwhois handle[@<server>]");
+			logger.error("usage: fwhois handle[@<server>]");
 			return -1;
 		}
 
@@ -25,7 +27,7 @@ public class ProbeWhois {
 
 		whois = new WhoisClient();
 		// We want to timeout if a response takes longer than 60 seconds
-		whois.setDefaultTimeout	(60000);
+		whois.setDefaultTimeout(60000);
 
 		if (index == -1) {
 			handle = args[0];
@@ -38,19 +40,20 @@ public class ProbeWhois {
 		startTime = System.currentTimeMillis();
 		try {
 			address = InetAddress.getByName(host);
-			System.out.println("[" + address.getHostName() + "]");
+			logger.trace("[" + address.getHostName() + "]");
 		} catch (UnknownHostException e) {
-			System.err.println("Error unknown host: " + e.getMessage());
+			logger.error("Error unknown host: " + e.getMessage());
 			endTime = System.currentTimeMillis();
 			return endTime - startTime;
 		}
 
 		try {
 			whois.connect(address);
-			System.out.print(whois.query(handle));
+			String query = whois.query(handle);
+			logger.trace(query);
 			whois.disconnect();
 		} catch (IOException e) {
-			System.err.println("Error I/O exception: " + e.getMessage());
+			logger.error("Error I/O exception: " + e.getMessage());
 			endTime = System.currentTimeMillis();
 			return endTime - startTime;
 		}

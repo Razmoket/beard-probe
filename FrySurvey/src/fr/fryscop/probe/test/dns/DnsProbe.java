@@ -65,7 +65,7 @@ public class DnsProbe implements ProbeTest {
 		for (String server : this.serverList) {
 			dnsNameServerAvailabilityParamList.add(new DnsNameServerAvailabilityParam(server, digNdd));
 		}
-		isInitDone = false;
+		isInitDone = true;
 	}
 
 	private DnsProbe() {

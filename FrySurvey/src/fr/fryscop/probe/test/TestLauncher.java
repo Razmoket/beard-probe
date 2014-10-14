@@ -8,7 +8,6 @@ import java.util.Map;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import fr.fryscop.FrySurvey;
 import fr.fryscop.probe.test.dns.DnsProbe;
 import fr.fryscop.probe.test.rdds.RddsProbe;
 
@@ -19,22 +18,24 @@ public class TestLauncher {
 
 	private Map<ProbeTest, Thread> launchedProbe = new HashMap<ProbeTest, Thread>();
 
-	public TestLauncher(){}
-	
+	public TestLauncher() {
+	}
+
 	public TestLauncher(List<ProbeTest> probes) {
 		this.probeList = probes;
 		initProbeList();
 	}
 
-	public void initProbeList(){
+	public void initProbeList() {
 		logger.info("Initializing Probes Threads List");
 		for (ProbeTest probe : probeList) {
 			Thread thread = new Thread(probe);
-			logger.debug("initProbeList- probe.toString():"+probe.toString());
+			logger.debug("initProbeList- probe.toString():" + probe.toString());
 			thread.setName(probe.toString());
 			launchedProbe.put(probe, thread);
 		}
 	}
+
 	public void startProbes() {
 		logger.info("Starting Probes Threads List");
 		for (ProbeTest probe : probeList) {
@@ -60,6 +61,7 @@ public class TestLauncher {
 		this.probeList = probeList;
 	}
 
+	// FIXME TEst
 	public static void main(String arg[]) {
 		ArrayList<ProbeTest> probes = new ArrayList<ProbeTest>();
 		probes.add(RddsProbe.getMockProbe());
@@ -69,7 +71,7 @@ public class TestLauncher {
 		testLauncher.startProbes();
 
 		// arret de la sonde
-		try {	
+		try {
 			Thread.sleep(600000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
