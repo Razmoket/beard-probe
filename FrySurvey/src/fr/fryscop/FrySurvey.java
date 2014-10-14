@@ -39,12 +39,12 @@ public class FrySurvey {
 			
 			
 			// arret de la sonde
-			try {	
+			/*try {	
 				Thread.sleep(600000);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			configuredLauncher.stopProbes();
+			configuredLauncher.stopProbes();*/
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
