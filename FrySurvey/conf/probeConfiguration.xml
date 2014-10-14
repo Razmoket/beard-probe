@@ -14,8 +14,8 @@
 	    <property name="digNdd" value="fryprobe-afnic.fr"/>
 	    <property name="serverList">
 		    <list>
-		        <bean id="serverFront" class="String" p:nom="B.NIC.fr" />
-		        <bean id="serverFront" class="String" p:nom="C.NIC.fr" />
+		        <value>B.NIC.fr</value>
+		        <value>C.NIC.fr</value>
 		    </list>
 	    </property>
 	    <property name="eppServer" ref="eppServerConf.fr" /> 
