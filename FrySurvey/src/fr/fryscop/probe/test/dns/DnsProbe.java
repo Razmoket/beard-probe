@@ -44,6 +44,8 @@ public class DnsProbe implements ProbeTest {
 	List<DnsNameServerAvailabilityParam> dnsNameServerAvailabilityParamList = null;
 	TcpDnsResolutionParam tcpDnsResolutionParam = null;
 	UdpDnsResolutionParam udpDnsResolutionParam = null;
+	
+	private boolean isInitDone = false;
 
 	public DnsProbe(String name, Probe probe, String tld, String digNdd, List<String> serverList) {
 		super();
@@ -63,9 +65,11 @@ public class DnsProbe implements ProbeTest {
 		for (String server : this.serverList) {
 			dnsNameServerAvailabilityParamList.add(new DnsNameServerAvailabilityParam(server, digNdd));
 		}
+		isInitDone = false;
 	}
 
 	private DnsProbe() {
+		this.probe = new Probe();
 	}
 
 	@Override
@@ -83,7 +87,7 @@ public class DnsProbe implements ProbeTest {
 
 	@Override
 	public void launchTest() {
-
+		if(!this.isInitDone){initParam();}
 		dnsServiceAvailability();
 		if (this.getProbe().getStatus() != ProbeStatus.Unavailable) {
 			for (DnsNameServerAvailabilityParam param : this.dnsNameServerAvailabilityParamList) {
@@ -172,6 +176,9 @@ public class DnsProbe implements ProbeTest {
 		return this.probe.toString();
 	}
 
+	public void setName(String name){
+		this.probe.setName(name);
+	}
 	public Probe getProbe() {
 		return probe;
 	}
@@ -186,6 +193,7 @@ public class DnsProbe implements ProbeTest {
 
 	public void setTld(String tld) {
 		this.tld = tld;
+		this.probe.setTld(tld);
 	}
 
 	public String getDigNdd() {
@@ -204,19 +212,24 @@ public class DnsProbe implements ProbeTest {
 		this.serverList = serverList;
 	}
 
+	public void setType(ProbeType type) {
+		this.probe.setType(type);
+	}
+	
+	public void setStatus(ProbeStatus status) {
+		this.probe.setStatus(status);
+	}
+	
 	/* FIXME TEST */
 
 	public static DnsProbe getMockProbe() {
 		// init de la sonde
-		Probe probe = new Probe();
-		probe.setName("test_dns");
-		probe.setTld("fr");
-		probe.setType(ProbeType.Dns);
-		probe.setStatus(ProbeStatus.Ok);
-
 		DnsProbe dnsProbe = new DnsProbe();
 		dnsProbe.setDigNdd("afnic.fr");
-		dnsProbe.setProbe(probe);
+		dnsProbe.setTld("fr");
+		dnsProbe.setName("test_dns");
+		dnsProbe.setType(ProbeType.Dns);
+		dnsProbe.setStatus(ProbeStatus.Ok);
 
 		ArrayList<String> serverList = new ArrayList<String>();
 		serverList.add("d.nic.fr");
@@ -225,8 +238,7 @@ public class DnsProbe implements ProbeTest {
 		serverList.add("turlututu.nic.fr");
 		dnsProbe.setServerList(serverList);
 
-		dnsProbe.setTld("fr");
-
+		
 		dnsProbe.initParam();
 
 		return dnsProbe;

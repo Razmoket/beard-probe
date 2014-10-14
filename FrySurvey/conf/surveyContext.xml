@@ -16,29 +16,29 @@
 
 
 	<!-- Type de sonde -->
-	<bean id="probeTypeDns" class="fr.fryscop.probe.ProbeType.Dns"/>
+<!-- 	<bean id="probeTypeDns" class="fr.fryscop.probe.ProbeType.Dns"/>
 	<bean id="probeTypeRdds" class="fr.fryscop.probe.ProbeType.Rdds"/>
 	<bean id="probeTypeEpp" class="fr.fryscop.probe.ProbeType.Epp"/>
-	
+ -->	
 	<!-- Status de sonde -->
-	<bean id="probeStatusOk" class="fr.fryscop.probe.ProbeStatus.Ok"/>
+<!-- 	<bean id="probeStatusOk" class="fr.fryscop.probe.ProbeStatus.Ok"/>
 	<bean id="probeStatusStopped" class="fr.fryscop.probe.ProbeStatus.Stopped"/>
 	<bean id="probeStatusUnavailable" class="fr.fryscop.probe.ProbeStatus.Unavailable"/>
-	
+ -->	
 	<!-- Type de sonde -->
 	<bean id="rdds" class="fr.fryscop.probe.Probe">
 	    	<property name="name" value="RDDS" />
-	    	<property name="type" ref="probeTypeRdds" />
-	    	<property name="status" ref="probeStatusOk" />
+	    	<property name="type" value="Rdds" />
+	    	<property name="status" value="Ok" />
 	</bean>
 	<bean id="dns" class="fr.fryscop.probe.Probe">
 	    	<property name="name" value="DNS" />
-	    	<property name="type" ref="probeTypeDns" />
-	    	<property name="status" ref="probeStatusOk" />
+	    	<property name="type" value="Dns" />
+	    	<property name="status" value="Ok" />
 	</bean>
 	<bean id="epp" class="fr.fryscop.probe.Probe">
 	    	<property name="name" value="EPP" />
-	    	<property name="type" ref="probeTypeEpp" />
-	    	<property name="status" ref="probeStatusOk" />
+	    	<property name="type" value="Epp" />
+	    	<property name="status" value="Ok" />
 	</bean>
 </beans>

@@ -11,11 +11,11 @@
 		    <list>
 		        <ref bean="DnsProbe.fr" />
 		        <ref bean="RddsProbe.fr" />
-		        <ref bean="EppProbe.fr" />
+<!-- 		        <ref bean="EppProbe.fr" /> -->
 		    </list>
 	    </property>
 	</bean>
-	
+<!-- 	
 	<bean id="Launcher.DNS" class="fr.fryscop.probe.test.TestLauncher">
 	    <property name="probeList">
 		    <list>
@@ -27,4 +27,5 @@
 		    </list>
 	    </property>
 	</bean>
+ -->
 </beans>

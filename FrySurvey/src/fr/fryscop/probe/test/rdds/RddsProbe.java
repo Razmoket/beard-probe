@@ -23,6 +23,7 @@ public class RddsProbe implements ProbeTest {
 	 * unavailable pour la sonde
 	 */
 
+	boolean isInitDone = false;
 	public RddsProbe(Probe probe, String tld, String whoisNdd, String server) {
 		super();
 		this.probe = probe;
@@ -33,11 +34,13 @@ public class RddsProbe implements ProbeTest {
 	}
 
 	private RddsProbe() {
+		this.probe = new Probe();
 	}
 
 	private void initParam() {
 		rddsServiceAvailabilityParam = new RddsServiceAvailabilityParam(server, whoisNdd);
 		rddsQueryRttParam = new RddsQueryRttParam(server, whoisNdd);
+		this.isInitDone = true;
 	}
 
 	private static final Logger logger = LoggerFactory.getLogger(RddsProbe.class);
@@ -52,6 +55,7 @@ public class RddsProbe implements ProbeTest {
 
 	@Override
 	public void launchTest() {
+		if(!this.isInitDone){initParam();}
 		rddsServiceAvailability();
 		if (this.getProbe().getStatus() != ProbeStatus.Unavailable) {
 			rddsQueryRtt();
@@ -133,6 +137,7 @@ public class RddsProbe implements ProbeTest {
 
 	public void setTld(String tld) {
 		this.tld = tld;
+		this.probe.setTld(tld);
 	}
 
 	public String getServer() {
@@ -163,44 +168,45 @@ public class RddsProbe implements ProbeTest {
 		return this.probe.toString();
 	}
 
+	public void setType(ProbeType type) {
+		this.probe.setType(type);
+	}
+
+	public void setStatus(ProbeStatus status) {
+		this.probe.setStatus(status);
+	}
+
+	public void setName(String name) {
+		this.probe.setName(name);
+	}
+
 	// FIXME TEST
 
 	public static RddsProbe getMockProbe() {
 		// init de la sonde
-		Probe probe = new Probe();
-		probe.setName("test_rdds");
-		probe.setTld("fr");
-		probe.setType(ProbeType.Rdds);
-		probe.setStatus(ProbeStatus.Ok);
-
 		RddsProbe rddsProbe = new RddsProbe();
-		rddsProbe.setWhoisNdd("afnic.fr");
-		rddsProbe.setProbe(probe);
-
-		rddsProbe.setServer("whois.nic.fr");
-
+		rddsProbe.setName("test_rdds");
 		rddsProbe.setTld("fr");
+		rddsProbe.setServer("whois.nic.fr");
+		
+		rddsProbe.setWhoisNdd("afnic.fr");
+		rddsProbe.setType(ProbeType.Rdds);
+		rddsProbe.setStatus(ProbeStatus.Ok);
+
+
 
 		rddsProbe.initParam();
 		return rddsProbe;
 	}
 
-/*	public static void main(String arg[]) {
-
-		RddsProbe rddsProbe = getMockProbe();
-		// démarrage sonde
-		Thread probeTest = new Thread(rddsProbe);
-		probeTest.start();
-
-		// arret de la sonde
-		try {
-			Thread.sleep(660000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		
-		rddsProbe.getProbe().stop();
-		// dnsProbe.launchTest();
-	}*/
+	/*
+	 * public static void main(String arg[]) {
+	 * 
+	 * RddsProbe rddsProbe = getMockProbe(); // démarrage sonde Thread probeTest = new Thread(rddsProbe); probeTest.start();
+	 * 
+	 * // arret de la sonde try { Thread.sleep(660000); } catch (InterruptedException e) { e.printStackTrace(); }
+	 * 
+	 * rddsProbe.getProbe().stop(); // dnsProbe.launchTest(); }
+	 */
 	// fin TEST
 }
