@@ -1,34 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
- <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-	<import resource="classpath*:fr/probeConfiguration.xml"/>
-	<import resource="classpath*:bzh/probeConfiguration.xml"/>
-	
-	
+	<import resource="classpath*:bzh/probeConfiguration.xml" />
+	<import resource="classpath*:fr/probeConfiguration.xml" />
+	<import resource="classpath*:frogans/probeConfiguration.xml" />
+	<import resource="classpath*:ovh/probeConfiguration.xml" />
+	<import resource="classpath*:paris/probeConfiguration.xml" />
+	<import resource="classpath*:pm/probeConfiguration.xml" />
+	<import resource="classpath*:re/probeConfiguration.xml" />
+	<import resource="classpath*:tf/probeConfiguration.xml" />
+	<import resource="classpath*:wf/probeConfiguration.xml" />
+	<import resource="classpath*:yt/probeConfiguration.xml" />
+
+
 	<bean id="Launcher" class="fr.fryscop.probe.test.TestLauncher">
-	    <property name="probeList">
-		    <list>
-		        <ref bean="DnsProbe.fr" />
-		        <ref bean="RddsProbe.fr" />
-<!-- 		        <ref bean="EppProbe.fr" /> -->
+		<property name="probeList">
+			<list>
 				<ref bean="DnsProbe.bzh" />
-		        <ref bean="RddsProbe.bzh" />
-		    </list>
-	    </property>
+				<ref bean="RddsProbe.bzh" />
+				<ref bean="DnsProbe.fr" />
+				<ref bean="RddsProbe.fr" />
+				<ref bean="DnsProbe.frogans" />
+				<ref bean="RddsProbe.frogans" />
+				<ref bean="DnsProbe.ovh" />
+				<ref bean="RddsProbe.ovh" />
+				<ref bean="DnsProbe.paris" />
+				<ref bean="RddsProbe.paris" />
+				<ref bean="DnsProbe.pm" />
+				<ref bean="RddsProbe.pm" />
+				<ref bean="DnsProbe.re" />
+				<ref bean="RddsProbe.re" />
+				<ref bean="DnsProbe.tf" />
+				<ref bean="RddsProbe.tf" />
+				<ref bean="DnsProbe.wf" />
+				<ref bean="RddsProbe.wf" />
+				<ref bean="DnsProbe.yt" />
+				<ref bean="RddsProbe.yt" />
+			</list>
+		</property>
 	</bean>
-<!-- 	
-	<bean id="Launcher.DNS" class="fr.fryscop.probe.test.TestLauncher">
-	    <property name="probeList">
-		    <list>
-		        <ref bean="DnsProbe.fr" />
-		        <ref bean="DnsProbe.ovh" />
-		        <ref bean="DnsProbe.paris" />
-		        <ref bean="DnsProbe.bzh" />
-		        <ref bean="DnsProbe.frogans" />
-		    </list>
-	    </property>
-	</bean>
- -->
+
+
 </beans>
