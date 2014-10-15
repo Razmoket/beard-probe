@@ -2,17 +2,17 @@ package fr.fryscop.probe.test.rdds.parameters;
 
 public class RddsServiceAvailabilityParam extends AbstractRddsTestParameters {
 
-	public RddsServiceAvailabilityParam(String serverName, String digNdd) {
-		super("RddsServiceAvailabilityParam", serverName, digNdd);
+	public RddsServiceAvailabilityParam(String tld, String digNdd) {
+		super("RddsServiceAvailabilityParam", tld, digNdd);
 	}
 
-	private RddsServiceAvailabilityParam(String testName, String serverName, String digNdd) {
-		super(testName, serverName, digNdd);
+	private RddsServiceAvailabilityParam(String testName, String tld, String digNdd) {
+		super(testName, tld, digNdd);
 	}
 
 	@Override
 	public String[] getTestArg() {
-		String argWhois[] = { digNdd +	"@" + serverName };
+		String argWhois[] = { digNdd +	"@" + getServerName() };
 		return argWhois;
 	}
 

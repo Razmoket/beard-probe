@@ -5,10 +5,8 @@
 
 	<import resource="classpath*:eppConfiguration.xml" />
 
-
 	<bean id="DnsProbe.fr" class="fr.fryscop.probe.test.dns.DnsProbe">
-		<!-- <property name="probe" ref="dns"/> -->
-		<property name="name" value="dns" />
+		<property name="name" value="dns.fr" />
 		<property name="tld" value="fr" />
 		<property name="type" value="Dns" />
 		<property name="status" value="Ok" />
@@ -18,30 +16,16 @@
 				<value>d.nic.fr</value>
 				<value>f.ext.nic.fr</value>
 				<value>g.ext.nic.fr</value>
-				<value>turlututu.nic.fr</value>
 			</list>
 		</property>
-		<!-- <property name="eppServer" ref="eppServerConf.fr" /> -->
 	</bean>
 
 	<bean id="RddsProbe.fr" class="fr.fryscop.probe.test.rdds.RddsProbe">
-		<!-- <property name="probe" ref="rdds"/> -->
-		<property name="name" value="rdds" />
+		<property name="name" value="rdds.fr" />
 		<property name="tld" value="fr" />
-		<property name="server" value="whois.nic.fr" />
 		<property name="whoisNdd" value="afnic.fr" />
 		<property name="type" value="Dns" />
 		<property name="status" value="Ok" />
-		<!-- <property name="eppServer" ref="eppServerConf.fr" /> -->
 	</bean>
 
-<!-- 
-	<bean id="EppProbe.fr" class="fr.fryscop.probe.test.rdds.RddsProbe">
-		<property name="name" value="epp" />
-		<property name="probe" ref="epp" />
-		<property name="tld" value="fr" />
-		<property name="eppServer" ref="eppServerConf.fr" />
-		<property name="ndd" value="fryprobe-afnic.fr" />
-	</bean> 
--->
 </beans>

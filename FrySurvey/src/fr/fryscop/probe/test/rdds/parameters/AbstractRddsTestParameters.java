@@ -4,19 +4,20 @@ import fr.fryscop.probe.test.AbstractTestParameters;
 
 public abstract class AbstractRddsTestParameters extends AbstractTestParameters{
 
-	public AbstractRddsTestParameters(String testName, String serverName, String digNdd) {
+	private final static String DEFAULT_WHOIS_NAME = "whois.nic.";
+	public AbstractRddsTestParameters(String testName, String tld, String digNdd) {
 	    super(testName,digNdd);
-	    this.serverName = serverName;
+	    setServerName( tld);
     }
 
-	String serverName = null;
+	private String serverName = null;
 
 
 	public String getServerName() {
 		return serverName;
 	}
 
-	public void setServerName(String serverName) {
-		this.serverName = serverName;
+	public void setServerName(String tld) {
+		this.serverName = DEFAULT_WHOIS_NAME + tld;
 	}
 }

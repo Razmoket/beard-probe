@@ -14,7 +14,7 @@ public class Configuration {
 
 	private static final Logger logger = LoggerFactory.getLogger(Configuration.class);
 
-	private final static String CONFIGURATION_FILE_NAME= "launcher.tld.xml"; 
+	private final static String CONFIGURATION_FILE_NAME= "probes-launcher.xml"; 
 	
 	public static TestLauncher loadConfiguration() throws Exception{
 		//ApplicationContext context = new ClassPathXmlApplicationContext(CONFIGURATION_FILE_NAME);

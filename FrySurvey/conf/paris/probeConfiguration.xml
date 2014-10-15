@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<import resource="classpath*:eppConfiguration.xml" />
+
+	<bean id="DnsProbe.paris" class="fr.fryscop.probe.test.dns.DnsProbe">
+		<property name="name" value="dns.paris" />
+		<property name="tld" value="paris" />
+		<property name="type" value="Dns" />
+		<property name="status" value="Ok" />
+		<property name="digNdd" value="nic.paris" />
+		<property name="serverList">
+			<list>
+				<value>d.nic.fr</value>
+				<value>f.ext.nic.fr</value>
+				<value>g.ext.nic.fr</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="RddsProbe.paris" class="fr.fryscop.probe.test.rdds.RddsProbe">
+		<property name="name" value="rdds.paris" />
+		<property name="tld" value="paris" />
+		<property name="whoisNdd" value="nic.paris" />
+		<property name="type" value="Dns" />
+		<property name="status" value="Ok" />
+	</bean>
+
+</beans>

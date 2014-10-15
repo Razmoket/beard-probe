@@ -31,8 +31,10 @@ public abstract class AbstractTestParameters {
 		if (this.getStatus() == ProbeStatus.Unavailable) {
 			this.setStatus(ProbeStatus.Ok);
 			unavaibilityDuration = System.currentTimeMillis() - startUnavaibility;
+			//send fin unavaibility
 			return unavaibilityDuration;
 		} else {
+			unavaibilityDuration = 0;
 			return 0;
 		}
 	}

@@ -24,12 +24,12 @@ public class RddsProbe implements ProbeTest {
 	 */
 
 	boolean isInitDone = false;
-	public RddsProbe(Probe probe, String tld, String whoisNdd, String server) {
+	public RddsProbe(Probe probe, String tld, String whoisNdd) {
 		super();
 		this.probe = probe;
 		this.tld = tld;
 		this.whoisNdd = whoisNdd;
-		this.server = server;
+
 		initParam();
 	}
 
@@ -38,8 +38,8 @@ public class RddsProbe implements ProbeTest {
 	}
 
 	private void initParam() {
-		rddsServiceAvailabilityParam = new RddsServiceAvailabilityParam(server, whoisNdd);
-		rddsQueryRttParam = new RddsQueryRttParam(server, whoisNdd);
+		rddsServiceAvailabilityParam = new RddsServiceAvailabilityParam(tld, whoisNdd);
+		rddsQueryRttParam = new RddsQueryRttParam(tld, whoisNdd);
 		this.isInitDone = true;
 	}
 
@@ -48,7 +48,6 @@ public class RddsProbe implements ProbeTest {
 	private Probe probe;
 	private String tld;
 	private String whoisNdd;
-	private String server;
 	private int frequenceTest = 300000; /* 5 minutes */
 
 	private static final long RDDS_QUERY_RTT = 2000;
@@ -140,14 +139,6 @@ public class RddsProbe implements ProbeTest {
 		this.probe.setTld(tld);
 	}
 
-	public String getServer() {
-		return server;
-	}
-
-	public void setServer(String server) {
-		this.server = server;
-	}
-
 	public int getFrequenceTest() {
 		return frequenceTest;
 	}
@@ -187,7 +178,6 @@ public class RddsProbe implements ProbeTest {
 		RddsProbe rddsProbe = new RddsProbe();
 		rddsProbe.setName("test_rdds");
 		rddsProbe.setTld("fr");
-		rddsProbe.setServer("whois.nic.fr");
 		
 		rddsProbe.setWhoisNdd("afnic.fr");
 		rddsProbe.setType(ProbeType.Rdds);
