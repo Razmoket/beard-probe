@@ -3,6 +3,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
+	<import resource="classpath*:alsace/probeConfiguration.xml" />
 	<import resource="classpath*:bzh/probeConfiguration.xml" />
 	<import resource="classpath*:fr/probeConfiguration.xml" />
 	<import resource="classpath*:frogans/probeConfiguration.xml" />
@@ -18,6 +19,8 @@
 	<bean id="Launcher" class="fr.fryscop.probe.test.TestLauncher">
 		<property name="probeList">
 			<list>
+				<ref bean="DnsProbe.alsace" />
+				<ref bean="RddsProbe.alsace" />
 				<ref bean="DnsProbe.bzh" />
 				<ref bean="RddsProbe.bzh" />
 				<ref bean="DnsProbe.fr" />
