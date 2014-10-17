@@ -1,6 +1,7 @@
 package fr.fryscop.network.protocole.epp.action;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Date;
@@ -22,10 +23,13 @@ import org.openrtk.idl.epprtk.contact.epp_ContactPostalInfoType;
 import org.openrtk.idl.epprtk.domain.epp_DomainCheckReq;
 import org.openrtk.idl.epprtk.domain.epp_DomainCheckRsp;
 
+import com.tucows.oxrs.epprtk.rtk.transport.EPPTransportException;
 import com.tucows.oxrs.epprtk.rtk.xml.EPPContactCheck;
 import com.tucows.oxrs.epprtk.rtk.xml.EPPContactCreate;
 import com.tucows.oxrs.epprtk.rtk.xml.EPPDomainCheck;
 import com.tucows.oxrs.epprtk.rtk.xml.EPPXMLBase;
+
+import fr.fryscop.network.protocole.epp.EppRequestObject;
 
 public class EppDomainCheck extends AbstractEppAction {
 
@@ -34,7 +38,7 @@ public class EppDomainCheck extends AbstractEppAction {
 	}
 
 	@Override
-	public void doAction() {
+	public void doAction(EppRequestObject eppRequestObject) throws epp_Exception, epp_XMLException, IOException, EPPTransportException {
             // ***************************
             // Domain Check
             //
@@ -48,26 +52,25 @@ public class EppDomainCheck extends AbstractEppAction {
 
             // The .biz registry requires unique client trid's for
             // a session, so we're using the date here to keep it unique
-            current_time = new Date();
-            client_trid = "ABC:"+epp_client_id+":"+current_time.getTime();
-            command_data.setClientTrid( client_trid );
-            domain_check_request.setCmd( command_data );
+            eppRequestObject.setCurrent_time(new Date());
+            eppRequestObject.getCommand_data().setClientTrid( "ABC:"+eppRequestObject.getEpp_client_id()+":"+eppRequestObject.getCurrent_time().getTime() );
+            domain_check_request.setCmd( eppRequestObject.getCommand_data() );
 
-            List domain_list = (List)new ArrayList();
-            domain_list.add(domain_name);
+            List<String> domain_list = new ArrayList<String>();
+            domain_list.add(eppRequestObject.getDomain_name());
             domain_check_request.setNames( EPPXMLBase.convertListToStringArray(domain_list) );
 
             EPPDomainCheck domain_check = new EPPDomainCheck();
             domain_check.setRequestData(domain_check_request);
 
-            domain_check = (EPPDomainCheck) epp_client.processAction(domain_check);
+            domain_check = (EPPDomainCheck) eppRequestObject.getEpp_client().processAction(domain_check);
 
             epp_DomainCheckRsp domain_check_response = domain_check.getResponseData();
-            check_results = domain_check_response.getResults();
-            System.out.println("DomainCheck results: domain ["+domain_name+"] available? ["+EPPXMLBase.getAvailResultFor(check_results, domain_name)+"]");
+            eppRequestObject.setCheck_results(domain_check_response.getResults());
+            System.out.println("DomainCheck results: domain ["+eppRequestObject.getDomain_name()+"] available? ["+EPPXMLBase.getAvailResultFor(eppRequestObject.getCheck_results(), eppRequestObject.getDomain_name())+"]");
 
-            if ( EPPXMLBase.getAvailResultFor(check_results, domain_name) != null &&
-                 EPPXMLBase.getAvailResultFor(check_results, domain_name).booleanValue() )
+            if ( EPPXMLBase.getAvailResultFor(eppRequestObject.getCheck_results(), eppRequestObject.getDomain_name()) != null &&
+                 EPPXMLBase.getAvailResultFor(eppRequestObject.getCheck_results(), eppRequestObject.getDomain_name()).booleanValue() )
             {
 
                 // We're going to be creating the domain in the registry.
@@ -78,7 +81,7 @@ public class EppDomainCheck extends AbstractEppAction {
                 boolean contact1_avail = false;
                 boolean contact2_avail = false;
 
-                if ( contact_id1 != null )
+                if ( eppRequestObject.getContact_id1() != null )
                 {
                     // ***************************
                     // Contact Check

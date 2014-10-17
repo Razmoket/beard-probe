@@ -1,5 +1,6 @@
 package fr.fryscop.network.protocole.epp.action;
 
+import java.io.IOException;
 import java.util.Date;
 
 import org.openrtk.idl.epprtk.epp_Command;
@@ -10,6 +11,10 @@ import org.openrtk.idl.epprtk.epp_Response;
 import org.openrtk.idl.epprtk.epp_Result;
 import org.openrtk.idl.epprtk.epp_XMLException;
 
+import com.tucows.oxrs.epprtk.rtk.transport.EPPTransportException;
+
+import fr.fryscop.network.protocole.epp.EppRequestObject;
+
 public class EppConnectAndGetGreeting  extends AbstractEppAction{
 
 	public EppConnectAndGetGreeting() {
@@ -17,7 +22,7 @@ public class EppConnectAndGetGreeting  extends AbstractEppAction{
 	}
 
 	@Override
-    public void doAction() {
+    public void doAction(EppRequestObject eppRequestObject) throws epp_Exception, epp_XMLException, IOException, EPPTransportException {
 		//test connect
         System.out.println("Connecting to the EPP Server and getting the greeting");
 
@@ -26,9 +31,9 @@ public class EppConnectAndGetGreeting  extends AbstractEppAction{
          * number on Login. Although Liberty RTK recomends to use this extension
          * tag on Login request.
          */
-        epp_client.setVersionSentOnLogin( false );
+        eppRequestObject.getEpp_client().setVersionSentOnLogin( false );
 
-        epp_Greeting greeting = epp_client.connectAndGetGreeting();
+        epp_Greeting greeting = eppRequestObject.getEpp_client().connectAndGetGreeting();
 
         System.out.println("greeting's server: ["+greeting.getServerId()+"]");
         System.out.println("greeting's server-date: ["+greeting.getServerDate()+"]");
@@ -36,13 +41,14 @@ public class EppConnectAndGetGreeting  extends AbstractEppAction{
 
         // The .biz registry requires unique client trid's for
         // a session, so we're using the date here to keep it unique
-        String client_trid = "ABC:"+epp_client_id+":"+current_time.getTime();
+        String client_trid = "ABC:"+eppRequestObject.getEpp_client_id()+":"+eppRequestObject.getCurrent_time().getTime();
 
-        command_data = new epp_Command();
-        command_data.setClientTrid( client_trid );
+        eppRequestObject.setCommand_data(new epp_Command()); 
+        eppRequestObject.getCommand_data().setClientTrid( client_trid );
+        
 
         System.out.println("Logging into the EPP Server");
-        epp_client.login(client_trid);
+        eppRequestObject.getEpp_client().login(client_trid);
 
         try
         {
@@ -50,9 +56,9 @@ public class EppConnectAndGetGreeting  extends AbstractEppAction{
             // Poll (for waiting messages)
             // ***************************
             System.out.println("Polling the server...");
-            current_time = new Date();
-            client_trid = "ABC:"+epp_client_id+":"+current_time.getTime();
-            epp_PollRsp poll_response = epp_client.poll(client_trid);
+            eppRequestObject.setCurrent_time(new Date()) ;
+            client_trid = "ABC:"+eppRequestObject.getEpp_client_id()+":"+eppRequestObject.getCurrent_time().getTime();
+            epp_PollRsp poll_response = eppRequestObject.getEpp_client().poll(client_trid);
 
             epp_Response response = poll_response.getRsp();
             System.out.println("Poll results: "+response);
