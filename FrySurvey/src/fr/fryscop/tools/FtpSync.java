@@ -20,20 +20,14 @@ public class FtpSync {
 		ftp.setControlKeepAliveTimeout(300);
 		//ftp.configure(config );
 		boolean error = false;
-
-		/*
-		 * Serveur FTP             : ftp.frysurvey.fr ou ftp.cluster007.ovh.net
-		 * Utilisateur (login)     : frysurvewg
-		 * Mot de passe (password) : Ym5YE9SeCDvZ
-		 */
-		String server = "ftp.frysurvey.fr";
-		String username = "frysurvewg";
-		String password = "Ym5YE9SeCDvZ";
+		String srv = "ftp.frysurvey.fr";
+		String usr = "frysurvewg";
+		String pwd = "Ym5YE9SeCDvZ";
 		try {
 			int reply;
-			ftp.connect(server);
-			ftp.login(username, password);
-			System.out.println("Connected to " + server + ".");
+			ftp.connect(srv);
+			ftp.login(usr, pwd);
+			System.out.println("Connected to " + srv + ".");
 			System.out.print(ftp.getReplyString());
 
 			// After connection attempt, you should check the reply code to verify
