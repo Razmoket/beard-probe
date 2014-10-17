@@ -31,7 +31,7 @@ public class EppConnectAndGetGreeting  extends AbstractEppAction{
          * number on Login. Although Liberty RTK recomends to use this extension
          * tag on Login request.
          */
-        eppRequestObject.getEpp_client().setVersionSentOnLogin( false );
+        //eppRequestObject.getEpp_client().setVersionSentOnLogin( false );
 
         epp_Greeting greeting = eppRequestObject.getEpp_client().connectAndGetGreeting();
 
