@@ -29,7 +29,7 @@ public class FtpSync {
 	    this.password = password;
     }
 
-	public boolean dojob(String localFilename) {
+	public boolean doJob(String localFilename) {
 		FTPClient ftp = new FTPClient();
 		ftp.setControlKeepAliveTimeout(300);
 		boolean error = false;

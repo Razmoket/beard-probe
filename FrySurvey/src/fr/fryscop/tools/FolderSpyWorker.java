@@ -1,5 +1,6 @@
 package fr.fryscop.tools;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -13,13 +14,14 @@ import java.util.logging.Logger;
 /**
  * Surveiller les changements dans un dossier
  * 
- * @author Axel
- * @see http://www.fobec.com/java/1126/detecter-changements-fichiers-dans-dossier.html
  */
 public class FolderSpyWorker implements Runnable {
 
-	private Path	path	= null;
-	private FtpSync	ftp = new FtpSync("ftp.frysurvey.fr","frysurvewg","Ym5YE9SeCDvZ");
+	private Path	path	         = null;
+	private FtpSync	ftp	             = new FtpSync("ftp.frysurvey.fr", "frysurvewg", "Ym5YE9SeCDvZ");
+
+	private String	pathname	     = null;
+	private String	backupFolderName	= "backup/";
 
 	/**
 	 * Constructor
@@ -28,14 +30,16 @@ public class FolderSpyWorker implements Runnable {
 	 *            String dossier à surveiller
 	 */
 	public FolderSpyWorker(String pathname) {
-		this.path = Paths.get(pathname);
+		this.pathname = pathname;
+		this.path = Paths.get(this.pathname);
 		System.out.println("Start FolderSpy on:" + pathname);
+
 	}
 
-	public FolderSpyWorker(){
+	public FolderSpyWorker() {
 		this("archive-log-probe/");
 	}
-	
+
 	/**
 	 * Worker
 	 */
@@ -56,6 +60,12 @@ public class FolderSpyWorker implements Runnable {
 					String fileName = event.context().toString();
 					if (StandardWatchEventKinds.ENTRY_CREATE.equals(event.kind())) {
 						System.out.println("new file create " + fileName);
+						if (!ftp.doJob(fileName)) {
+							// le fichier a ete transfere correctement, il est supprimable ou bougeable dans un autre dossier
+							File source = new File(this.pathname + fileName);
+							File destination = new File(this.pathname + backupFolderName + fileName);
+							source.renameTo(destination);
+						}
 					} else if (StandardWatchEventKinds.ENTRY_MODIFY.equals(event.kind())) {
 						System.out.println(fileName + " has been modified");
 					} else if (StandardWatchEventKinds.ENTRY_DELETE.equals(event.kind())) {
@@ -78,5 +88,13 @@ public class FolderSpyWorker implements Runnable {
 		} catch (Exception ex) {
 			Logger.getLogger(FolderSpyWorker.class.getName()).log(Level.SEVERE, null, ex);
 		}
+	}
+
+	public FtpSync getFtp() {
+		return ftp;
+	}
+
+	public void setFtp(FtpSync ftp) {
+		this.ftp = ftp;
 	}
 }
