@@ -3,7 +3,7 @@ set APP_NAME=FrySurvey
 set INSTALL_DIR=C:\FryScop\%APP_NAME%
 set JAR=%INSTALL_DIR%\lib\*.jar
 
-if "%JAVA_HOME%" == "" set JAVA_HOME="C:\Program Files\Java\jdk1.6.0_43"
+if "%JAVA_HOME%" == "" set JAVA_HOME="C:\Program Files\Java\jdk1.7.0_40"
 
 echo %INSTALL_DIR%
 

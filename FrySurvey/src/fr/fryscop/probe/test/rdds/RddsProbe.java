@@ -189,6 +189,11 @@ public class RddsProbe implements ProbeTest {
 		return rddsProbe;
 	}
 
+	@Override
+    public String toString() {
+	    return probe.toString();
+    }
+
 	/*
 	 * public static void main(String arg[]) {
 	 * 

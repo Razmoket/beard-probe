@@ -252,4 +252,9 @@ public class DnsProbe implements ProbeTest {
 	 * dnsProbe.launchTest(); }
 	 */
 	/* TEST */
+
+	@Override
+    public String toString() {
+	    return  probe.toString();
+    }
 }

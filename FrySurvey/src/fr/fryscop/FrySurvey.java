@@ -46,6 +46,7 @@ public class FrySurvey {
 			}
 			configuredLauncher.stopProbes();*/
 		} catch (Exception e) {
+			logger.error(e.getMessage(),e);
 			e.printStackTrace();
 		}
 	}
