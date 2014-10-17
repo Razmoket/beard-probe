@@ -36,27 +36,26 @@ public class EppDomainUpdate extends AbstractEppAction {
         System.out.println("Creating the Domain Update command");
         epp_DomainUpdateReq domain_update_request = new epp_DomainUpdateReq();
 
-        current_time = new Date();
-        client_trid = "ABC:"+epp_client_id+":"+current_time.getTime();
-        command_data.setClientTrid( client_trid );
-        domain_update_request.setCmd( command_data );
+        eppRequestObject.setCurrent_time( new Date());
+        eppRequestObject.getCommand_data().setClientTrid( "ABC:"+eppRequestObject.getEpp_client_id()+":"+eppRequestObject.getCurrent_time().getTime() );
+        domain_update_request.setCmd( eppRequestObject.getCommand_data() );
 
-        domain_update_request.setName( domain_name );
+        domain_update_request.setName( eppRequestObject.getDomain_name() );
 
         // We determined a little earlier which operations to perform.
-        if ( add != null )
+        if ( eppRequestObject.getAdd() != null )
         {
-            domain_update_request.setAdd( add );
+            domain_update_request.setAdd( eppRequestObject.getAdd() );
         }
-        if ( remove != null )
+        if ( eppRequestObject.getRemove() != null )
         {
-            domain_update_request.setRemove( remove );
+            domain_update_request.setRemove( eppRequestObject.getRemove() );
         }
 
         EPPDomainUpdate domain_update = new EPPDomainUpdate();
         domain_update.setRequestData(domain_update_request);
 
-        domain_update = (EPPDomainUpdate) epp_client.processAction(domain_update);
+        domain_update = (EPPDomainUpdate) eppRequestObject.getEpp_client().processAction(domain_update);
 
         // As long as no exception was thrown, the update was a success
 
@@ -68,17 +67,16 @@ public class EppDomainUpdate extends AbstractEppAction {
         System.out.println("Creating the Contact Info command");
         epp_ContactInfoReq contact_info_request = new epp_ContactInfoReq();
 
-        current_time = new Date();
-        client_trid = "ABC:"+epp_client_id+":"+current_time.getTime();
-        command_data.setClientTrid( client_trid );
-        contact_info_request.setCmd( command_data );
+        eppRequestObject.setCurrent_time(new Date());
+        eppRequestObject.getCommand_data().setClientTrid( "ABC:"+eppRequestObject.getEpp_client_id()+":"+eppRequestObject.getCurrent_time().getTime());
+        contact_info_request.setCmd( eppRequestObject.getCommand_data() );
 
-        contact_info_request.setId( domain_info_response.m_registrant );
+        contact_info_request.setId( eppRequestObject.getDomain_info_response().m_registrant );
 
         EPPContactInfo contact_info = new EPPContactInfo();
         contact_info.setRequestData(contact_info_request);
 
-        contact_info = (EPPContactInfo) epp_client.processAction(contact_info);
+        contact_info = (EPPContactInfo) eppRequestObject.getEpp_client().processAction(contact_info);
 
         epp_ContactInfoRsp contact_info_response = contact_info.getResponseData();
 

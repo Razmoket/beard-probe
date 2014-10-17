@@ -1,8 +1,7 @@
 package fr.fryscop.network.protocole.epp.action;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
+import java.text.ParseException;
 import java.util.Date;
 
 import org.openrtk.idl.epprtk.epp_Exception;
@@ -17,6 +16,7 @@ import com.tucows.oxrs.epprtk.rtk.transport.EPPTransportException;
 import com.tucows.oxrs.epprtk.rtk.xml.EPPDomainRenew;
 
 import fr.fryscop.network.protocole.epp.EppRequestObject;
+import fr.fryscop.tools.ISO8601Utils;
 
 public class EppDomainRenew extends AbstractEppAction {
 
@@ -27,64 +27,48 @@ public class EppDomainRenew extends AbstractEppAction {
 	@Override
 	public void doAction(EppRequestObject eppRequestObject) throws epp_Exception, epp_XMLException, IOException, EPPTransportException {
 
-        // Let's ask to see if the user wants to renew the domain
-        BufferedReader buffed_reader = new BufferedReader(new InputStreamReader(System.in));
-        System.out.print("Do you wish to renew your domain [y]? ");
-        String answer = buffed_reader.readLine();
+		// ***************************
+		// Domain Renew
+		//
+		// Now, assuming no exception was thrown from the transfer
+		// query request, we can probably try to renew the
+		// domain.
+		//
+		// ***************************
+		System.out.println("Creating the Domain Renew command");
+		epp_DomainRenewReq domain_renew_request = new epp_DomainRenewReq();
 
-        while ( ( answer != null ) &&
-                ( answer.length() != 0 ) &&
-                ( ! answer.equalsIgnoreCase("n") ) &&
-                ( ! answer.equalsIgnoreCase("y") ) )
-        {
-            answer = buffed_reader.readLine();
-        }
+		eppRequestObject.setCurrent_time(new Date());
+		eppRequestObject.getCommand_data().setClientTrid("ABC:" + eppRequestObject.getEpp_client_id() + ":" + eppRequestObject.getCurrent_time().getTime());
+		domain_renew_request.setCmd(eppRequestObject.getCommand_data());
 
-        if ( ! answer.equalsIgnoreCase("n") )
-        {
+		domain_renew_request.setName(eppRequestObject.getDomain_name());
+		// How about for another 6 years?
+		// Note that some openrtk might not accept renewal
+		// periods by months.
+		epp_DomainPeriod period = new epp_DomainPeriod();
+		period.setUnit(epp_DomainPeriodUnitType.YEAR);
+		period.setValue((short) 6);
+		domain_renew_request.setPeriod(period);
+		// The domain's current expiration must also be specified
+		// to unintentional multiple renew request from succeeding.
+		// The format of the expiration date must be "YYYY-MM-DD"
+		domain_renew_request.setCurrentExpirationDate(RTKBase.DATE_FMT.format(eppRequestObject.getDomain_exp_date()));
 
-            // ***************************
-            // Domain Renew
-            //
-            // Now, assuming no exception was thrown from the transfer
-            // query request, we can probably try to renew the
-            // domain.
-            //
-            // ***************************
-            System.out.println("Creating the Domain Renew command");
-            epp_DomainRenewReq domain_renew_request = new epp_DomainRenewReq();
+		EPPDomainRenew domain_renew = new EPPDomainRenew();
+		domain_renew.setRequestData(domain_renew_request);
 
-            current_time = new Date();
-            client_trid = "ABC:"+epp_client_id+":"+current_time.getTime();
-            command_data.setClientTrid( client_trid );
-            domain_renew_request.setCmd( command_data );
+		domain_renew = (EPPDomainRenew) eppRequestObject.getEpp_client().processAction(domain_renew);
 
-            domain_renew_request.setName( domain_name );
-            // How about for another 6 years?
-            // Note that some openrtk might not accept renewal
-            // periods by months.
-            epp_DomainPeriod period = new epp_DomainPeriod();
-            period.setUnit( epp_DomainPeriodUnitType.YEAR );
-            period.setValue( (short) 6 );
-            domain_renew_request.setPeriod( period );
-            // The domain's current expiration must also be specified
-            // to unintentional multiple renew request from succeeding.
-            // The format of the expiration date must be "YYYY-MM-DD"
-            domain_renew_request.setCurrentExpirationDate( RTKBase.DATE_FMT.format(domain_exp_date) );
-
-            EPPDomainRenew domain_renew = new EPPDomainRenew();
-            domain_renew.setRequestData(domain_renew_request);
-
-            domain_renew = (EPPDomainRenew) epp_client.processAction(domain_renew);
-
-            epp_DomainRenewRsp domain_renew_response = domain_renew.getResponseData();
-            // The domain renew action returns the domain's new expiration
-            // date if the request was successful
-            System.out.println("DomainRenew results: new exDate ["+domain_renew_response.getExpirationDate()+"]");
-            domain_exp_date = RTKBase.UTC_FMT.parse(domain_renew_response.getExpirationDate());
-
-        }
-
+		epp_DomainRenewRsp domain_renew_response = domain_renew.getResponseData();
+		// The domain renew action returns the domain's new expiration
+		// date if the request was successful
+		System.out.println("DomainRenew results: new exDate [" + domain_renew_response.getExpirationDate() + "]");
+		try {
+			eppRequestObject.setDomain_exp_date(ISO8601Utils.parse(domain_renew_response.getExpirationDate()));
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
 
 	}
 

@@ -43,23 +43,22 @@ public class EppDomainTransfer extends AbstractEppAction {
             System.out.println("Creating the Domain Transfer command");
             epp_DomainTransferReq domain_transfer_request = new epp_DomainTransferReq();
 
-            current_time = new Date();
-            client_trid = "ABC:"+epp_client_id+":"+current_time.getTime();
-            command_data.setClientTrid( client_trid );
-            domain_transfer_request.setCmd( command_data );
+            eppRequestObject.setCurrent_time(new Date());
+            eppRequestObject.getCommand_data().setClientTrid( "ABC:"+eppRequestObject.getEpp_client_id()+":"+eppRequestObject.getCurrent_time().getTime() );
+            domain_transfer_request.setCmd( eppRequestObject.getCommand_data() );
 
-            transfer_request = new epp_TransferRequest();
-            transfer_request.setOp( epp_TransferOpType.QUERY );
+            eppRequestObject.setTransfer_request( new epp_TransferRequest());
+            eppRequestObject.getTransfer_request().setOp( epp_TransferOpType.QUERY );
             // Use the auth info from the creation of the domain
-            transfer_request.setAuthInfo( domain_auth_info );
-            domain_transfer_request.setTrans( transfer_request );
+            eppRequestObject.getTransfer_request().setAuthInfo( eppRequestObject.getDomain_auth_info() );
+            domain_transfer_request.setTrans( eppRequestObject.getTransfer_request() );
 
-            domain_transfer_request.setName( domain_name );
+            domain_transfer_request.setName( eppRequestObject.getDomain_name() );
 
             EPPDomainTransfer domain_transfer = new EPPDomainTransfer();
             domain_transfer.setRequestData(domain_transfer_request);
 
-            domain_transfer = (EPPDomainTransfer) epp_client.processAction(domain_transfer);
+            domain_transfer = (EPPDomainTransfer) eppRequestObject.getEpp_client().processAction(domain_transfer);
 
             epp_DomainTransferRsp domain_transfer_response = domain_transfer.getResponseData();
             System.out.println("DomainTransfer Results: transfer status ["+EPPXMLBase.transferStatusToString( domain_transfer_response.getTrnData().getTransferStatus() )+"]");
@@ -71,12 +70,11 @@ public class EppDomainTransfer extends AbstractEppAction {
                 System.out.println("Creating the Domain Transfer command");
                 domain_transfer_request = new epp_DomainTransferReq();
 
-                current_time = new Date();
-                client_trid = "ABC:"+epp_client_id+":"+current_time.getTime();
-                command_data.setClientTrid( client_trid );
-                domain_transfer_request.setCmd( command_data );
+                eppRequestObject.setCurrent_time(new Date());
+                eppRequestObject.getCommand_data().setClientTrid( "ABC:"+eppRequestObject.getEpp_client_id()+":"+eppRequestObject.getCurrent_time().getTime() );
+                domain_transfer_request.setCmd( eppRequestObject.getCommand_data() );
 
-                transfer_request = new epp_TransferRequest();
+                eppRequestObject.setTransfer_request( new epp_TransferRequest());
 
                 // Let's find out from the registrant/registrar if they want
                 // the transfer approved.
@@ -95,39 +93,36 @@ public class EppDomainTransfer extends AbstractEppAction {
                 if ( ! answer.equalsIgnoreCase("n") )
                 {
                     System.out.println("Going to approve the transfer");
-                    transfer_request.setOp( epp_TransferOpType.APPROVE );
+                    eppRequestObject.getTransfer_request().setOp( epp_TransferOpType.APPROVE );
                 }
                 else
                 {
                     System.out.println("Going to reject the transfer");
-                    transfer_request.setOp( epp_TransferOpType.REJECT );
+                    eppRequestObject.getTransfer_request().setOp( epp_TransferOpType.REJECT );
                 }
 
 
                 // Use the auth info from the creation of the domain
-                transfer_request.setAuthInfo( domain_auth_info );
-                domain_transfer_request.setTrans( transfer_request );
+                eppRequestObject.getTransfer_request().setAuthInfo( eppRequestObject.getDomain_auth_info() );
+                domain_transfer_request.setTrans( eppRequestObject.getTransfer_request() );
 
-                domain_transfer_request.setName( domain_name );
+                domain_transfer_request.setName( eppRequestObject.getDomain_name() );
 
                 domain_transfer = new EPPDomainTransfer();
                 domain_transfer.setRequestData(domain_transfer_request);
 
-                domain_transfer = (EPPDomainTransfer) epp_client.processAction(domain_transfer);
+                domain_transfer = (EPPDomainTransfer) eppRequestObject.getEpp_client().processAction(domain_transfer);
 
                 domain_transfer_response = domain_transfer.getResponseData();
                 System.out.println("DomainTransfer Results: transfer status ["+EPPXMLBase.transferStatusToString( domain_transfer_response.getTrnData().getTransferStatus() )+"]");
 
-                if ( transfer_request.getOp() == epp_TransferOpType.APPROVE )
+                if ( eppRequestObject.getTransfer_request().getOp() == epp_TransferOpType.APPROVE )
                 {
                     // We've approved the domain's transfer, so
                     // since we don't own it anymore, we can't
                     // continue working on it.
-                    System.out.println("Logging out from the EPP Server");
-                    epp_client.logout(client_trid);
-                    System.out.println("Disconnecting from the EPP Server");
-                    epp_client.disconnect();
-                    System.exit(1);
+                	new EppDisconnect().doAction(eppRequestObject);
+                    
                 }
 
             }

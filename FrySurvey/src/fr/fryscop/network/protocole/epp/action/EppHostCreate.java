@@ -195,9 +195,7 @@ public class EppHostCreate extends AbstractEppAction {
         }
 
 
-        epp_DomainUpdateAddRemove add = null;
-        epp_DomainUpdateAddRemove remove = null;
-
+        
         // OK, the domain exists, the hosts exists.  Are
         // they already assigned to the domain as nameservers?
 

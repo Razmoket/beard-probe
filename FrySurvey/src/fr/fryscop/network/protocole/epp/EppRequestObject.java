@@ -6,6 +6,8 @@ import org.openrtk.idl.epprtk.epp_AuthInfo;
 import org.openrtk.idl.epprtk.epp_CheckResult;
 import org.openrtk.idl.epprtk.epp_Command;
 import org.openrtk.idl.epprtk.epp_TransferRequest;
+import org.openrtk.idl.epprtk.domain.epp_DomainInfoRsp;
+import org.openrtk.idl.epprtk.domain.epp_DomainUpdateAddRemove;
 
 import com.tucows.oxrs.epprtk.rtk.EPPClient;
 
@@ -37,6 +39,10 @@ public class EppRequestObject {
     epp_CheckResult[] check_results = null;
     
     EPPClient epp_client;
+    
+    epp_DomainUpdateAddRemove add = null;
+    epp_DomainUpdateAddRemove remove = null;
+    epp_DomainInfoRsp domain_info_response = null;
 	
 	public EppRequestObject() {
 		
@@ -257,6 +263,36 @@ public class EppRequestObject {
 
 	public void setEpp_client(EPPClient epp_client) {
 		this.epp_client = epp_client;
+	}
+
+
+	public epp_DomainUpdateAddRemove getAdd() {
+		return add;
+	}
+
+
+	public void setAdd(epp_DomainUpdateAddRemove add) {
+		this.add = add;
+	}
+
+
+	public epp_DomainUpdateAddRemove getRemove() {
+		return remove;
+	}
+
+
+	public void setRemove(epp_DomainUpdateAddRemove remove) {
+		this.remove = remove;
+	}
+
+
+	public epp_DomainInfoRsp getDomain_info_response() {
+		return domain_info_response;
+	}
+
+
+	public void setDomain_info_response(epp_DomainInfoRsp domain_info_response) {
+		this.domain_info_response = domain_info_response;
 	}
 
 }
