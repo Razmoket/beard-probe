@@ -36,15 +36,6 @@ public class FrySurvey {
 			configuredLauncher.initProbeList();
 			logger.info("ProbeLauncher is starting probes.");
 			configuredLauncher.startProbes();
-			
-			
-			// arret de la sonde
-			/*try {	
-				Thread.sleep(600000);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-			configuredLauncher.stopProbes();*/
 		} catch (Exception e) {
 			logger.error(e.getMessage(),e);
 			e.printStackTrace();

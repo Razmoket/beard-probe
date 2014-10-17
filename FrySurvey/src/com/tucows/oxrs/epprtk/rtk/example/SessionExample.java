@@ -75,7 +75,7 @@ public class SessionExample
         // This date will be used in the client trid
         // because the .biz registry requires unique
         // trid's per client session.
-	Date current_time = new Date();
+        Date current_time = new Date();
 
         try
         {
