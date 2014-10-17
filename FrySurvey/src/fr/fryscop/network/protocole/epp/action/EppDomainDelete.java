@@ -1,12 +1,18 @@
 package fr.fryscop.network.protocole.epp.action;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Date;
 
+import org.openrtk.idl.epprtk.epp_Exception;
+import org.openrtk.idl.epprtk.epp_XMLException;
 import org.openrtk.idl.epprtk.domain.epp_DomainDeleteReq;
 
+import com.tucows.oxrs.epprtk.rtk.transport.EPPTransportException;
 import com.tucows.oxrs.epprtk.rtk.xml.EPPDomainDelete;
+
+import fr.fryscop.network.protocole.epp.EppRequestObject;
 
 public class EppDomainDelete extends AbstractEppAction {
 
@@ -15,7 +21,7 @@ public class EppDomainDelete extends AbstractEppAction {
 	}
 
 	@Override
-	public void doAction() {
+	public void doAction(EppRequestObject eppRequestObject) throws epp_Exception, epp_XMLException, IOException, EPPTransportException {
 
         // Let's ask to see if the user wants to delete the domain.
         // You would not want to delete the domain if you want to

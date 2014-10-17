@@ -1,23 +1,29 @@
 package fr.fryscop.network.protocole.epp.action;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Date;
 
 import org.openrtk.idl.epprtk.epp_AuthInfo;
 import org.openrtk.idl.epprtk.epp_AuthInfoType;
+import org.openrtk.idl.epprtk.epp_Exception;
 import org.openrtk.idl.epprtk.epp_TransferOpType;
 import org.openrtk.idl.epprtk.epp_TransferRequest;
+import org.openrtk.idl.epprtk.epp_XMLException;
 import org.openrtk.idl.epprtk.domain.epp_DomainInfoReq;
 import org.openrtk.idl.epprtk.domain.epp_DomainInfoRsp;
 import org.openrtk.idl.epprtk.domain.epp_DomainTransferReq;
 import org.openrtk.idl.epprtk.domain.epp_DomainTransferRsp;
 
 import com.tucows.oxrs.epprtk.rtk.RTKBase;
+import com.tucows.oxrs.epprtk.rtk.transport.EPPTransportException;
 import com.tucows.oxrs.epprtk.rtk.xml.EPPDomainBase;
 import com.tucows.oxrs.epprtk.rtk.xml.EPPDomainInfo;
 import com.tucows.oxrs.epprtk.rtk.xml.EPPDomainTransfer;
 import com.tucows.oxrs.epprtk.rtk.xml.EPPXMLBase;
+
+import fr.fryscop.network.protocole.epp.EppRequestObject;
 
 public class EppDomainInfo extends AbstractEppAction {
 
@@ -26,7 +32,7 @@ public class EppDomainInfo extends AbstractEppAction {
 	}
 
 	@Override
-	public void doAction() {
+	public void doAction(EppRequestObject eppRequestObject) throws epp_Exception, epp_XMLException, IOException, EPPTransportException {
 		// OK, before trying to do anything to this domain,
         // we should check to see if we have a situation where
         // the domain already existed and it's not owned by us.

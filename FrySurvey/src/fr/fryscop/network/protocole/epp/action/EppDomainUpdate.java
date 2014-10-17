@@ -1,13 +1,19 @@
 package fr.fryscop.network.protocole.epp.action;
 
+import java.io.IOException;
 import java.util.Date;
 
+import org.openrtk.idl.epprtk.epp_Exception;
+import org.openrtk.idl.epprtk.epp_XMLException;
 import org.openrtk.idl.epprtk.contact.epp_ContactInfoReq;
 import org.openrtk.idl.epprtk.contact.epp_ContactInfoRsp;
 import org.openrtk.idl.epprtk.domain.epp_DomainUpdateReq;
 
+import com.tucows.oxrs.epprtk.rtk.transport.EPPTransportException;
 import com.tucows.oxrs.epprtk.rtk.xml.EPPContactInfo;
 import com.tucows.oxrs.epprtk.rtk.xml.EPPDomainUpdate;
+
+import fr.fryscop.network.protocole.epp.EppRequestObject;
 
 public class EppDomainUpdate extends AbstractEppAction {
 
@@ -16,7 +22,7 @@ public class EppDomainUpdate extends AbstractEppAction {
 	}
 
 	@Override
-	public void doAction() {
+	public void doAction(EppRequestObject eppRequestObject) throws epp_Exception, epp_XMLException, IOException, EPPTransportException {
 
         // Let's modify the domain to have these hosts act
         // as its nameservers.

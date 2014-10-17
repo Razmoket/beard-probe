@@ -1,6 +1,7 @@
 package fr.fryscop.network.protocole.epp.action;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Date;
@@ -8,14 +9,19 @@ import java.util.List;
 
 import org.openrtk.idl.epprtk.epp_AuthInfo;
 import org.openrtk.idl.epprtk.epp_AuthInfoType;
+import org.openrtk.idl.epprtk.epp_Exception;
+import org.openrtk.idl.epprtk.epp_XMLException;
 import org.openrtk.idl.epprtk.domain.epp_DomainContact;
 import org.openrtk.idl.epprtk.domain.epp_DomainContactType;
 import org.openrtk.idl.epprtk.domain.epp_DomainCreateReq;
 import org.openrtk.idl.epprtk.domain.epp_DomainPeriod;
 import org.openrtk.idl.epprtk.domain.epp_DomainPeriodUnitType;
 
+import com.tucows.oxrs.epprtk.rtk.transport.EPPTransportException;
 import com.tucows.oxrs.epprtk.rtk.xml.EPPDomainCreate;
 import com.tucows.oxrs.epprtk.rtk.xml.EPPXMLBase;
+
+import fr.fryscop.network.protocole.epp.EppRequestObject;
 
 public class EppDomainCreate extends AbstractEppAction {
 
@@ -24,7 +30,7 @@ public class EppDomainCreate extends AbstractEppAction {
 	}
 
 	@Override
-	public void doAction() {
+	public void doAction(EppRequestObject eppRequestObject) throws epp_Exception, epp_XMLException, IOException, EPPTransportException {
 
         // Since we're going to create the domain,
         // we have to ask the registrant for

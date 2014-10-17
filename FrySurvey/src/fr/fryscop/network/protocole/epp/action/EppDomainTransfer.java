@@ -1,6 +1,7 @@
 package fr.fryscop.network.protocole.epp.action;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Date;
 
@@ -10,11 +11,15 @@ import org.openrtk.idl.epprtk.epp_Session;
 import org.openrtk.idl.epprtk.epp_TransferOpType;
 import org.openrtk.idl.epprtk.epp_TransferRequest;
 import org.openrtk.idl.epprtk.epp_TransferStatusType;
+import org.openrtk.idl.epprtk.epp_XMLException;
 import org.openrtk.idl.epprtk.domain.epp_DomainTransferReq;
 import org.openrtk.idl.epprtk.domain.epp_DomainTransferRsp;
 
+import com.tucows.oxrs.epprtk.rtk.transport.EPPTransportException;
 import com.tucows.oxrs.epprtk.rtk.xml.EPPDomainTransfer;
 import com.tucows.oxrs.epprtk.rtk.xml.EPPXMLBase;
+
+import fr.fryscop.network.protocole.epp.EppRequestObject;
 
 public class EppDomainTransfer extends AbstractEppAction {
 
@@ -23,7 +28,7 @@ public class EppDomainTransfer extends AbstractEppAction {
 	}
 
 	@Override
-	public void doAction() {
+	public void doAction(EppRequestObject eppRequestObject) throws epp_Exception, epp_XMLException, IOException, EPPTransportException {
 
         // ***************************
         // Domain Transfer (Query)

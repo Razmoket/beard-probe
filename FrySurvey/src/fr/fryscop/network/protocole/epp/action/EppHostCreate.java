@@ -1,11 +1,14 @@
 package fr.fryscop.network.protocole.epp.action;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import org.openrtk.idl.epprtk.epp_Exception;
+import org.openrtk.idl.epprtk.epp_XMLException;
 import org.openrtk.idl.epprtk.domain.epp_DomainUpdateAddRemove;
 import org.openrtk.idl.epprtk.host.epp_HostAddress;
 import org.openrtk.idl.epprtk.host.epp_HostAddressType;
@@ -15,11 +18,14 @@ import org.openrtk.idl.epprtk.host.epp_HostCreateReq;
 import org.openrtk.idl.epprtk.host.epp_HostInfoReq;
 import org.openrtk.idl.epprtk.host.epp_HostInfoRsp;
 
+import com.tucows.oxrs.epprtk.rtk.transport.EPPTransportException;
 import com.tucows.oxrs.epprtk.rtk.xml.EPPHostBase;
 import com.tucows.oxrs.epprtk.rtk.xml.EPPHostCheck;
 import com.tucows.oxrs.epprtk.rtk.xml.EPPHostCreate;
 import com.tucows.oxrs.epprtk.rtk.xml.EPPHostInfo;
 import com.tucows.oxrs.epprtk.rtk.xml.EPPXMLBase;
+
+import fr.fryscop.network.protocole.epp.EppRequestObject;
 
 public class EppHostCreate extends AbstractEppAction {
 
@@ -28,7 +34,7 @@ public class EppHostCreate extends AbstractEppAction {
 	}
 
 	@Override
-    public void doAction() {
+	public void doAction(EppRequestObject eppRequestObject) throws epp_Exception, epp_XMLException, IOException, EPPTransportException {
 
         // The domain is ours.
         // Now let's create some hosts in this domain.
