@@ -9,6 +9,7 @@ import fr.fryscop.probe.ProbeStatus;
 import fr.fryscop.probe.ProbeType;
 import fr.fryscop.probe.configuration.log.ProbeLogger;
 import fr.fryscop.probe.monitoring.HeartBeat;
+import fr.fryscop.probe.monitoring.ProbeListener;
 import fr.fryscop.probe.test.ProbeTest;
 import fr.fryscop.probe.test.rdds.parameters.AbstractRddsTestParameters;
 import fr.fryscop.probe.test.rdds.parameters.RddsQueryRttParam;
@@ -41,6 +42,7 @@ public class RddsProbe implements ProbeTest {
 		rddsServiceAvailabilityParam = new RddsServiceAvailabilityParam(tld, whoisNdd);
 		rddsQueryRttParam = new RddsQueryRttParam(tld, whoisNdd);
 		this.isInitDone = true;
+		ProbeListener.createProbeListener(probe);
 	}
 
 	private static final Logger logger = LoggerFactory.getLogger(RddsProbe.class);

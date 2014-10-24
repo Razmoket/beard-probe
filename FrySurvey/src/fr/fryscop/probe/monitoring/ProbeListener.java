@@ -7,25 +7,23 @@ import org.slf4j.LoggerFactory;
 
 import fr.fryscop.probe.Probe;
 
-public class HeartBeat extends AbstractHttpRequest {
-	// appel la page de gestion des heartbeat en donnant l'état de la sonde
-	// http://www.frysurvey.fr/monitoring/probes/beat.php?name=test&tld=fr&type=dns&status=1
-	private static final Logger logger = LoggerFactory.getLogger(HeartBeat.class);
-	private final static String defaultBeatUrl = "http://www.frysurvey.fr/monitoring/probes/beat.php";
+public class ProbeListener extends AbstractHttpRequest{
 
-	private static HeartBeat instance = null;
+	private static final Logger logger = LoggerFactory.getLogger(ProbeListener.class);
+	private final static String defaultBeatUrl = "http://frymonitoring.ovh/probe_add.php";
+	private static ProbeListener instance = null;
 
-	private HeartBeat() {
+	private ProbeListener() {
 	}
 
-	protected static HeartBeat getInstance() {
+	protected static ProbeListener getInstance() {
 		if (instance == null) {
-			instance = new HeartBeat();
+			instance = new ProbeListener();
 		}
 		return instance;
 	}
 
-	public static void sendBeat(Probe probe) {
+	public static void createProbeListener(Probe probe) {
 		String urlToCall = defaultBeatUrl + "?" + HeartBeatParameter.Name.getValue() + "=" + probe.getName() + "&" + HeartBeatParameter.Tld.getValue() + "=" + probe.getTld() + "&"
 		        + HeartBeatParameter.Type.getValue() + "=" + probe.getType().getValue() + "&" + HeartBeatParameter.Status.getValue() + "=" + probe.getStatus().getValue();
 		logger.debug("sendBeat() " + urlToCall);

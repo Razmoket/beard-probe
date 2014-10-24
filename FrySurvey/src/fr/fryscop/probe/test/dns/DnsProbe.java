@@ -12,6 +12,7 @@ import fr.fryscop.probe.ProbeStatus;
 import fr.fryscop.probe.ProbeType;
 import fr.fryscop.probe.configuration.log.ProbeLogger;
 import fr.fryscop.probe.monitoring.HeartBeat;
+import fr.fryscop.probe.monitoring.ProbeListener;
 import fr.fryscop.probe.test.ProbeTest;
 import fr.fryscop.probe.test.dns.parameters.AbstractDnsTestParameters;
 import fr.fryscop.probe.test.dns.parameters.DnsNameServerAvailabilityParam;
@@ -66,6 +67,7 @@ public class DnsProbe implements ProbeTest {
 			dnsNameServerAvailabilityParamList.add(new DnsNameServerAvailabilityParam(server, digNdd));
 		}
 		isInitDone = true;
+		ProbeListener.createProbeListener(probe);
 	}
 
 	private DnsProbe() {
