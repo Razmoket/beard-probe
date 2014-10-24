@@ -18,14 +18,14 @@ public class HeartBeat extends AbstractHttpRequest {
 	private HeartBeat() {
 	}
 
-	protected static HeartBeat getInstance() {
+	protected synchronized static HeartBeat getInstance() {
 		if (instance == null) {
 			instance = new HeartBeat();
 		}
 		return instance;
 	}
 
-	public static void sendBeat(Probe probe) {
+	public synchronized static void sendBeat(Probe probe) {
 		String urlToCall = defaultBeatUrl + "?" + HeartBeatParameter.Name.getValue() + "=" + probe.getName() + "&" + HeartBeatParameter.Tld.getValue() + "=" + probe.getTld() + "&"
 		        + HeartBeatParameter.Type.getValue() + "=" + probe.getType().getValue() + "&" + HeartBeatParameter.Status.getValue() + "=" + probe.getStatus().getValue();
 		logger.debug("sendBeat() " + urlToCall);
