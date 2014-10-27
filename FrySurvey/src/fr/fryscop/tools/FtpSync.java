@@ -10,16 +10,19 @@ import org.apache.commons.net.ftp.FTPClient;
 import org.apache.commons.net.ftp.FTPReply;
 import org.apache.commons.net.io.CopyStreamEvent;
 import org.apache.commons.net.io.CopyStreamListener;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class FtpSync {
-
+	private static final Logger logger = LoggerFactory.getLogger(FtpSync.class);
+	
 	String	server;	                                        //                  = "ftp.frysurvey.fr";
 	String	username;	                                    //                  = "frysurvewg";
 	String	password;	                                    //                  = "Ym5YE9SeCDvZ";
 
 	String	default_remote_folder	= "/log_probes/";
 	String	default_local_folder	= "archive-log-probe/";
-
+	
 	
 	
 	public FtpSync(String server, String username, String password) {
@@ -37,8 +40,8 @@ public class FtpSync {
 			int reply;
 			ftp.connect(server);
 			ftp.login(username, password);
-			System.out.println("Connected to " + server + ".");
-			System.out.print(ftp.getReplyString());
+			logger.info("Connected to " + server + ".");
+			logger.info(ftp.getReplyString());
 
 			// After connection attempt, you should check the reply code to verify
 			// success.
@@ -46,11 +49,11 @@ public class FtpSync {
 
 			if (!FTPReply.isPositiveCompletion(reply)) {
 				ftp.disconnect();
-				System.err.println("FTP server refused connection.");
+				logger.error("FTP server refused connection.");
 				return true;
 			}
 			// do the job there
-			System.out.println("Remote system is " + ftp.getSystemType());
+			logger.info("Remote system is " + ftp.getSystemType());
 
 			ftp.setFileType(FTP.BINARY_FILE_TYPE, FTP.BINARY_FILE_TYPE);
 			ftp.setFileTransferMode(FTP.BINARY_FILE_TYPE);
@@ -65,18 +68,15 @@ public class FtpSync {
 			InputStream input;
 			input = new FileInputStream(local);
 
-			System.out.println("local:" + local);
-			System.out.println("remote:" + remote);
-			boolean storeFile = ftp.storeFile(remote, input);
-			System.out.println("storeFile:" + storeFile);
+			ftp.storeFile(remote, input);
 			reply = ftp.getReplyCode();
-			System.out.println("reply:" + reply);
 			input.close();
 
 			// end job
 			ftp.logout();
 		} catch (IOException e) {
 			error = true;
+			logger.error(e.getMessage(),e);
 			e.printStackTrace();
 		} finally {
 			if (ftp.isConnected()) {
@@ -103,7 +103,7 @@ public class FtpSync {
 			public void bytesTransferred(long totalBytesTransferred, int bytesTransferred, long streamSize) {
 				long megs = totalBytesTransferred / 1000000;
 				for (long l = megsTotal; l < megs; l++) {
-					System.err.print("#");
+					logger.error("#");
 				}
 				megsTotal = megs;
 			}

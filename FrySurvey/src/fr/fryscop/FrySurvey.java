@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 
 import fr.fryscop.probe.configuration.Configuration;
 import fr.fryscop.probe.test.TestLauncher;
+import fr.fryscop.tools.LogProbeSyncManager;
 
 public class FrySurvey {
 
@@ -36,6 +37,8 @@ public class FrySurvey {
 			configuredLauncher.initProbeList();
 			logger.info("ProbeLauncher is starting probes.");
 			configuredLauncher.startProbes();
+			
+			LogProbeSyncManager.start();
 		} catch (Exception e) {
 			logger.error(e.getMessage(),e);
 			e.printStackTrace();

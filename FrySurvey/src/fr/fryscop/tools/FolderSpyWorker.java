@@ -8,21 +8,22 @@ import java.nio.file.StandardWatchEventKinds;
 import java.nio.file.WatchEvent;
 import java.nio.file.WatchKey;
 import java.nio.file.WatchService;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 /**
  * Surveiller les changements dans un dossier
  * 
  */
 public class FolderSpyWorker implements Runnable {
-
+	
+	private static final Logger logger = LoggerFactory.getLogger(FolderSpyWorker.class);
 	private Path	path	         = null;
 	private FtpSync	ftp	             = new FtpSync("ftp.frysurvey.fr", "frysurvewg", "Ym5YE9SeCDvZ");
 
 	private String	pathname	     = null;
 	private String	backupFolderName	= "backup/";
-
+	
 	/**
 	 * Constructor
 	 * 
@@ -32,7 +33,7 @@ public class FolderSpyWorker implements Runnable {
 	public FolderSpyWorker(String pathname) {
 		this.pathname = pathname;
 		this.path = Paths.get(this.pathname);
-		System.out.println("Start FolderSpy on:" + pathname);
+		logger.info("Start FolderSpy on:" + pathname);
 
 	}
 
@@ -59,7 +60,7 @@ public class FolderSpyWorker implements Runnable {
 				for (WatchEvent<?> event : watchKey.pollEvents()) {
 					String fileName = event.context().toString();
 					if (StandardWatchEventKinds.ENTRY_CREATE.equals(event.kind())) {
-						System.out.println("new file create " + fileName);
+						logger.info("new file create " + fileName);
 						if (!ftp.doJob(fileName)) {
 							// le fichier a ete transfere correctement, il est supprimable ou bougeable dans un autre dossier
 							File source = new File(this.pathname + fileName);
@@ -67,11 +68,11 @@ public class FolderSpyWorker implements Runnable {
 							source.renameTo(destination);
 						}
 					} else if (StandardWatchEventKinds.ENTRY_MODIFY.equals(event.kind())) {
-						System.out.println(fileName + " has been modified");
+						logger.info(fileName + " has been modified");
 					} else if (StandardWatchEventKinds.ENTRY_DELETE.equals(event.kind())) {
-						System.out.println(fileName + " has been deleted");
+						logger.info(fileName + " has been deleted");
 					} else if (StandardWatchEventKinds.OVERFLOW.equals(event.kind())) {
-						System.out.println("Strange event");
+						logger.info("Strange event");
 						continue;
 					}
 				}
@@ -81,12 +82,12 @@ public class FolderSpyWorker implements Runnable {
 		} catch (InterruptedException ex) {
 			try {
 				if (watchService != null) watchService.close();
-				System.out.println("Stop FolderSpy");
+				logger.info("Stop FolderSpy");
 			} catch (IOException ex1) {
-				Logger.getLogger(FolderSpyWorker.class.getName()).log(Level.SEVERE, null, ex1);
+				logger.error(ex1.getMessage(), ex1);
 			}
 		} catch (Exception ex) {
-			Logger.getLogger(FolderSpyWorker.class.getName()).log(Level.SEVERE, null, ex);
+			logger.error(ex.getMessage(), ex);
 		}
 	}
 
