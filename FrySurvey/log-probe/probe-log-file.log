@@ -1,252 +1,632 @@
-2014-10-16 13:50:59|rdds.yt|yt|DNS|RddsServiceAvailabilityParam|whois.nic.yt|17
-2014-10-16 13:50:59|rdds.tf|tf|DNS|RddsServiceAvailabilityParam|whois.nic.tf|21
-2014-10-16 13:50:59|rdds.wf|wf|DNS|RddsServiceAvailabilityParam|whois.nic.wf|21
-2014-10-16 13:50:59|rdds.pm|pm|DNS|RddsServiceAvailabilityParam|whois.nic.pm|19
-2014-10-16 13:50:59|rdds.yt|yt|DNS|RddsQueryRttParam|whois.nic.yt|8
-2014-10-16 13:50:59|rdds.tf|tf|DNS|RddsQueryRttParam|whois.nic.tf|8
-2014-10-16 13:50:59|rdds.wf|wf|DNS|RddsQueryRttParam|whois.nic.wf|7
-2014-10-16 13:50:59|rdds.pm|pm|DNS|RddsQueryRttParam|whois.nic.pm|9
-2014-10-16 13:50:59|dns.tf|tf|DNS|dnsServiceAvailability| |31
-2014-10-16 13:50:59|dns.yt|yt|DNS|dnsServiceAvailability| |29
-2014-10-16 13:50:59|dns.alsace|alsace|DNS|dnsServiceAvailability| |32
-2014-10-16 13:50:59|dns.bzh|bzh|DNS|dnsServiceAvailability| |33
-2014-10-16 13:50:59|dns.wf|wf|DNS|dnsServiceAvailability| |33
-2014-10-16 13:50:59|dns.frogans|frogans|DNS|dnsServiceAvailability| |36
-2014-10-16 13:50:59|dns.re|re|DNS|dnsServiceAvailability| |37
-2014-10-16 13:50:59|dns.ovh|ovh|DNS|dnsServiceAvailability| |37
-2014-10-16 13:50:59|dns.paris|paris|DNS|dnsServiceAvailability| |37
-2014-10-16 13:50:59|dns.tf|tf|DNS|dnsNameServerAvailability|d.nic.fr|7
-2014-10-16 13:50:59|dns.fr|fr|DNS|dnsServiceAvailability| |39
-2014-10-16 13:50:59|dns.alsace|alsace|DNS|dnsNameServerAvailability|d.nic.fr|8
-2014-10-16 13:50:59|dns.pm|pm|DNS|dnsServiceAvailability| |41
-2014-10-16 13:50:59|dns.yt|yt|DNS|dnsNameServerAvailability|d.nic.fr|8
-2014-10-16 13:50:59|dns.pm|pm|DNS|dnsNameServerAvailability|d.nic.fr|2
-2014-10-16 13:50:59|dns.bzh|bzh|DNS|dnsNameServerAvailability|d.nic.fr|10
-2014-10-16 13:50:59|dns.frogans|frogans|DNS|dnsNameServerAvailability|d.nic.fr|8
-2014-10-16 13:50:59|dns.wf|wf|DNS|dnsNameServerAvailability|d.nic.fr|9
-2014-10-16 13:50:59|dns.re|re|DNS|dnsNameServerAvailability|d.nic.fr|9
-2014-10-16 13:50:59|dns.tf|tf|DNS|dnsNameServerAvailability|f.ext.nic.fr|4
-2014-10-16 13:50:59|dns.yt|yt|DNS|dnsNameServerAvailability|f.ext.nic.fr|4
-2014-10-16 13:50:59|dns.fr|fr|DNS|dnsNameServerAvailability|d.nic.fr|5
-2014-10-16 13:50:59|dns.ovh|ovh|DNS|dnsNameServerAvailability|d.nic.fr|9
-2014-10-16 13:50:59|dns.paris|paris|DNS|dnsNameServerAvailability|d.nic.fr|9
-2014-10-16 13:50:59|dns.alsace|alsace|DNS|dnsNameServerAvailability|f.ext.nic.fr|4
-2014-10-16 13:50:59|dns.pm|pm|DNS|dnsNameServerAvailability|f.ext.nic.fr|2
-2014-10-16 13:50:59|dns.bzh|bzh|DNS|dnsNameServerAvailability|f.ext.nic.fr|3
-2014-10-16 13:50:59|dns.fr|fr|DNS|dnsNameServerAvailability|f.ext.nic.fr|3
-2014-10-16 13:50:59|dns.wf|wf|DNS|dnsNameServerAvailability|f.ext.nic.fr|4
-2014-10-16 13:50:59|dns.frogans|frogans|DNS|dnsNameServerAvailability|f.ext.nic.fr|5
-2014-10-16 13:50:59|dns.paris|paris|DNS|dnsNameServerAvailability|f.ext.nic.fr|4
-2014-10-16 13:50:59|dns.re|re|DNS|dnsNameServerAvailability|f.ext.nic.fr|5
-2014-10-16 13:50:59|dns.tf|tf|DNS|dnsNameServerAvailability|g.ext.nic.fr|3
-2014-10-16 13:50:59|dns.pm|pm|DNS|dnsNameServerAvailability|g.ext.nic.fr|4
-2014-10-16 13:50:59|dns.bzh|bzh|DNS|dnsNameServerAvailability|g.ext.nic.fr|5
-2014-10-16 13:50:59|dns.tf|tf|DNS|tcpDnsResolution| |2
-2014-10-16 13:50:59|dns.wf|wf|DNS|dnsNameServerAvailability|g.ext.nic.fr|4
-2014-10-16 13:50:59|dns.yt|yt|DNS|dnsNameServerAvailability|g.ext.nic.fr|6
-2014-10-16 13:50:59|dns.frogans|frogans|DNS|dnsNameServerAvailability|g.ext.nic.fr|5
-2014-10-16 13:50:59|dns.tf|tf|DNS|UdpDnsResolution| |2
-2014-10-16 13:50:59|dns.paris|paris|DNS|dnsNameServerAvailability|g.ext.nic.fr|5
-2014-10-16 13:50:59|dns.alsace|alsace|DNS|dnsNameServerAvailability|g.ext.nic.fr|8
-2014-10-16 13:50:59|dns.re|re|DNS|dnsNameServerAvailability|g.ext.nic.fr|6
-2014-10-16 13:50:59|dns.fr|fr|DNS|dnsNameServerAvailability|g.ext.nic.fr|8
-2014-10-16 13:50:59|dns.wf|wf|DNS|tcpDnsResolution| |4
-2014-10-16 13:50:59|dns.pm|pm|DNS|tcpDnsResolution| |7
-2014-10-16 13:50:59|dns.frogans|frogans|DNS|tcpDnsResolution| |4
-2014-10-16 13:50:59|dns.bzh|bzh|DNS|tcpDnsResolution| |7
-2014-10-16 13:50:59|dns.fr|fr|DNS|tcpDnsResolution| |3
-2014-10-16 13:50:59|dns.re|re|DNS|tcpDnsResolution| |4
-2014-10-16 13:50:59|dns.pm|pm|DNS|UdpDnsResolution| |2
-2014-10-16 13:50:59|dns.yt|yt|DNS|tcpDnsResolution| |8
-2014-10-16 13:50:59|dns.wf|wf|DNS|UdpDnsResolution| |4
-2014-10-16 13:50:59|dns.bzh|bzh|DNS|UdpDnsResolution| |3
-2014-10-16 13:50:59|dns.fr|fr|DNS|UdpDnsResolution| |3
-2014-10-16 13:50:59|rdds.fr|fr|DNS|RddsServiceAvailabilityParam|whois.nic.fr|113
-2014-10-16 13:50:59|dns.paris|paris|DNS|tcpDnsResolution| |8
-2014-10-16 13:50:59|dns.alsace|alsace|DNS|tcpDnsResolution| |8
-2014-10-16 13:50:59|dns.yt|yt|DNS|UdpDnsResolution| |2
-2014-10-16 13:50:59|dns.re|re|DNS|UdpDnsResolution| |4
-2014-10-16 13:50:59|dns.paris|paris|DNS|UdpDnsResolution| |2
-2014-10-16 13:50:59|dns.frogans|frogans|DNS|UdpDnsResolution| |7
-2014-10-16 13:50:59|dns.alsace|alsace|DNS|UdpDnsResolution| |3
-2014-10-16 13:50:59|rdds.fr|fr|DNS|RddsQueryRttParam|whois.nic.fr|7
-2014-10-16 13:50:59|rdds.re|re|DNS|RddsServiceAvailabilityParam|whois.nic.re|137
-2014-10-16 13:50:59|rdds.re|re|DNS|RddsQueryRttParam|whois.nic.re|6
-2014-10-16 13:50:59|rdds.bzh|bzh|DNS|RddsServiceAvailabilityParam|whois.nic.bzh|545
-2014-10-16 13:50:59|rdds.paris|paris|DNS|RddsServiceAvailabilityParam|whois.nic.paris|590
-2014-10-16 13:50:59|rdds.alsace|alsace|DNS|RddsServiceAvailabilityParam|whois.nic.alsace|613
-2014-10-16 13:50:59|rdds.ovh|ovh|DNS|RddsServiceAvailabilityParam|whois.nic.ovh|657
-2014-10-16 13:50:59|rdds.frogans|frogans|DNS|RddsServiceAvailabilityParam|whois.nic.frogans|735
-2014-10-16 13:51:00|rdds.bzh|bzh|DNS|RddsQueryRttParam|whois.nic.bzh|550
-2014-10-16 13:51:00|rdds.paris|paris|DNS|RddsQueryRttParam|whois.nic.paris|587
-2014-10-16 13:51:00|rdds.alsace|alsace|DNS|RddsQueryRttParam|whois.nic.alsace|584
-2014-10-16 13:51:00|rdds.ovh|ovh|DNS|RddsQueryRttParam|whois.nic.ovh|607
-2014-10-16 13:51:00|rdds.frogans|frogans|DNS|RddsQueryRttParam|whois.nic.frogans|797
-2014-10-16 13:56:24|rdds.yt|yt|DNS|RddsServiceAvailabilityParam|whois.nic.yt|23
-2014-10-16 13:56:24|rdds.fr|fr|DNS|RddsServiceAvailabilityParam|whois.nic.fr|24
-2014-10-16 13:56:25|rdds.wf|wf|DNS|RddsServiceAvailabilityParam|whois.nic.wf|18
-2014-10-16 13:56:25|rdds.pm|pm|DNS|RddsServiceAvailabilityParam|whois.nic.pm|26
-2014-10-16 13:56:25|rdds.fr|fr|DNS|RddsQueryRttParam|whois.nic.fr|7
-2014-10-16 13:56:25|rdds.yt|yt|DNS|RddsQueryRttParam|whois.nic.yt|9
-2014-10-16 13:56:25|rdds.pm|pm|DNS|RddsQueryRttParam|whois.nic.pm|7
-2014-10-16 13:56:25|rdds.wf|wf|DNS|RddsQueryRttParam|whois.nic.wf|10
-2014-10-16 13:56:25|rdds.tf|tf|DNS|RddsServiceAvailabilityParam|whois.nic.tf|52
-2014-10-16 13:56:25|rdds.tf|tf|DNS|RddsQueryRttParam|whois.nic.tf|7
-2014-10-16 13:56:25|dns.pm|pm|DNS|dnsServiceAvailability| |28
-2014-10-16 13:56:25|dns.paris|paris|DNS|dnsServiceAvailability| |28
-2014-10-16 13:56:25|dns.alsace|alsace|DNS|dnsServiceAvailability| |29
-2014-10-16 13:56:25|dns.bzh|bzh|DNS|dnsServiceAvailability| |29
-2014-10-16 13:56:25|dns.yt|yt|DNS|dnsServiceAvailability| |29
-2014-10-16 13:56:25|dns.fr|fr|DNS|dnsServiceAvailability| |29
-2014-10-16 13:56:25|dns.frogans|frogans|DNS|dnsServiceAvailability| |29
-2014-10-16 13:56:25|dns.wf|wf|DNS|dnsServiceAvailability| |29
-2014-10-16 13:56:25|dns.ovh|ovh|DNS|dnsServiceAvailability| |30
-2014-10-16 13:56:25|dns.re|re|DNS|dnsServiceAvailability| |30
-2014-10-16 13:56:25|dns.tf|tf|DNS|dnsServiceAvailability| |30
-2014-10-16 13:56:25|dns.pm|pm|DNS|dnsNameServerAvailability|d.nic.fr|6
-2014-10-16 13:56:25|dns.tf|tf|DNS|dnsNameServerAvailability|d.nic.fr|7
-2014-10-16 13:56:25|dns.wf|wf|DNS|dnsNameServerAvailability|d.nic.fr|6
-2014-10-16 13:56:25|dns.re|re|DNS|dnsNameServerAvailability|d.nic.fr|8
-2014-10-16 13:56:25|dns.ovh|ovh|DNS|dnsNameServerAvailability|d.nic.fr|7
-2014-10-16 13:56:25|dns.frogans|frogans|DNS|dnsNameServerAvailability|d.nic.fr|8
-2014-10-16 13:56:25|dns.fr|fr|DNS|dnsNameServerAvailability|d.nic.fr|7
-2014-10-16 13:56:25|dns.bzh|bzh|DNS|dnsNameServerAvailability|d.nic.fr|8
-2014-10-16 13:56:25|dns.yt|yt|DNS|dnsNameServerAvailability|d.nic.fr|9
-2014-10-16 13:56:25|dns.paris|paris|DNS|dnsNameServerAvailability|d.nic.fr|8
-2014-10-16 13:56:25|dns.alsace|alsace|DNS|dnsNameServerAvailability|d.nic.fr|9
-2014-10-16 13:56:25|dns.wf|wf|DNS|dnsNameServerAvailability|f.ext.nic.fr|6
-2014-10-16 13:56:25|dns.bzh|bzh|DNS|dnsNameServerAvailability|f.ext.nic.fr|3
-2014-10-16 13:56:25|dns.frogans|frogans|DNS|dnsNameServerAvailability|f.ext.nic.fr|5
-2014-10-16 13:56:25|dns.tf|tf|DNS|dnsNameServerAvailability|f.ext.nic.fr|8
-2014-10-16 13:56:25|dns.paris|paris|DNS|dnsNameServerAvailability|f.ext.nic.fr|4
-2014-10-16 13:56:25|dns.fr|fr|DNS|dnsNameServerAvailability|f.ext.nic.fr|7
-2014-10-16 13:56:25|dns.ovh|ovh|DNS|dnsNameServerAvailability|f.ext.nic.fr|9
-2014-10-16 13:56:25|dns.pm|pm|DNS|dnsNameServerAvailability|f.ext.nic.fr|11
-2014-10-16 13:56:25|dns.yt|yt|DNS|dnsNameServerAvailability|f.ext.nic.fr|7
-2014-10-16 13:56:25|dns.wf|wf|DNS|dnsNameServerAvailability|g.ext.nic.fr|4
-2014-10-16 13:56:25|dns.tf|tf|DNS|dnsNameServerAvailability|g.ext.nic.fr|4
-2014-10-16 13:56:25|dns.re|re|DNS|dnsNameServerAvailability|f.ext.nic.fr|11
-2014-10-16 13:56:25|dns.wf|wf|DNS|tcpDnsResolution| |2
-2014-10-16 13:56:25|dns.frogans|frogans|DNS|dnsNameServerAvailability|g.ext.nic.fr|6
-2014-10-16 13:56:25|dns.tf|tf|DNS|tcpDnsResolution| |2
-2014-10-16 13:56:25|dns.bzh|bzh|DNS|dnsNameServerAvailability|g.ext.nic.fr|6
-2014-10-16 13:56:25|dns.wf|wf|DNS|UdpDnsResolution| |2
-2014-10-16 13:56:25|dns.paris|paris|DNS|dnsNameServerAvailability|g.ext.nic.fr|8
-2014-10-16 13:56:25|dns.re|re|DNS|dnsNameServerAvailability|g.ext.nic.fr|5
-2014-10-16 13:56:25|dns.bzh|bzh|DNS|tcpDnsResolution| |5
-2014-10-16 13:56:25|dns.paris|paris|DNS|tcpDnsResolution| |4
-2014-10-16 13:56:25|dns.re|re|DNS|tcpDnsResolution| |3
-2014-10-16 13:56:25|dns.bzh|bzh|DNS|UdpDnsResolution| |3
-2014-10-16 13:56:25|dns.tf|tf|DNS|UdpDnsResolution| |9
-2014-10-16 13:56:25|dns.paris|paris|DNS|UdpDnsResolution| |3
-2014-10-16 13:56:25|dns.re|re|DNS|UdpDnsResolution| |3
-2014-10-16 13:56:25|dns.yt|yt|DNS|dnsNameServerAvailability|g.ext.nic.fr|15
-2014-10-16 13:56:25|dns.fr|fr|DNS|dnsNameServerAvailability|g.ext.nic.fr|16
-2014-10-16 13:56:25|dns.ovh|ovh|DNS|dnsNameServerAvailability|g.ext.nic.fr|16
-2014-10-16 13:56:25|dns.frogans|frogans|DNS|tcpDnsResolution| |12
-2014-10-16 13:56:25|dns.fr|fr|DNS|tcpDnsResolution| |2
-2014-10-16 13:56:25|dns.frogans|frogans|DNS|UdpDnsResolution| |2
-2014-10-16 13:56:25|dns.pm|pm|DNS|dnsNameServerAvailability|g.ext.nic.fr|19
-2014-10-16 13:56:25|dns.ovh|ovh|DNS|tcpDnsResolution| |3
-2014-10-16 13:56:25|dns.fr|fr|DNS|UdpDnsResolution| |1
-2014-10-16 13:56:25|dns.yt|yt|DNS|tcpDnsResolution| |5
-2014-10-16 13:56:25|dns.pm|pm|DNS|tcpDnsResolution| |1
-2014-10-16 13:56:25|dns.ovh|ovh|DNS|UdpDnsResolution| |1
-2014-10-16 13:56:25|dns.yt|yt|DNS|UdpDnsResolution| |1
-2014-10-16 13:56:25|dns.pm|pm|DNS|UdpDnsResolution| |2
-2014-10-16 13:56:25|rdds.re|re|DNS|RddsServiceAvailabilityParam|whois.nic.re|117
-2014-10-16 13:56:25|rdds.re|re|DNS|RddsQueryRttParam|whois.nic.re|8
-2014-10-16 13:56:25|rdds.bzh|bzh|DNS|RddsServiceAvailabilityParam|whois.nic.bzh|543
-2014-10-16 13:56:25|rdds.ovh|ovh|DNS|RddsServiceAvailabilityParam|whois.nic.ovh|556
-2014-10-16 13:56:25|rdds.alsace|alsace|DNS|RddsServiceAvailabilityParam|whois.nic.alsace|567
-2014-10-16 13:56:25|rdds.paris|paris|DNS|RddsServiceAvailabilityParam|whois.nic.paris|571
-2014-10-16 13:56:25|rdds.frogans|frogans|DNS|RddsServiceAvailabilityParam|whois.nic.frogans|886
-2014-10-16 13:56:26|rdds.bzh|bzh|DNS|RddsQueryRttParam|whois.nic.bzh|533
-2014-10-16 13:56:26|rdds.ovh|ovh|DNS|RddsQueryRttParam|whois.nic.ovh|555
-2014-10-16 13:56:26|rdds.alsace|alsace|DNS|RddsQueryRttParam|whois.nic.alsace|575
-2014-10-16 13:56:26|rdds.paris|paris|DNS|RddsQueryRttParam|whois.nic.paris|586
-2014-10-16 13:56:26|rdds.frogans|frogans|DNS|RddsQueryRttParam|whois.nic.frogans|824
-2014-10-16 13:58:48|rdds.re|re|DNS|RddsServiceAvailabilityParam|whois.nic.re|13
-2014-10-16 13:58:48|rdds.tf|tf|DNS|RddsServiceAvailabilityParam|whois.nic.tf|13
-2014-10-16 13:58:48|rdds.fr|fr|DNS|RddsServiceAvailabilityParam|whois.nic.fr|24
-2014-10-16 13:58:48|rdds.wf|wf|DNS|RddsServiceAvailabilityParam|whois.nic.wf|15
-2014-10-16 13:58:48|rdds.re|re|DNS|RddsQueryRttParam|whois.nic.re|8
-2014-10-16 13:58:48|rdds.tf|tf|DNS|RddsQueryRttParam|whois.nic.tf|10
-2014-10-16 13:58:48|rdds.fr|fr|DNS|RddsQueryRttParam|whois.nic.fr|10
-2014-10-16 13:58:48|rdds.wf|wf|DNS|RddsQueryRttParam|whois.nic.wf|9
-2014-10-16 13:58:48|rdds.pm|pm|DNS|RddsServiceAvailabilityParam|whois.nic.pm|45
-2014-10-16 13:58:48|rdds.yt|yt|DNS|RddsServiceAvailabilityParam|whois.nic.yt|44
-2014-10-16 13:58:48|rdds.pm|pm|DNS|RddsQueryRttParam|whois.nic.pm|8
-2014-10-16 13:58:48|rdds.yt|yt|DNS|RddsQueryRttParam|whois.nic.yt|8
-2014-10-16 13:58:48|dns.bzh|bzh|DNS|dnsServiceAvailability| |29
-2014-10-16 13:58:48|dns.pm|pm|DNS|dnsServiceAvailability| |28
-2014-10-16 13:58:48|dns.alsace|alsace|DNS|dnsServiceAvailability| |29
-2014-10-16 13:58:48|dns.ovh|ovh|DNS|dnsServiceAvailability| |29
-2014-10-16 13:58:48|dns.yt|yt|DNS|dnsServiceAvailability| |29
-2014-10-16 13:58:48|dns.fr|fr|DNS|dnsServiceAvailability| |30
-2014-10-16 13:58:48|dns.paris|paris|DNS|dnsServiceAvailability| |30
-2014-10-16 13:58:48|dns.tf|tf|DNS|dnsServiceAvailability| |32
-2014-10-16 13:58:48|dns.frogans|frogans|DNS|dnsServiceAvailability| |33
-2014-10-16 13:58:48|dns.re|re|DNS|dnsServiceAvailability| |35
-2014-10-16 13:58:48|dns.wf|wf|DNS|dnsServiceAvailability| |34
-2014-10-16 13:58:48|dns.paris|paris|DNS|dnsNameServerAvailability|d.nic.fr|7
-2014-10-16 13:58:48|dns.yt|yt|DNS|dnsNameServerAvailability|d.nic.fr|6
-2014-10-16 13:58:48|dns.bzh|bzh|DNS|dnsNameServerAvailability|d.nic.fr|7
-2014-10-16 13:58:48|dns.fr|fr|DNS|dnsNameServerAvailability|d.nic.fr|7
-2014-10-16 13:58:48|dns.alsace|alsace|DNS|dnsNameServerAvailability|d.nic.fr|8
-2014-10-16 13:58:48|dns.ovh|ovh|DNS|dnsNameServerAvailability|d.nic.fr|8
-2014-10-16 13:58:48|dns.pm|pm|DNS|dnsNameServerAvailability|d.nic.fr|8
-2014-10-16 13:58:48|dns.tf|tf|DNS|dnsNameServerAvailability|d.nic.fr|8
-2014-10-16 13:58:48|dns.alsace|alsace|DNS|dnsNameServerAvailability|f.ext.nic.fr|3
-2014-10-16 13:58:48|dns.ovh|ovh|DNS|dnsNameServerAvailability|f.ext.nic.fr|3
-2014-10-16 13:58:48|dns.fr|fr|DNS|dnsNameServerAvailability|f.ext.nic.fr|4
-2014-10-16 13:58:48|dns.tf|tf|DNS|dnsNameServerAvailability|f.ext.nic.fr|4
-2014-10-16 13:58:48|dns.yt|yt|DNS|dnsNameServerAvailability|f.ext.nic.fr|3
-2014-10-16 13:58:48|dns.pm|pm|DNS|dnsNameServerAvailability|f.ext.nic.fr|5
-2014-10-16 13:58:48|dns.frogans|frogans|DNS|dnsNameServerAvailability|d.nic.fr|13
-2014-10-16 13:58:48|dns.wf|wf|DNS|dnsNameServerAvailability|d.nic.fr|12
-2014-10-16 13:58:48|dns.paris|paris|DNS|dnsNameServerAvailability|f.ext.nic.fr|10
-2014-10-16 13:58:48|dns.re|re|DNS|dnsNameServerAvailability|d.nic.fr|13
-2014-10-16 13:58:48|dns.bzh|bzh|DNS|dnsNameServerAvailability|f.ext.nic.fr|7
-2014-10-16 13:58:48|dns.frogans|frogans|DNS|dnsNameServerAvailability|f.ext.nic.fr|2
-2014-10-16 13:58:48|dns.alsace|alsace|DNS|dnsNameServerAvailability|g.ext.nic.fr|6
-2014-10-16 13:58:48|dns.wf|wf|DNS|dnsNameServerAvailability|f.ext.nic.fr|3
-2014-10-16 13:58:48|dns.yt|yt|DNS|dnsNameServerAvailability|g.ext.nic.fr|6
-2014-10-16 13:58:48|dns.fr|fr|DNS|dnsNameServerAvailability|g.ext.nic.fr|8
-2014-10-16 13:58:48|dns.pm|pm|DNS|dnsNameServerAvailability|g.ext.nic.fr|7
-2014-10-16 13:58:48|dns.alsace|alsace|DNS|tcpDnsResolution| |2
-2014-10-16 13:58:48|dns.yt|yt|DNS|tcpDnsResolution| |2
-2014-10-16 13:58:48|dns.paris|paris|DNS|dnsNameServerAvailability|g.ext.nic.fr|5
-2014-10-16 13:58:48|dns.fr|fr|DNS|tcpDnsResolution| |2
-2014-10-16 13:58:48|dns.frogans|frogans|DNS|dnsNameServerAvailability|g.ext.nic.fr|4
-2014-10-16 13:58:48|dns.bzh|bzh|DNS|dnsNameServerAvailability|g.ext.nic.fr|6
-2014-10-16 13:58:48|dns.yt|yt|DNS|UdpDnsResolution| |2
-2014-10-16 13:58:48|dns.wf|wf|DNS|dnsNameServerAvailability|g.ext.nic.fr|4
-2014-10-16 13:58:48|dns.pm|pm|DNS|tcpDnsResolution| |3
-2014-10-16 13:58:48|dns.frogans|frogans|DNS|tcpDnsResolution| |2
-2014-10-16 13:58:48|dns.fr|fr|DNS|UdpDnsResolution| |2
-2014-10-16 13:58:48|dns.alsace|alsace|DNS|UdpDnsResolution| |4
-2014-10-16 13:58:48|dns.bzh|bzh|DNS|tcpDnsResolution| |3
-2014-10-16 13:58:48|dns.paris|paris|DNS|tcpDnsResolution| |5
-2014-10-16 13:58:48|dns.frogans|frogans|DNS|UdpDnsResolution| |3
-2014-10-16 13:58:48|dns.pm|pm|DNS|UdpDnsResolution| |3
-2014-10-16 13:58:48|dns.wf|wf|DNS|tcpDnsResolution| |5
-2014-10-16 13:58:48|dns.bzh|bzh|DNS|UdpDnsResolution| |2
-2014-10-16 13:58:48|dns.paris|paris|DNS|UdpDnsResolution| |4
-2014-10-16 13:58:48|dns.wf|wf|DNS|UdpDnsResolution| |2
-2014-10-16 13:58:48|dns.ovh|ovh|DNS|dnsNameServerAvailability|g.ext.nic.fr|19
-2014-10-16 13:58:48|dns.tf|tf|DNS|dnsNameServerAvailability|g.ext.nic.fr|18
-2014-10-16 13:58:48|dns.ovh|ovh|DNS|tcpDnsResolution| |1
-2014-10-16 13:58:48|dns.tf|tf|DNS|tcpDnsResolution| |2
-2014-10-16 13:58:48|dns.ovh|ovh|DNS|UdpDnsResolution| |1
-2014-10-16 13:58:48|dns.tf|tf|DNS|UdpDnsResolution| |1
-2014-10-16 13:58:49|rdds.ovh|ovh|DNS|RddsServiceAvailabilityParam|whois.nic.ovh|550
-2014-10-16 13:58:49|rdds.paris|paris|DNS|RddsServiceAvailabilityParam|whois.nic.paris|572
-2014-10-16 13:58:49|rdds.bzh|bzh|DNS|RddsServiceAvailabilityParam|whois.nic.bzh|580
-2014-10-16 13:58:49|rdds.alsace|alsace|DNS|RddsServiceAvailabilityParam|whois.nic.alsace|591
-2014-10-16 13:58:49|rdds.frogans|frogans|DNS|RddsServiceAvailabilityParam|whois.nic.frogans|802
-2014-10-16 13:58:49|rdds.ovh|ovh|DNS|RddsQueryRttParam|whois.nic.ovh|547
-2014-10-16 13:58:49|rdds.bzh|bzh|DNS|RddsQueryRttParam|whois.nic.bzh|561
-2014-10-16 13:58:49|rdds.paris|paris|DNS|RddsQueryRttParam|whois.nic.paris|569
-2014-10-16 13:58:49|rdds.alsace|alsace|DNS|RddsQueryRttParam|whois.nic.alsace|574
-2014-10-16 13:58:50|rdds.frogans|frogans|DNS|RddsQueryRttParam|whois.nic.frogans|802
+2014-10-24 10:00:38|rdds.re|re|DNS|RddsServiceAvailabilityParam|whois.nic.re|30
+2014-10-24 10:00:38|rdds.wf|wf|DNS|RddsServiceAvailabilityParam|whois.nic.wf|50
+2014-10-24 10:00:38|rdds.tf|tf|DNS|RddsServiceAvailabilityParam|whois.nic.tf|50
+2014-10-24 10:00:38|rdds.yt|yt|DNS|RddsServiceAvailabilityParam|whois.nic.yt|70
+2014-10-24 10:00:38|rdds.pm|pm|DNS|RddsServiceAvailabilityParam|whois.nic.pm|30
+2014-10-24 10:00:38|rdds.tf|tf|DNS|RddsQueryRttParam|whois.nic.tf|0
+2014-10-24 10:00:38|rdds.yt|yt|DNS|RddsQueryRttParam|whois.nic.yt|0
+2014-10-24 10:00:38|rdds.wf|wf|DNS|RddsQueryRttParam|whois.nic.wf|10
+2014-10-24 10:00:38|rdds.re|re|DNS|RddsQueryRttParam|whois.nic.re|10
+2014-10-24 10:00:38|rdds.pm|pm|DNS|RddsQueryRttParam|whois.nic.pm|10
+2014-10-24 10:00:38|rdds.fr|fr|DNS|RddsServiceAvailabilityParam|whois.nic.fr|108
+2014-10-24 10:00:38|rdds.fr|fr|DNS|RddsQueryRttParam|whois.nic.fr|2
+2014-10-24 10:00:38|dns.pm|pm|DNS|dnsServiceAvailability| |94
+2014-10-24 10:00:38|dns.ovh|ovh|DNS|dnsServiceAvailability| |94
+2014-10-24 10:00:38|dns.re|re|DNS|dnsServiceAvailability| |94
+2014-10-24 10:00:38|dns.frogans|frogans|DNS|dnsServiceAvailability| |94
+2014-10-24 10:00:38|dns.paris|paris|DNS|dnsServiceAvailability| |94
+2014-10-24 10:00:38|dns.bzh|bzh|DNS|dnsServiceAvailability| |94
+2014-10-24 10:00:38|dns.tf|tf|DNS|dnsServiceAvailability| |94
+2014-10-24 10:00:38|dns.yt|yt|DNS|dnsServiceAvailability| |94
+2014-10-24 10:00:38|dns.alsace|alsace|DNS|dnsServiceAvailability| |94
+2014-10-24 10:00:38|dns.fr|fr|DNS|dnsServiceAvailability| |94
+2014-10-24 10:00:38|dns.wf|wf|DNS|dnsServiceAvailability| |94
+2014-10-24 10:00:38|dns.frogans|frogans|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:00:38|dns.fr|fr|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:00:38|dns.pm|pm|DNS|dnsNameServerAvailability|d.nic.fr|10
+2014-10-24 10:00:38|dns.bzh|bzh|DNS|dnsNameServerAvailability|d.nic.fr|10
+2014-10-24 10:00:38|dns.wf|wf|DNS|dnsNameServerAvailability|d.nic.fr|10
+2014-10-24 10:00:38|dns.re|re|DNS|dnsNameServerAvailability|d.nic.fr|10
+2014-10-24 10:00:38|dns.paris|paris|DNS|dnsNameServerAvailability|d.nic.fr|10
+2014-10-24 10:00:38|dns.alsace|alsace|DNS|dnsNameServerAvailability|d.nic.fr|10
+2014-10-24 10:00:38|dns.tf|tf|DNS|dnsNameServerAvailability|d.nic.fr|10
+2014-10-24 10:00:38|dns.yt|yt|DNS|dnsNameServerAvailability|d.nic.fr|10
+2014-10-24 10:00:38|dns.ovh|ovh|DNS|dnsNameServerAvailability|d.nic.fr|10
+2014-10-24 10:00:38|dns.frogans|frogans|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:00:38|dns.tf|tf|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:00:38|dns.re|re|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:00:38|dns.ovh|ovh|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:00:38|dns.bzh|bzh|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:00:38|dns.pm|pm|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:00:38|dns.paris|paris|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:00:38|dns.wf|wf|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:00:38|dns.yt|yt|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:00:38|dns.alsace|alsace|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:00:38|dns.tf|tf|DNS|dnsNameServerAvailability|g.ext.nic.fr|0
+2014-10-24 10:00:38|dns.pm|pm|DNS|dnsNameServerAvailability|g.ext.nic.fr|0
+2014-10-24 10:00:38|dns.frogans|frogans|DNS|dnsNameServerAvailability|g.ext.nic.fr|0
+2014-10-24 10:00:38|dns.bzh|bzh|DNS|dnsNameServerAvailability|g.ext.nic.fr|0
+2014-10-24 10:00:38|dns.re|re|DNS|dnsNameServerAvailability|g.ext.nic.fr|0
+2014-10-24 10:00:38|dns.ovh|ovh|DNS|dnsNameServerAvailability|g.ext.nic.fr|0
+2014-10-24 10:00:38|dns.paris|paris|DNS|dnsNameServerAvailability|g.ext.nic.fr|0
+2014-10-24 10:00:38|dns.yt|yt|DNS|dnsNameServerAvailability|g.ext.nic.fr|0
+2014-10-24 10:00:38|dns.alsace|alsace|DNS|dnsNameServerAvailability|g.ext.nic.fr|0
+2014-10-24 10:00:38|dns.wf|wf|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:00:38|dns.bzh|bzh|DNS|tcpDnsResolution| |10
+2014-10-24 10:00:38|dns.frogans|frogans|DNS|tcpDnsResolution| |10
+2014-10-24 10:00:38|dns.ovh|ovh|DNS|tcpDnsResolution| |10
+2014-10-24 10:00:38|dns.paris|paris|DNS|tcpDnsResolution| |10
+2014-10-24 10:00:38|dns.pm|pm|DNS|tcpDnsResolution| |10
+2014-10-24 10:00:38|dns.re|re|DNS|tcpDnsResolution| |10
+2014-10-24 10:00:38|dns.alsace|alsace|DNS|tcpDnsResolution| |0
+2014-10-24 10:00:38|dns.tf|tf|DNS|tcpDnsResolution| |10
+2014-10-24 10:00:38|dns.ovh|ovh|DNS|UdpDnsResolution| |0
+2014-10-24 10:00:38|dns.paris|paris|DNS|UdpDnsResolution| |0
+2014-10-24 10:00:38|dns.bzh|bzh|DNS|UdpDnsResolution| |0
+2014-10-24 10:00:38|dns.pm|pm|DNS|UdpDnsResolution| |0
+2014-10-24 10:00:38|dns.re|re|DNS|UdpDnsResolution| |0
+2014-10-24 10:00:38|dns.alsace|alsace|DNS|UdpDnsResolution| |0
+2014-10-24 10:00:38|dns.wf|wf|DNS|tcpDnsResolution| |0
+2014-10-24 10:00:38|dns.tf|tf|DNS|UdpDnsResolution| |0
+2014-10-24 10:00:38|dns.yt|yt|DNS|tcpDnsResolution| |10
+2014-10-24 10:00:38|dns.frogans|frogans|DNS|UdpDnsResolution| |0
+2014-10-24 10:00:38|dns.yt|yt|DNS|UdpDnsResolution| |10
+2014-10-24 10:00:38|dns.wf|wf|DNS|UdpDnsResolution| |10
+2014-10-24 10:00:38|rdds.ovh|ovh|DNS|RddsServiceAvailabilityParam|whois.nic.ovh|520
+2014-10-24 10:00:38|rdds.bzh|bzh|DNS|RddsServiceAvailabilityParam|whois.nic.bzh|560
+2014-10-24 10:00:38|rdds.paris|paris|DNS|RddsServiceAvailabilityParam|whois.nic.paris|590
+2014-10-24 10:00:38|rdds.frogans|frogans|DNS|RddsServiceAvailabilityParam|whois.nic.frogans|820
+2014-10-24 10:00:38|rdds.alsace|alsace|DNS|RddsServiceAvailabilityParam|whois.nic.alsace|840
+2014-10-24 10:00:39|rdds.bzh|bzh|DNS|RddsQueryRttParam|whois.nic.bzh|530
+2014-10-24 10:00:39|rdds.ovh|ovh|DNS|RddsQueryRttParam|whois.nic.ovh|550
+2014-10-24 10:00:39|rdds.paris|paris|DNS|RddsQueryRttParam|whois.nic.paris|570
+2014-10-24 10:00:39|rdds.alsace|alsace|DNS|RddsQueryRttParam|whois.nic.alsace|561
+2014-10-24 10:00:39|rdds.frogans|frogans|DNS|RddsQueryRttParam|whois.nic.frogans|811
+2014-10-24 10:00:48|dns.fr|fr|DNS|dnsNameServerAvailability|f.ext.nic.fr|unavailable
+2014-10-24 10:00:48|dns.fr|fr|DNS|dnsNameServerAvailability|g.ext.nic.fr|71
+2014-10-24 10:00:48|dns.fr|fr|DNS|tcpDnsResolution| |10
+2014-10-24 10:00:48|dns.fr|fr|DNS|UdpDnsResolution| |0
+2014-10-24 10:01:50|rdds.pm|pm|DNS|RddsServiceAvailabilityParam|whois.nic.pm|20
+2014-10-24 10:01:50|rdds.yt|yt|DNS|RddsServiceAvailabilityParam|whois.nic.yt|20
+2014-10-24 10:01:50|rdds.fr|fr|DNS|RddsServiceAvailabilityParam|whois.nic.fr|20
+2014-10-24 10:01:50|rdds.re|re|DNS|RddsServiceAvailabilityParam|whois.nic.re|20
+2014-10-24 10:01:50|rdds.tf|tf|DNS|RddsServiceAvailabilityParam|whois.nic.tf|40
+2014-10-24 10:01:50|rdds.wf|wf|DNS|RddsServiceAvailabilityParam|whois.nic.wf|40
+2014-10-24 10:01:50|dns.frogans|frogans|DNS|dnsServiceAvailability| |43
+2014-10-24 10:01:50|dns.alsace|alsace|DNS|dnsServiceAvailability| |43
+2014-10-24 10:01:50|dns.fr|fr|DNS|dnsServiceAvailability| |43
+2014-10-24 10:01:50|dns.pm|pm|DNS|dnsServiceAvailability| |43
+2014-10-24 10:01:50|dns.tf|tf|DNS|dnsServiceAvailability| |43
+2014-10-24 10:01:50|dns.bzh|bzh|DNS|dnsServiceAvailability| |43
+2014-10-24 10:01:50|dns.ovh|ovh|DNS|dnsServiceAvailability| |43
+2014-10-24 10:01:50|dns.paris|paris|DNS|dnsServiceAvailability| |43
+2014-10-24 10:01:50|dns.yt|yt|DNS|dnsServiceAvailability| |43
+2014-10-24 10:01:50|dns.wf|wf|DNS|dnsServiceAvailability| |43
+2014-10-24 10:01:50|dns.re|re|DNS|dnsServiceAvailability| |43
+2014-10-24 10:01:50|dns.yt|yt|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:01:50|dns.frogans|frogans|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:01:50|dns.ovh|ovh|DNS|dnsNameServerAvailability|d.nic.fr|10
+2014-10-24 10:01:50|dns.tf|tf|DNS|dnsNameServerAvailability|d.nic.fr|10
+2014-10-24 10:01:50|dns.pm|pm|DNS|dnsNameServerAvailability|d.nic.fr|10
+2014-10-24 10:01:50|dns.fr|fr|DNS|dnsNameServerAvailability|d.nic.fr|10
+2014-10-24 10:01:50|dns.alsace|alsace|DNS|dnsNameServerAvailability|d.nic.fr|10
+2014-10-24 10:01:50|dns.wf|wf|DNS|dnsNameServerAvailability|d.nic.fr|10
+2014-10-24 10:01:50|dns.re|re|DNS|dnsNameServerAvailability|d.nic.fr|10
+2014-10-24 10:01:50|dns.paris|paris|DNS|dnsNameServerAvailability|d.nic.fr|10
+2014-10-24 10:01:50|dns.bzh|bzh|DNS|dnsNameServerAvailability|d.nic.fr|10
+2014-10-24 10:01:50|dns.paris|paris|DNS|dnsNameServerAvailability|f.ext.nic.fr|10
+2014-10-24 10:01:50|dns.yt|yt|DNS|dnsNameServerAvailability|f.ext.nic.fr|10
+2014-10-24 10:01:50|dns.alsace|alsace|DNS|dnsNameServerAvailability|f.ext.nic.fr|10
+2014-10-24 10:01:50|dns.bzh|bzh|DNS|dnsNameServerAvailability|f.ext.nic.fr|10
+2014-10-24 10:01:50|dns.re|re|DNS|dnsNameServerAvailability|f.ext.nic.fr|10
+2014-10-24 10:01:50|dns.pm|pm|DNS|dnsNameServerAvailability|f.ext.nic.fr|10
+2014-10-24 10:01:50|dns.wf|wf|DNS|dnsNameServerAvailability|f.ext.nic.fr|10
+2014-10-24 10:01:50|dns.tf|tf|DNS|dnsNameServerAvailability|f.ext.nic.fr|10
+2014-10-24 10:01:50|dns.fr|fr|DNS|dnsNameServerAvailability|f.ext.nic.fr|10
+2014-10-24 10:01:50|dns.frogans|frogans|DNS|dnsNameServerAvailability|f.ext.nic.fr|10
+2014-10-24 10:01:50|dns.paris|paris|DNS|dnsNameServerAvailability|g.ext.nic.fr|0
+2014-10-24 10:01:50|dns.bzh|bzh|DNS|dnsNameServerAvailability|g.ext.nic.fr|0
+2014-10-24 10:01:50|dns.frogans|frogans|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:01:50|dns.alsace|alsace|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:01:50|dns.yt|yt|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:01:50|dns.pm|pm|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:01:50|dns.tf|tf|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:01:50|dns.fr|fr|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:01:50|dns.re|re|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:01:50|dns.wf|wf|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:01:50|dns.paris|paris|DNS|tcpDnsResolution| |10
+2014-10-24 10:01:50|dns.bzh|bzh|DNS|tcpDnsResolution| |10
+2014-10-24 10:01:50|dns.alsace|alsace|DNS|tcpDnsResolution| |0
+2014-10-24 10:01:50|dns.frogans|frogans|DNS|tcpDnsResolution| |0
+2014-10-24 10:01:50|dns.pm|pm|DNS|tcpDnsResolution| |0
+2014-10-24 10:01:50|dns.yt|yt|DNS|tcpDnsResolution| |0
+2014-10-24 10:01:50|dns.tf|tf|DNS|tcpDnsResolution| |0
+2014-10-24 10:01:50|dns.re|re|DNS|tcpDnsResolution| |0
+2014-10-24 10:01:50|dns.fr|fr|DNS|tcpDnsResolution| |0
+2014-10-24 10:01:50|dns.alsace|alsace|DNS|UdpDnsResolution| |0
+2014-10-24 10:01:50|dns.paris|paris|DNS|UdpDnsResolution| |0
+2014-10-24 10:01:50|dns.tf|tf|DNS|UdpDnsResolution| |0
+2014-10-24 10:01:50|dns.yt|yt|DNS|UdpDnsResolution| |0
+2014-10-24 10:01:50|dns.pm|pm|DNS|UdpDnsResolution| |0
+2014-10-24 10:01:50|dns.wf|wf|DNS|tcpDnsResolution| |0
+2014-10-24 10:01:50|dns.frogans|frogans|DNS|UdpDnsResolution| |0
+2014-10-24 10:01:50|dns.fr|fr|DNS|UdpDnsResolution| |0
+2014-10-24 10:01:50|dns.bzh|bzh|DNS|UdpDnsResolution| |0
+2014-10-24 10:01:50|dns.re|re|DNS|UdpDnsResolution| |0
+2014-10-24 10:01:50|dns.wf|wf|DNS|UdpDnsResolution| |10
+2014-10-24 10:01:50|rdds.pm|pm|DNS|RddsQueryRttParam|whois.nic.pm|193
+2014-10-24 10:01:50|rdds.re|re|DNS|RddsQueryRttParam|whois.nic.re|203
+2014-10-24 10:01:50|rdds.yt|yt|DNS|RddsQueryRttParam|whois.nic.yt|203
+2014-10-24 10:01:50|rdds.fr|fr|DNS|RddsQueryRttParam|whois.nic.fr|213
+2014-10-24 10:01:50|rdds.wf|wf|DNS|RddsQueryRttParam|whois.nic.wf|193
+2014-10-24 10:01:50|rdds.tf|tf|DNS|RddsQueryRttParam|whois.nic.tf|193
+2014-10-24 10:01:50|rdds.ovh|ovh|DNS|RddsServiceAvailabilityParam|whois.nic.ovh|453
+2014-10-24 10:01:50|rdds.bzh|bzh|DNS|RddsServiceAvailabilityParam|whois.nic.bzh|553
+2014-10-24 10:01:50|rdds.paris|paris|DNS|RddsServiceAvailabilityParam|whois.nic.paris|573
+2014-10-24 10:01:50|rdds.alsace|alsace|DNS|RddsServiceAvailabilityParam|whois.nic.alsace|573
+2014-10-24 10:01:50|rdds.ovh|ovh|DNS|RddsQueryRttParam|whois.nic.ovh|440
+2014-10-24 10:01:50|rdds.frogans|frogans|DNS|RddsServiceAvailabilityParam|whois.nic.frogans|913
+2014-10-24 10:01:51|rdds.bzh|bzh|DNS|RddsQueryRttParam|whois.nic.bzh|520
+2014-10-24 10:01:51|rdds.alsace|alsace|DNS|RddsQueryRttParam|whois.nic.alsace|581
+2014-10-24 10:01:51|rdds.paris|paris|DNS|RddsQueryRttParam|whois.nic.paris|591
+2014-10-24 10:01:51|rdds.frogans|frogans|DNS|RddsQueryRttParam|whois.nic.frogans|893
+2014-10-24 10:02:00|dns.ovh|ovh|DNS|dnsNameServerAvailability|f.ext.nic.fr|unavailable
+2014-10-24 10:02:00|dns.ovh|ovh|DNS|dnsNameServerAvailability|g.ext.nic.fr|0
+2014-10-24 10:02:00|dns.ovh|ovh|DNS|tcpDnsResolution| |10
+2014-10-24 10:02:00|dns.ovh|ovh|DNS|UdpDnsResolution| |0
+2014-10-24 10:02:50|dns.alsace|alsace|DNS|dnsServiceAvailability| |0
+2014-10-24 10:02:50|dns.frogans|frogans|DNS|dnsServiceAvailability| |0
+2014-10-24 10:02:50|dns.pm|pm|DNS|dnsServiceAvailability| |0
+2014-10-24 10:02:50|dns.yt|yt|DNS|dnsServiceAvailability| |0
+2014-10-24 10:02:50|dns.bzh|bzh|DNS|dnsServiceAvailability| |0
+2014-10-24 10:02:50|dns.wf|wf|DNS|dnsServiceAvailability| |0
+2014-10-24 10:02:50|dns.re|re|DNS|dnsServiceAvailability| |0
+2014-10-24 10:02:50|dns.fr|fr|DNS|dnsServiceAvailability| |0
+2014-10-24 10:02:50|dns.frogans|frogans|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:02:50|dns.bzh|bzh|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:02:50|dns.pm|pm|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:02:50|dns.yt|yt|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:02:50|dns.alsace|alsace|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:02:50|dns.re|re|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:02:50|dns.wf|wf|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:02:50|dns.fr|fr|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:02:50|dns.bzh|bzh|DNS|dnsNameServerAvailability|f.ext.nic.fr|10
+2014-10-24 10:02:50|dns.yt|yt|DNS|dnsNameServerAvailability|f.ext.nic.fr|10
+2014-10-24 10:02:50|dns.alsace|alsace|DNS|dnsNameServerAvailability|f.ext.nic.fr|10
+2014-10-24 10:02:50|dns.wf|wf|DNS|dnsNameServerAvailability|f.ext.nic.fr|10
+2014-10-24 10:02:50|dns.fr|fr|DNS|dnsNameServerAvailability|f.ext.nic.fr|10
+2014-10-24 10:02:50|dns.pm|pm|DNS|dnsNameServerAvailability|f.ext.nic.fr|10
+2014-10-24 10:02:50|dns.tf|tf|DNS|dnsServiceAvailability| |0
+2014-10-24 10:02:50|dns.re|re|DNS|dnsNameServerAvailability|f.ext.nic.fr|10
+2014-10-24 10:02:50|dns.frogans|frogans|DNS|dnsNameServerAvailability|f.ext.nic.fr|10
+2014-10-24 10:02:50|dns.bzh|bzh|DNS|dnsNameServerAvailability|g.ext.nic.fr|0
+2014-10-24 10:02:50|dns.yt|yt|DNS|dnsNameServerAvailability|g.ext.nic.fr|0
+2014-10-24 10:02:50|dns.alsace|alsace|DNS|dnsNameServerAvailability|g.ext.nic.fr|0
+2014-10-24 10:02:50|dns.tf|tf|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:02:50|dns.bzh|bzh|DNS|tcpDnsResolution| |10
+2014-10-24 10:02:50|dns.yt|yt|DNS|tcpDnsResolution| |10
+2014-10-24 10:02:50|dns.alsace|alsace|DNS|tcpDnsResolution| |10
+2014-10-24 10:02:50|dns.pm|pm|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:02:50|dns.wf|wf|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:02:50|dns.tf|tf|DNS|dnsNameServerAvailability|f.ext.nic.fr|10
+2014-10-24 10:02:50|dns.frogans|frogans|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:02:50|dns.alsace|alsace|DNS|UdpDnsResolution| |0
+2014-10-24 10:02:50|dns.re|re|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:02:50|dns.pm|pm|DNS|tcpDnsResolution| |0
+2014-10-24 10:02:50|dns.yt|yt|DNS|UdpDnsResolution| |0
+2014-10-24 10:02:50|dns.wf|wf|DNS|tcpDnsResolution| |0
+2014-10-24 10:02:50|dns.frogans|frogans|DNS|tcpDnsResolution| |0
+2014-10-24 10:02:50|dns.re|re|DNS|tcpDnsResolution| |0
+2014-10-24 10:02:50|dns.tf|tf|DNS|dnsNameServerAvailability|g.ext.nic.fr|0
+2014-10-24 10:02:50|dns.wf|wf|DNS|UdpDnsResolution| |0
+2014-10-24 10:02:50|dns.pm|pm|DNS|UdpDnsResolution| |0
+2014-10-24 10:02:50|dns.fr|fr|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:02:50|dns.tf|tf|DNS|tcpDnsResolution| |10
+2014-10-24 10:02:50|dns.fr|fr|DNS|tcpDnsResolution| |10
+2014-10-24 10:02:50|dns.tf|tf|DNS|UdpDnsResolution| |0
+2014-10-24 10:02:50|dns.fr|fr|DNS|UdpDnsResolution| |0
+2014-10-24 10:02:50|dns.re|re|DNS|UdpDnsResolution| |10
+2014-10-24 10:02:50|dns.frogans|frogans|DNS|UdpDnsResolution| |10
+2014-10-24 10:02:50|dns.paris|paris|DNS|dnsServiceAvailability| |30
+2014-10-24 10:02:50|dns.bzh|bzh|DNS|UdpDnsResolution| |20
+2014-10-24 10:02:50|dns.paris|paris|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:02:50|dns.paris|paris|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:02:50|dns.paris|paris|DNS|dnsNameServerAvailability|g.ext.nic.fr|11
+2014-10-24 10:02:50|dns.paris|paris|DNS|tcpDnsResolution| |0
+2014-10-24 10:02:50|dns.paris|paris|DNS|UdpDnsResolution| |0
+2014-10-24 10:05:44|rdds.yt|yt|DNS|RddsServiceAvailabilityParam|whois.nic.yt|40
+2014-10-24 10:05:44|rdds.tf|tf|DNS|RddsServiceAvailabilityParam|whois.nic.tf|20
+2014-10-24 10:05:44|rdds.yt|yt|DNS|RddsQueryRttParam|whois.nic.yt|30
+2014-10-24 10:05:44|rdds.tf|tf|DNS|RddsQueryRttParam|whois.nic.tf|20
+2014-10-24 10:05:44|rdds.wf|wf|DNS|RddsServiceAvailabilityParam|whois.nic.wf|0
+2014-10-24 10:05:44|rdds.wf|wf|DNS|RddsQueryRttParam|whois.nic.wf|10
+2014-10-24 10:05:44|dns.pm|pm|DNS|dnsServiceAvailability| |62
+2014-10-24 10:05:44|dns.alsace|alsace|DNS|dnsServiceAvailability| |32
+2014-10-24 10:05:44|dns.tf|tf|DNS|dnsServiceAvailability| |62
+2014-10-24 10:05:44|dns.paris|paris|DNS|dnsServiceAvailability| |32
+2014-10-24 10:05:44|dns.frogans|frogans|DNS|dnsServiceAvailability| |62
+2014-10-24 10:05:44|dns.tf|tf|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:05:44|dns.paris|paris|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:05:44|dns.frogans|frogans|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:05:44|dns.pm|pm|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:05:44|dns.alsace|alsace|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:05:44|dns.tf|tf|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:05:44|dns.paris|paris|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:05:44|dns.frogans|frogans|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:05:44|dns.pm|pm|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:05:44|dns.alsace|alsace|DNS|dnsNameServerAvailability|f.ext.nic.fr|10
+2014-10-24 10:05:44|dns.tf|tf|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:05:44|dns.paris|paris|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:05:44|dns.pm|pm|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:05:44|dns.paris|paris|DNS|tcpDnsResolution| |0
+2014-10-24 10:05:44|dns.tf|tf|DNS|tcpDnsResolution| |0
+2014-10-24 10:05:44|dns.pm|pm|DNS|tcpDnsResolution| |0
+2014-10-24 10:05:44|dns.paris|paris|DNS|UdpDnsResolution| |0
+2014-10-24 10:05:44|dns.tf|tf|DNS|UdpDnsResolution| |0
+2014-10-24 10:05:44|dns.yt|yt|DNS|dnsServiceAvailability| |0
+2014-10-24 10:05:44|dns.frogans|frogans|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:05:44|dns.pm|pm|DNS|UdpDnsResolution| |0
+2014-10-24 10:05:44|dns.alsace|alsace|DNS|dnsNameServerAvailability|g.ext.nic.fr|0
+2014-10-24 10:05:44|dns.ovh|ovh|DNS|dnsServiceAvailability| |10
+2014-10-24 10:05:44|dns.yt|yt|DNS|dnsNameServerAvailability|d.nic.fr|10
+2014-10-24 10:05:44|dns.alsace|alsace|DNS|tcpDnsResolution| |10
+2014-10-24 10:05:44|dns.frogans|frogans|DNS|tcpDnsResolution| |10
+2014-10-24 10:05:44|dns.ovh|ovh|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:05:44|dns.wf|wf|DNS|dnsServiceAvailability| |10
+2014-10-24 10:05:44|dns.alsace|alsace|DNS|UdpDnsResolution| |0
+2014-10-24 10:05:44|dns.yt|yt|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:05:44|dns.ovh|ovh|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:05:44|dns.wf|wf|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:05:44|dns.re|re|DNS|dnsServiceAvailability| |10
+2014-10-24 10:05:44|dns.bzh|bzh|DNS|dnsServiceAvailability| |10
+2014-10-24 10:05:44|dns.frogans|frogans|DNS|UdpDnsResolution| |0
+2014-10-24 10:05:44|dns.wf|wf|DNS|dnsNameServerAvailability|f.ext.nic.fr|10
+2014-10-24 10:05:44|dns.re|re|DNS|dnsNameServerAvailability|d.nic.fr|10
+2014-10-24 10:05:44|rdds.re|re|DNS|RddsServiceAvailabilityParam|whois.nic.re|20
+2014-10-24 10:05:44|dns.bzh|bzh|DNS|dnsNameServerAvailability|d.nic.fr|10
+2014-10-24 10:05:44|dns.yt|yt|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:05:44|dns.re|re|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:05:44|dns.ovh|ovh|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:05:44|dns.yt|yt|DNS|tcpDnsResolution| |0
+2014-10-24 10:05:44|dns.wf|wf|DNS|dnsNameServerAvailability|g.ext.nic.fr|0
+2014-10-24 10:05:44|dns.bzh|bzh|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:05:44|dns.yt|yt|DNS|UdpDnsResolution| |0
+2014-10-24 10:05:44|dns.ovh|ovh|DNS|tcpDnsResolution| |0
+2014-10-24 10:05:44|dns.wf|wf|DNS|tcpDnsResolution| |0
+2014-10-24 10:05:44|rdds.re|re|DNS|RddsQueryRttParam|whois.nic.re|10
+2014-10-24 10:05:44|dns.wf|wf|DNS|UdpDnsResolution| |10
+2014-10-24 10:05:44|dns.re|re|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:05:44|dns.bzh|bzh|DNS|dnsNameServerAvailability|g.ext.nic.fr|20
+2014-10-24 10:05:44|dns.ovh|ovh|DNS|UdpDnsResolution| |20
+2014-10-24 10:05:44|dns.re|re|DNS|tcpDnsResolution| |10
+2014-10-24 10:05:44|dns.bzh|bzh|DNS|tcpDnsResolution| |10
+2014-10-24 10:05:44|dns.fr|fr|DNS|dnsServiceAvailability| |10
+2014-10-24 10:05:44|dns.re|re|DNS|UdpDnsResolution| |10
+2014-10-24 10:05:44|dns.bzh|bzh|DNS|UdpDnsResolution| |0
+2014-10-24 10:05:44|dns.fr|fr|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:05:44|rdds.fr|fr|DNS|RddsServiceAvailabilityParam|whois.nic.fr|20
+2014-10-24 10:05:44|rdds.fr|fr|DNS|RddsQueryRttParam|whois.nic.fr|0
+2014-10-24 10:05:44|rdds.pm|pm|DNS|RddsServiceAvailabilityParam|whois.nic.pm|10
+2014-10-24 10:05:44|rdds.pm|pm|DNS|RddsQueryRttParam|whois.nic.pm|0
+2014-10-24 10:05:44|rdds.ovh|ovh|DNS|RddsServiceAvailabilityParam|whois.nic.ovh|573
+2014-10-24 10:05:44|rdds.bzh|bzh|DNS|RddsServiceAvailabilityParam|whois.nic.bzh|573
+2014-10-24 10:05:44|rdds.alsace|alsace|DNS|RddsServiceAvailabilityParam|whois.nic.alsace|583
+2014-10-24 10:05:44|rdds.paris|paris|DNS|RddsServiceAvailabilityParam|whois.nic.paris|551
+2014-10-24 10:05:44|rdds.frogans|frogans|DNS|RddsServiceAvailabilityParam|whois.nic.frogans|813
+2014-10-24 10:05:45|rdds.ovh|ovh|DNS|RddsQueryRttParam|whois.nic.ovh|550
+2014-10-24 10:05:45|rdds.alsace|alsace|DNS|RddsQueryRttParam|whois.nic.alsace|581
+2014-10-24 10:05:45|rdds.paris|paris|DNS|RddsQueryRttParam|whois.nic.paris|571
+2014-10-24 10:05:45|rdds.bzh|bzh|DNS|RddsQueryRttParam|whois.nic.bzh|721
+2014-10-24 10:05:45|rdds.frogans|frogans|DNS|RddsQueryRttParam|whois.nic.frogans|832
+2014-10-24 10:05:54|dns.fr|fr|DNS|dnsNameServerAvailability|f.ext.nic.fr|unavailable
+2014-10-24 10:05:54|dns.fr|fr|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:05:54|dns.fr|fr|DNS|tcpDnsResolution| |0
+2014-10-24 10:05:54|dns.fr|fr|DNS|UdpDnsResolution| |0
+2014-10-24 10:08:14|rdds.fr|fr|DNS|RddsServiceAvailabilityParam|whois.nic.fr|0
+2014-10-24 10:08:14|rdds.pm|pm|DNS|RddsServiceAvailabilityParam|whois.nic.pm|0
+2014-10-24 10:08:14|rdds.fr|fr|DNS|RddsQueryRttParam|whois.nic.fr|10
+2014-10-24 10:08:14|rdds.pm|pm|DNS|RddsQueryRttParam|whois.nic.pm|10
+2014-10-24 10:08:14|rdds.re|re|DNS|RddsServiceAvailabilityParam|whois.nic.re|0
+2014-10-24 10:08:14|rdds.re|re|DNS|RddsQueryRttParam|whois.nic.re|10
+2014-10-24 10:08:14|rdds.yt|yt|DNS|RddsServiceAvailabilityParam|whois.nic.yt|0
+2014-10-24 10:08:14|rdds.tf|tf|DNS|RddsServiceAvailabilityParam|whois.nic.tf|30
+2014-10-24 10:08:14|rdds.yt|yt|DNS|RddsQueryRttParam|whois.nic.yt|10
+2014-10-24 10:08:14|rdds.wf|wf|DNS|RddsServiceAvailabilityParam|whois.nic.wf|31
+2014-10-24 10:08:14|rdds.tf|tf|DNS|RddsQueryRttParam|whois.nic.tf|11
+2014-10-24 10:08:14|rdds.wf|wf|DNS|RddsQueryRttParam|whois.nic.wf|10
+2014-10-24 10:08:14|dns.ovh|ovh|DNS|dnsServiceAvailability| |42
+2014-10-24 10:08:14|dns.wf|wf|DNS|dnsServiceAvailability| |42
+2014-10-24 10:08:14|dns.re|re|DNS|dnsServiceAvailability| |42
+2014-10-24 10:08:14|dns.tf|tf|DNS|dnsServiceAvailability| |52
+2014-10-24 10:08:14|dns.re|re|DNS|dnsNameServerAvailability|d.nic.fr|10
+2014-10-24 10:08:14|dns.fr|fr|DNS|dnsServiceAvailability| |52
+2014-10-24 10:08:14|dns.pm|pm|DNS|dnsServiceAvailability| |52
+2014-10-24 10:08:14|dns.paris|paris|DNS|dnsServiceAvailability| |52
+2014-10-24 10:08:14|dns.alsace|alsace|DNS|dnsServiceAvailability| |52
+2014-10-24 10:08:14|dns.bzh|bzh|DNS|dnsServiceAvailability| |52
+2014-10-24 10:08:14|dns.yt|yt|DNS|dnsServiceAvailability| |52
+2014-10-24 10:08:14|dns.ovh|ovh|DNS|dnsNameServerAvailability|d.nic.fr|10
+2014-10-24 10:08:14|dns.frogans|frogans|DNS|dnsServiceAvailability| |52
+2014-10-24 10:08:14|dns.wf|wf|DNS|dnsNameServerAvailability|d.nic.fr|10
+2014-10-24 10:08:14|dns.tf|tf|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:08:14|dns.fr|fr|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:08:14|dns.paris|paris|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:08:14|dns.yt|yt|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:08:14|dns.pm|pm|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:08:14|dns.alsace|alsace|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:08:14|dns.bzh|bzh|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:08:14|dns.ovh|ovh|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:08:14|dns.re|re|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:08:14|dns.wf|wf|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:08:14|dns.fr|fr|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:08:14|dns.frogans|frogans|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:08:14|dns.tf|tf|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:08:14|dns.yt|yt|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:08:14|dns.pm|pm|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:08:14|dns.paris|paris|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:08:14|dns.alsace|alsace|DNS|dnsNameServerAvailability|f.ext.nic.fr|10
+2014-10-24 10:08:14|dns.bzh|bzh|DNS|dnsNameServerAvailability|f.ext.nic.fr|10
+2014-10-24 10:08:14|dns.fr|fr|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:08:14|dns.tf|tf|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:08:14|dns.yt|yt|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:08:14|dns.paris|paris|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:08:14|dns.pm|pm|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:08:14|dns.alsace|alsace|DNS|dnsNameServerAvailability|g.ext.nic.fr|0
+2014-10-24 10:08:14|dns.fr|fr|DNS|tcpDnsResolution| |0
+2014-10-24 10:08:14|dns.ovh|ovh|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:08:14|dns.tf|tf|DNS|tcpDnsResolution| |0
+2014-10-24 10:08:14|dns.wf|wf|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:08:14|dns.re|re|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:08:14|dns.yt|yt|DNS|tcpDnsResolution| |0
+2014-10-24 10:08:14|dns.fr|fr|DNS|UdpDnsResolution| |0
+2014-10-24 10:08:14|dns.pm|pm|DNS|tcpDnsResolution| |0
+2014-10-24 10:08:14|dns.bzh|bzh|DNS|dnsNameServerAvailability|g.ext.nic.fr|0
+2014-10-24 10:08:14|dns.alsace|alsace|DNS|tcpDnsResolution| |0
+2014-10-24 10:08:14|dns.paris|paris|DNS|tcpDnsResolution| |0
+2014-10-24 10:08:14|dns.yt|yt|DNS|UdpDnsResolution| |0
+2014-10-24 10:08:14|dns.tf|tf|DNS|UdpDnsResolution| |0
+2014-10-24 10:08:14|dns.wf|wf|DNS|tcpDnsResolution| |0
+2014-10-24 10:08:14|dns.pm|pm|DNS|UdpDnsResolution| |0
+2014-10-24 10:08:14|dns.ovh|ovh|DNS|tcpDnsResolution| |10
+2014-10-24 10:08:14|dns.paris|paris|DNS|UdpDnsResolution| |10
+2014-10-24 10:08:14|dns.re|re|DNS|tcpDnsResolution| |10
+2014-10-24 10:08:14|dns.bzh|bzh|DNS|tcpDnsResolution| |10
+2014-10-24 10:08:14|dns.alsace|alsace|DNS|UdpDnsResolution| |10
+2014-10-24 10:08:14|dns.wf|wf|DNS|UdpDnsResolution| |20
+2014-10-24 10:08:14|dns.re|re|DNS|UdpDnsResolution| |10
+2014-10-24 10:08:14|dns.bzh|bzh|DNS|UdpDnsResolution| |10
+2014-10-24 10:08:14|dns.ovh|ovh|DNS|UdpDnsResolution| |10
+2014-10-24 10:08:14|rdds.ovh|ovh|DNS|RddsServiceAvailabilityParam|whois.nic.ovh|555
+2014-10-24 10:08:14|rdds.bzh|bzh|DNS|RddsServiceAvailabilityParam|whois.nic.bzh|535
+2014-10-24 10:08:14|rdds.paris|paris|DNS|RddsServiceAvailabilityParam|whois.nic.paris|585
+2014-10-24 10:08:14|rdds.alsace|alsace|DNS|RddsServiceAvailabilityParam|whois.nic.alsace|635
+2014-10-24 10:08:15|rdds.frogans|frogans|DNS|RddsServiceAvailabilityParam|whois.nic.frogans|825
+2014-10-24 10:08:15|rdds.bzh|bzh|DNS|RddsQueryRttParam|whois.nic.bzh|540
+2014-10-24 10:08:15|rdds.ovh|ovh|DNS|RddsQueryRttParam|whois.nic.ovh|561
+2014-10-24 10:08:15|rdds.paris|paris|DNS|RddsQueryRttParam|whois.nic.paris|541
+2014-10-24 10:08:15|rdds.alsace|alsace|DNS|RddsQueryRttParam|whois.nic.alsace|581
+2014-10-24 10:08:16|rdds.frogans|frogans|DNS|RddsQueryRttParam|whois.nic.frogans|861
+2014-10-24 10:08:24|dns.frogans|frogans|DNS|dnsNameServerAvailability|f.ext.nic.fr|unavailable
+2014-10-24 10:08:24|dns.frogans|frogans|DNS|dnsNameServerAvailability|g.ext.nic.fr|0
+2014-10-24 10:08:24|dns.frogans|frogans|DNS|tcpDnsResolution| |10
+2014-10-24 10:08:24|dns.frogans|frogans|DNS|UdpDnsResolution| |0
+2014-10-24 10:09:14|dns.paris|paris|DNS|dnsServiceAvailability| |0
+2014-10-24 10:09:14|dns.tf|tf|DNS|dnsServiceAvailability| |0
+2014-10-24 10:09:14|dns.fr|fr|DNS|dnsServiceAvailability| |0
+2014-10-24 10:09:14|dns.pm|pm|DNS|dnsServiceAvailability| |0
+2014-10-24 10:09:14|dns.yt|yt|DNS|dnsServiceAvailability| |0
+2014-10-24 10:09:14|dns.pm|pm|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:09:14|dns.paris|paris|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:09:14|dns.fr|fr|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:09:14|dns.yt|yt|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:09:14|dns.tf|tf|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:09:14|dns.pm|pm|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:09:14|dns.paris|paris|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:09:14|dns.fr|fr|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:09:14|dns.tf|tf|DNS|dnsNameServerAvailability|f.ext.nic.fr|10
+2014-10-24 10:09:14|dns.yt|yt|DNS|dnsNameServerAvailability|f.ext.nic.fr|10
+2014-10-24 10:09:14|dns.paris|paris|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:09:14|dns.fr|fr|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:09:14|dns.tf|tf|DNS|dnsNameServerAvailability|g.ext.nic.fr|0
+2014-10-24 10:09:14|dns.yt|yt|DNS|dnsNameServerAvailability|g.ext.nic.fr|0
+2014-10-24 10:09:14|dns.fr|fr|DNS|tcpDnsResolution| |0
+2014-10-24 10:09:14|dns.wf|wf|DNS|dnsServiceAvailability| |0
+2014-10-24 10:09:14|dns.pm|pm|DNS|dnsNameServerAvailability|g.ext.nic.fr|0
+2014-10-24 10:09:14|dns.paris|paris|DNS|tcpDnsResolution| |0
+2014-10-24 10:09:14|dns.tf|tf|DNS|tcpDnsResolution| |10
+2014-10-24 10:09:14|dns.pm|pm|DNS|tcpDnsResolution| |10
+2014-10-24 10:09:14|dns.yt|yt|DNS|tcpDnsResolution| |10
+2014-10-24 10:09:14|dns.paris|paris|DNS|UdpDnsResolution| |10
+2014-10-24 10:09:14|dns.bzh|bzh|DNS|dnsServiceAvailability| |10
+2014-10-24 10:09:14|dns.wf|wf|DNS|dnsNameServerAvailability|d.nic.fr|10
+2014-10-24 10:09:14|dns.fr|fr|DNS|UdpDnsResolution| |10
+2014-10-24 10:09:14|dns.tf|tf|DNS|UdpDnsResolution| |0
+2014-10-24 10:09:14|dns.ovh|ovh|DNS|dnsServiceAvailability| |10
+2014-10-24 10:09:14|dns.alsace|alsace|DNS|dnsServiceAvailability| |0
+2014-10-24 10:09:14|dns.bzh|bzh|DNS|dnsNameServerAvailability|d.nic.fr|10
+2014-10-24 10:09:14|dns.wf|wf|DNS|dnsNameServerAvailability|f.ext.nic.fr|10
+2014-10-24 10:09:14|dns.yt|yt|DNS|UdpDnsResolution| |10
+2014-10-24 10:09:14|dns.ovh|ovh|DNS|dnsNameServerAvailability|d.nic.fr|10
+2014-10-24 10:09:14|dns.pm|pm|DNS|UdpDnsResolution| |10
+2014-10-24 10:09:14|dns.bzh|bzh|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:09:14|dns.alsace|alsace|DNS|dnsNameServerAvailability|d.nic.fr|10
+2014-10-24 10:09:14|dns.ovh|ovh|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:09:14|dns.alsace|alsace|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:09:14|dns.wf|wf|DNS|dnsNameServerAvailability|g.ext.nic.fr|0
+2014-10-24 10:09:14|dns.bzh|bzh|DNS|dnsNameServerAvailability|g.ext.nic.fr|0
+2014-10-24 10:09:14|dns.ovh|ovh|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:09:14|dns.alsace|alsace|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:09:14|dns.bzh|bzh|DNS|tcpDnsResolution| |10
+2014-10-24 10:09:14|dns.ovh|ovh|DNS|tcpDnsResolution| |0
+2014-10-24 10:09:14|dns.alsace|alsace|DNS|tcpDnsResolution| |0
+2014-10-24 10:09:14|dns.wf|wf|DNS|tcpDnsResolution| |10
+2014-10-24 10:09:14|dns.re|re|DNS|dnsServiceAvailability| |10
+2014-10-24 10:09:14|dns.ovh|ovh|DNS|UdpDnsResolution| |0
+2014-10-24 10:09:14|dns.alsace|alsace|DNS|UdpDnsResolution| |0
+2014-10-24 10:09:14|dns.bzh|bzh|DNS|UdpDnsResolution| |0
+2014-10-24 10:09:14|dns.wf|wf|DNS|UdpDnsResolution| |0
+2014-10-24 10:09:14|dns.re|re|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:09:14|dns.re|re|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:09:14|dns.re|re|DNS|dnsNameServerAvailability|g.ext.nic.fr|11
+2014-10-24 10:09:14|dns.re|re|DNS|tcpDnsResolution| |0
+2014-10-24 10:09:14|dns.re|re|DNS|UdpDnsResolution| |0
+2014-10-24 10:09:24|dns.frogans|frogans|DNS|dnsServiceAvailability| |0
+2014-10-24 10:09:24|dns.frogans|frogans|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:09:24|dns.frogans|frogans|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:09:24|dns.frogans|frogans|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:09:24|dns.frogans|frogans|DNS|tcpDnsResolution| |0
+2014-10-24 10:09:24|dns.frogans|frogans|DNS|UdpDnsResolution| |0
+2014-10-24 10:09:34|rdds.alsace|alsace|DNS|RddsServiceAvailabilityParam|whois.nic.alsace|571
+2014-10-24 10:09:35|rdds.alsace|alsace|DNS|RddsQueryRttParam|whois.nic.alsace|570
+2014-10-24 10:09:35|rdds.fr|fr|DNS|RddsServiceAvailabilityParam|whois.nic.fr|91
+2014-10-24 10:09:35|rdds.fr|fr|DNS|RddsQueryRttParam|whois.nic.fr|90
+2014-10-24 10:09:36|rdds.ovh|ovh|DNS|RddsServiceAvailabilityParam|whois.nic.ovh|551
+2014-10-24 10:09:37|rdds.pm|pm|DNS|RddsServiceAvailabilityParam|whois.nic.pm|21
+2014-10-24 10:09:37|rdds.pm|pm|DNS|RddsQueryRttParam|whois.nic.pm|30
+2014-10-24 10:09:37|rdds.ovh|ovh|DNS|RddsQueryRttParam|whois.nic.ovh|551
+2014-10-24 10:09:38|rdds.tf|tf|DNS|RddsServiceAvailabilityParam|whois.nic.tf|0
+2014-10-24 10:09:38|rdds.tf|tf|DNS|RddsQueryRttParam|whois.nic.tf|10
+2014-10-24 10:09:39|rdds.yt|yt|DNS|RddsServiceAvailabilityParam|whois.nic.yt|21
+2014-10-24 10:09:39|rdds.yt|yt|DNS|RddsQueryRttParam|whois.nic.yt|30
+2014-10-24 10:09:40|rdds.paris|paris|DNS|RddsServiceAvailabilityParam|whois.nic.paris|561
+2014-10-24 10:09:41|rdds.re|re|DNS|RddsServiceAvailabilityParam|whois.nic.re|91
+2014-10-24 10:09:41|rdds.paris|paris|DNS|RddsQueryRttParam|whois.nic.paris|551
+2014-10-24 10:09:41|rdds.re|re|DNS|RddsQueryRttParam|whois.nic.re|90
+2014-10-24 10:09:42|rdds.wf|wf|DNS|RddsServiceAvailabilityParam|whois.nic.wf|0
+2014-10-24 10:09:42|rdds.wf|wf|DNS|RddsQueryRttParam|whois.nic.wf|10
+2014-10-24 10:09:43|dns.alsace|alsace|DNS|dnsServiceAvailability| |50
+2014-10-24 10:09:43|dns.alsace|alsace|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:09:43|dns.alsace|alsace|DNS|dnsNameServerAvailability|f.ext.nic.fr|11
+2014-10-24 10:09:43|dns.alsace|alsace|DNS|dnsNameServerAvailability|g.ext.nic.fr|0
+2014-10-24 10:09:43|dns.alsace|alsace|DNS|tcpDnsResolution| |0
+2014-10-24 10:09:43|dns.alsace|alsace|DNS|UdpDnsResolution| |0
+2014-10-24 10:09:44|dns.fr|fr|DNS|dnsServiceAvailability| |0
+2014-10-24 10:09:44|dns.fr|fr|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:09:44|dns.fr|fr|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:09:44|dns.fr|fr|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:09:44|dns.fr|fr|DNS|tcpDnsResolution| |0
+2014-10-24 10:09:44|dns.fr|fr|DNS|UdpDnsResolution| |0
+2014-10-24 10:09:45|dns.ovh|ovh|DNS|dnsServiceAvailability| |0
+2014-10-24 10:09:45|dns.ovh|ovh|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:09:45|dns.ovh|ovh|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:09:45|dns.ovh|ovh|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:09:45|dns.ovh|ovh|DNS|tcpDnsResolution| |0
+2014-10-24 10:09:45|dns.ovh|ovh|DNS|UdpDnsResolution| |0
+2014-10-24 10:09:46|dns.pm|pm|DNS|dnsServiceAvailability| |0
+2014-10-24 10:09:46|dns.pm|pm|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:09:46|dns.pm|pm|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:09:46|dns.pm|pm|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:09:46|dns.pm|pm|DNS|tcpDnsResolution| |0
+2014-10-24 10:09:46|dns.pm|pm|DNS|UdpDnsResolution| |0
+2014-10-24 10:09:47|dns.yt|yt|DNS|dnsServiceAvailability| |0
+2014-10-24 10:09:47|dns.yt|yt|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:09:47|dns.yt|yt|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:09:47|dns.yt|yt|DNS|dnsNameServerAvailability|g.ext.nic.fr|51
+2014-10-24 10:09:47|dns.yt|yt|DNS|tcpDnsResolution| |0
+2014-10-24 10:09:47|dns.yt|yt|DNS|UdpDnsResolution| |0
+2014-10-24 10:09:48|dns.tf|tf|DNS|dnsServiceAvailability| |0
+2014-10-24 10:09:48|dns.tf|tf|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:09:48|dns.tf|tf|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:09:48|dns.tf|tf|DNS|dnsNameServerAvailability|g.ext.nic.fr|131
+2014-10-24 10:09:48|dns.tf|tf|DNS|tcpDnsResolution| |0
+2014-10-24 10:09:48|dns.tf|tf|DNS|UdpDnsResolution| |10
+2014-10-24 10:09:50|rdds.frogans|frogans|DNS|RddsServiceAvailabilityParam|whois.nic.frogans|891
+2014-10-24 10:09:51|rdds.bzh|bzh|DNS|RddsServiceAvailabilityParam|whois.nic.bzh|533
+2014-10-24 10:09:51|rdds.frogans|frogans|DNS|RddsQueryRttParam|whois.nic.frogans|823
+2014-10-24 10:09:51|dns.wf|wf|DNS|dnsServiceAvailability| |10
+2014-10-24 10:09:51|dns.wf|wf|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:09:51|dns.wf|wf|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:09:51|dns.wf|wf|DNS|dnsNameServerAvailability|g.ext.nic.fr|0
+2014-10-24 10:09:51|dns.wf|wf|DNS|tcpDnsResolution| |11
+2014-10-24 10:09:51|dns.wf|wf|DNS|UdpDnsResolution| |1
+2014-10-24 10:09:51|rdds.bzh|bzh|DNS|RddsQueryRttParam|whois.nic.bzh|592
+2014-10-24 10:09:52|dns.re|re|DNS|dnsServiceAvailability| |0
+2014-10-24 10:09:52|dns.re|re|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:09:52|dns.re|re|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:09:52|dns.re|re|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:09:52|dns.re|re|DNS|tcpDnsResolution| |0
+2014-10-24 10:09:52|dns.re|re|DNS|UdpDnsResolution| |0
+2014-10-24 10:09:53|dns.paris|paris|DNS|dnsServiceAvailability| |0
+2014-10-24 10:09:53|dns.paris|paris|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:09:53|dns.paris|paris|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:09:53|dns.paris|paris|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:09:53|dns.paris|paris|DNS|tcpDnsResolution| |0
+2014-10-24 10:09:53|dns.paris|paris|DNS|UdpDnsResolution| |0
+2014-10-24 10:09:54|dns.frogans|frogans|DNS|dnsServiceAvailability| |0
+2014-10-24 10:09:54|dns.frogans|frogans|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:09:54|dns.frogans|frogans|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:09:54|dns.frogans|frogans|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:09:54|dns.frogans|frogans|DNS|tcpDnsResolution| |0
+2014-10-24 10:09:54|dns.frogans|frogans|DNS|UdpDnsResolution| |0
+2014-10-24 10:09:55|dns.bzh|bzh|DNS|dnsServiceAvailability| |0
+2014-10-24 10:09:55|dns.bzh|bzh|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:09:55|dns.bzh|bzh|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:09:55|dns.bzh|bzh|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:09:55|dns.bzh|bzh|DNS|tcpDnsResolution| |0
+2014-10-24 10:09:55|dns.bzh|bzh|DNS|UdpDnsResolution| |0
+2014-10-24 10:10:43|dns.alsace|alsace|DNS|dnsServiceAvailability| |0
+2014-10-24 10:10:43|dns.alsace|alsace|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:10:43|dns.alsace|alsace|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:10:43|dns.alsace|alsace|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:10:43|dns.alsace|alsace|DNS|tcpDnsResolution| |0
+2014-10-24 10:10:43|dns.alsace|alsace|DNS|UdpDnsResolution| |0
+2014-10-24 10:10:44|dns.fr|fr|DNS|dnsServiceAvailability| |0
+2014-10-24 10:10:44|dns.fr|fr|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:10:44|dns.fr|fr|DNS|dnsNameServerAvailability|f.ext.nic.fr|10
+2014-10-24 10:10:44|dns.fr|fr|DNS|dnsNameServerAvailability|g.ext.nic.fr|0
+2014-10-24 10:10:44|dns.fr|fr|DNS|tcpDnsResolution| |0
+2014-10-24 10:10:44|dns.fr|fr|DNS|UdpDnsResolution| |0
+2014-10-24 10:10:45|dns.ovh|ovh|DNS|dnsServiceAvailability| |0
+2014-10-24 10:10:45|dns.ovh|ovh|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:10:45|dns.ovh|ovh|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:10:45|dns.ovh|ovh|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:10:45|dns.ovh|ovh|DNS|tcpDnsResolution| |0
+2014-10-24 10:10:45|dns.ovh|ovh|DNS|UdpDnsResolution| |0
+2014-10-24 10:10:46|dns.pm|pm|DNS|dnsServiceAvailability| |0
+2014-10-24 10:10:46|dns.pm|pm|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:10:46|dns.pm|pm|DNS|dnsNameServerAvailability|f.ext.nic.fr|10
+2014-10-24 10:10:46|dns.pm|pm|DNS|dnsNameServerAvailability|g.ext.nic.fr|0
+2014-10-24 10:10:46|dns.pm|pm|DNS|tcpDnsResolution| |0
+2014-10-24 10:10:46|dns.pm|pm|DNS|UdpDnsResolution| |0
+2014-10-24 10:10:47|dns.yt|yt|DNS|dnsServiceAvailability| |0
+2014-10-24 10:10:47|dns.yt|yt|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:10:47|dns.yt|yt|DNS|dnsNameServerAvailability|f.ext.nic.fr|10
+2014-10-24 10:10:47|dns.yt|yt|DNS|dnsNameServerAvailability|g.ext.nic.fr|0
+2014-10-24 10:10:47|dns.yt|yt|DNS|tcpDnsResolution| |0
+2014-10-24 10:10:47|dns.yt|yt|DNS|UdpDnsResolution| |0
+2014-10-24 10:10:48|dns.tf|tf|DNS|dnsServiceAvailability| |0
+2014-10-24 10:10:48|dns.tf|tf|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:10:48|dns.tf|tf|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:10:51|dns.wf|wf|DNS|dnsServiceAvailability| |0
+2014-10-24 10:10:51|dns.wf|wf|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:10:51|dns.wf|wf|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:10:51|dns.wf|wf|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:10:51|dns.wf|wf|DNS|tcpDnsResolution| |0
+2014-10-24 10:10:51|dns.wf|wf|DNS|UdpDnsResolution| |0
+2014-10-24 10:10:52|dns.re|re|DNS|dnsServiceAvailability| |0
+2014-10-24 10:10:52|dns.re|re|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:10:52|dns.re|re|DNS|dnsNameServerAvailability|f.ext.nic.fr|10
+2014-10-24 10:10:52|dns.re|re|DNS|dnsNameServerAvailability|g.ext.nic.fr|0
+2014-10-24 10:10:52|dns.re|re|DNS|tcpDnsResolution| |0
+2014-10-24 10:10:52|dns.re|re|DNS|UdpDnsResolution| |0
+2014-10-24 10:10:53|dns.paris|paris|DNS|dnsServiceAvailability| |0
+2014-10-24 10:10:53|dns.paris|paris|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:10:53|dns.paris|paris|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:10:53|dns.paris|paris|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:10:53|dns.paris|paris|DNS|tcpDnsResolution| |0
+2014-10-24 10:10:53|dns.paris|paris|DNS|UdpDnsResolution| |10
+2014-10-24 10:10:54|dns.frogans|frogans|DNS|dnsServiceAvailability| |0
+2014-10-24 10:10:54|dns.frogans|frogans|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:10:54|dns.frogans|frogans|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:10:54|dns.frogans|frogans|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:10:54|dns.frogans|frogans|DNS|tcpDnsResolution| |0
+2014-10-24 10:10:54|dns.frogans|frogans|DNS|UdpDnsResolution| |0
+2014-10-24 10:10:55|dns.bzh|bzh|DNS|dnsServiceAvailability| |0
+2014-10-24 10:10:55|dns.bzh|bzh|DNS|dnsNameServerAvailability|d.nic.fr|0
+2014-10-24 10:10:55|dns.bzh|bzh|DNS|dnsNameServerAvailability|f.ext.nic.fr|0
+2014-10-24 10:10:55|dns.bzh|bzh|DNS|dnsNameServerAvailability|g.ext.nic.fr|10
+2014-10-24 10:10:55|dns.bzh|bzh|DNS|tcpDnsResolution| |0
+2014-10-24 10:10:55|dns.bzh|bzh|DNS|UdpDnsResolution| |0
+2014-10-24 10:10:58|dns.tf|tf|DNS|dnsNameServerAvailability|g.ext.nic.fr|unavailable
+2014-10-24 10:10:58|dns.tf|tf|DNS|tcpDnsResolution| |0
+2014-10-24 10:10:58|dns.tf|tf|DNS|UdpDnsResolution| |0
