@@ -24,7 +24,7 @@
 		<property name="name" value="rdds.yt" />
 		<property name="tld" value="yt" />
 		<property name="whoisNdd" value="nic.yt" />
-		<property name="type" value="Dns" />
+		<property name="type" value="Rdds" />
 		<property name="status" value="Ok" />
 	</bean>
 

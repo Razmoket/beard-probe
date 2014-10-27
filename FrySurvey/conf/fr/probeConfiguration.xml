@@ -24,7 +24,7 @@
 		<property name="name" value="rdds.fr" />
 		<property name="tld" value="fr" />
 		<property name="whoisNdd" value="afnic.fr" />
-		<property name="type" value="Dns" />
+		<property name="type" value="Rdds" />
 		<property name="status" value="Ok" />
 	</bean>
 

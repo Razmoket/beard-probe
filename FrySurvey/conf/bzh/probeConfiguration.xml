@@ -24,7 +24,7 @@
 		<property name="name" value="rdds.bzh" />
 		<property name="tld" value="bzh" />
 		<property name="whoisNdd" value="nic.bzh" />
-		<property name="type" value="Dns" />
+		<property name="type" value="Rdds" />
 		<property name="status" value="Ok" />
 	</bean>
 

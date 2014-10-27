@@ -24,7 +24,7 @@
 		<property name="name" value="rdds.paris" />
 		<property name="tld" value="paris" />
 		<property name="whoisNdd" value="nic.paris" />
-		<property name="type" value="Dns" />
+		<property name="type" value="Rdds" />
 		<property name="status" value="Ok" />
 	</bean>
 

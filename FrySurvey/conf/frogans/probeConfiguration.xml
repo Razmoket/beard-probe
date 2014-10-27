@@ -25,7 +25,7 @@
 		<property name="name" value="rdds.frogans" />
 		<property name="tld" value="frogans" />
 		<property name="whoisNdd" value="nic.frogans" />
-		<property name="type" value="Dns" />
+		<property name="type" value="Rdds" />
 		<property name="status" value="Ok" />
 	</bean>
 </beans>

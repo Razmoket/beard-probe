@@ -24,7 +24,7 @@
 		<property name="name" value="rdds.ovh" />
 		<property name="tld" value="ovh" />
 		<property name="whoisNdd" value="nic.ovh" />
-		<property name="type" value="Dns" />
+		<property name="type" value="Rdds" />
 		<property name="status" value="Ok" />
 	</bean>
 

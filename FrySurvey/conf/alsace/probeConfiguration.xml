@@ -24,7 +24,7 @@
 		<property name="name" value="rdds.alsace" />
 		<property name="tld" value="alsace" />
 		<property name="whoisNdd" value="nic.alsace" />
-		<property name="type" value="Dns" />
+		<property name="type" value="Rdds" />
 		<property name="status" value="Ok" />
 	</bean>
 

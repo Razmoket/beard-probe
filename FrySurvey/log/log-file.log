@@ -1,423 +1,95 @@
-2014-10-24 10:00:36 [main] INFO  fr.fryscop.FrySurvey - * * * * * * * * * * * * * * * * * * 
-2014-10-24 10:00:36 [main] INFO  fr.fryscop.FrySurvey - * * * * * * Démarrage * * * * * * * 
-2014-10-24 10:00:36 [main] INFO  fr.fryscop.FrySurvey - * * * * * * * * * * * * * * * * * * 
-2014-10-24 10:00:36 [main] INFO  f.f.p.configuration.Configuration - load probes-launcher.xml 
-2014-10-24 10:00:37 [main] INFO  fr.fryscop.FrySurvey - ProbeLauncher configured. 
-2014-10-24 10:00:37 [main] INFO  fr.fryscop.probe.test.TestLauncher - Initializing Probes Threads List 
-2014-10-24 10:00:37 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.alsace|alsace|DNS 
-2014-10-24 10:00:37 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.alsace|alsace|DNS 
-2014-10-24 10:00:37 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.bzh|bzh|DNS 
-2014-10-24 10:00:37 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.bzh|bzh|DNS 
-2014-10-24 10:00:37 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.fr|fr|DNS 
-2014-10-24 10:00:37 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.fr|fr|DNS 
-2014-10-24 10:00:37 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.frogans|frogans|DNS 
-2014-10-24 10:00:37 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.frogans|frogans|DNS 
-2014-10-24 10:00:37 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.ovh|ovh|DNS 
-2014-10-24 10:00:37 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.ovh|ovh|DNS 
-2014-10-24 10:00:37 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.paris|paris|DNS 
-2014-10-24 10:00:37 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.paris|paris|DNS 
-2014-10-24 10:00:37 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.pm|pm|DNS 
-2014-10-24 10:00:37 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.pm|pm|DNS 
-2014-10-24 10:00:37 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.re|re|DNS 
-2014-10-24 10:00:37 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.re|re|DNS 
-2014-10-24 10:00:37 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.tf|tf|DNS 
-2014-10-24 10:00:37 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.tf|tf|DNS 
-2014-10-24 10:00:37 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.wf|wf|DNS 
-2014-10-24 10:00:37 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.wf|wf|DNS 
-2014-10-24 10:00:37 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.yt|yt|DNS 
-2014-10-24 10:00:37 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.yt|yt|DNS 
-2014-10-24 10:00:37 [main] INFO  fr.fryscop.FrySurvey - ProbeLauncher is starting probes. 
-2014-10-24 10:00:37 [main] INFO  fr.fryscop.probe.test.TestLauncher - Starting Probes Threads List 
-2014-10-24 10:00:37 [dns.re|re|DNS] DEBUG f.f.probe.monitoring.ProbeListener - sendBeat() http://frymonitoring.ovh/probe_add.php?name=dns.re&tld=re&type=DNS&status=1 
-2014-10-24 10:00:37 [rdds.ovh|ovh|DNS] DEBUG f.f.probe.monitoring.ProbeListener - sendBeat() http://frymonitoring.ovh/probe_add.php?name=rdds.ovh&tld=ovh&type=DNS&status=1 
-2014-10-24 10:00:37 [rdds.paris|paris|DNS] DEBUG f.f.probe.monitoring.ProbeListener - sendBeat() http://frymonitoring.ovh/probe_add.php?name=rdds.paris&tld=paris&type=DNS&status=1 
-2014-10-24 10:00:37 [dns.wf|wf|DNS] DEBUG f.f.probe.monitoring.ProbeListener - sendBeat() http://frymonitoring.ovh/probe_add.php?name=dns.wf&tld=wf&type=DNS&status=1 
-2014-10-24 10:00:37 [dns.yt|yt|DNS] DEBUG f.f.probe.monitoring.ProbeListener - sendBeat() http://frymonitoring.ovh/probe_add.php?name=dns.yt&tld=yt&type=DNS&status=1 
-2014-10-24 10:00:37 [dns.bzh|bzh|DNS] DEBUG f.f.probe.monitoring.ProbeListener - sendBeat() http://frymonitoring.ovh/probe_add.php?name=dns.bzh&tld=bzh&type=DNS&status=1 
-2014-10-24 10:00:37 [dns.paris|paris|DNS] DEBUG f.f.probe.monitoring.ProbeListener - sendBeat() http://frymonitoring.ovh/probe_add.php?name=dns.paris&tld=paris&type=DNS&status=1 
-2014-10-24 10:00:37 [dns.frogans|frogans|DNS] DEBUG f.f.probe.monitoring.ProbeListener - sendBeat() http://frymonitoring.ovh/probe_add.php?name=dns.frogans&tld=frogans&type=DNS&status=1 
-2014-10-24 10:00:37 [rdds.bzh|bzh|DNS] DEBUG f.f.probe.monitoring.ProbeListener - sendBeat() http://frymonitoring.ovh/probe_add.php?name=rdds.bzh&tld=bzh&type=DNS&status=1 
-2014-10-24 10:00:37 [rdds.frogans|frogans|DNS] DEBUG f.f.probe.monitoring.ProbeListener - sendBeat() http://frymonitoring.ovh/probe_add.php?name=rdds.frogans&tld=frogans&type=DNS&status=1 
-2014-10-24 10:00:37 [rdds.fr|fr|DNS] DEBUG f.f.probe.monitoring.ProbeListener - sendBeat() http://frymonitoring.ovh/probe_add.php?name=rdds.fr&tld=fr&type=DNS&status=1 
-2014-10-24 10:00:37 [dns.ovh|ovh|DNS] DEBUG f.f.probe.monitoring.ProbeListener - sendBeat() http://frymonitoring.ovh/probe_add.php?name=dns.ovh&tld=ovh&type=DNS&status=1 
-2014-10-24 10:00:37 [dns.fr|fr|DNS] DEBUG f.f.probe.monitoring.ProbeListener - sendBeat() http://frymonitoring.ovh/probe_add.php?name=dns.fr&tld=fr&type=DNS&status=1 
-2014-10-24 10:00:37 [rdds.yt|yt|DNS] DEBUG f.f.probe.monitoring.ProbeListener - sendBeat() http://frymonitoring.ovh/probe_add.php?name=rdds.yt&tld=yt&type=DNS&status=1 
-2014-10-24 10:00:37 [rdds.wf|wf|DNS] DEBUG f.f.probe.monitoring.ProbeListener - sendBeat() http://frymonitoring.ovh/probe_add.php?name=rdds.wf&tld=wf&type=DNS&status=1 
-2014-10-24 10:00:37 [rdds.re|re|DNS] DEBUG f.f.probe.monitoring.ProbeListener - sendBeat() http://frymonitoring.ovh/probe_add.php?name=rdds.re&tld=re&type=DNS&status=1 
-2014-10-24 10:00:37 [rdds.pm|pm|DNS] DEBUG f.f.probe.monitoring.ProbeListener - sendBeat() http://frymonitoring.ovh/probe_add.php?name=rdds.pm&tld=pm&type=DNS&status=1 
-2014-10-24 10:00:37 [rdds.tf|tf|DNS] DEBUG f.f.probe.monitoring.ProbeListener - sendBeat() http://frymonitoring.ovh/probe_add.php?name=rdds.tf&tld=tf&type=DNS&status=1 
-2014-10-24 10:00:37 [dns.pm|pm|DNS] DEBUG f.f.probe.monitoring.ProbeListener - sendBeat() http://frymonitoring.ovh/probe_add.php?name=dns.pm&tld=pm&type=DNS&status=1 
-2014-10-24 10:00:37 [dns.alsace|alsace|DNS] DEBUG f.f.probe.monitoring.ProbeListener - sendBeat() http://frymonitoring.ovh/probe_add.php?name=dns.alsace&tld=alsace&type=DNS&status=1 
-2014-10-24 10:00:37 [rdds.alsace|alsace|DNS] DEBUG f.f.probe.monitoring.ProbeListener - sendBeat() http://frymonitoring.ovh/probe_add.php?name=rdds.alsace&tld=alsace&type=DNS&status=1 
-2014-10-24 10:00:37 [dns.tf|tf|DNS] DEBUG f.f.probe.monitoring.ProbeListener - sendBeat() http://frymonitoring.ovh/probe_add.php?name=dns.tf&tld=tf&type=DNS&status=1 
-2014-10-24 10:00:38 [rdds.tf|tf|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.tf&tld=tf&type=DNS&status=1 
-2014-10-24 10:00:38 [rdds.yt|yt|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.yt&tld=yt&type=DNS&status=1 
-2014-10-24 10:00:38 [rdds.wf|wf|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.wf&tld=wf&type=DNS&status=1 
-2014-10-24 10:00:38 [rdds.re|re|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.re&tld=re&type=DNS&status=1 
-2014-10-24 10:00:38 [rdds.pm|pm|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.pm&tld=pm&type=DNS&status=1 
-2014-10-24 10:00:38 [rdds.fr|fr|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.fr&tld=fr&type=DNS&status=1 
-2014-10-24 10:00:38 [dns.ovh|ovh|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.ovh&tld=ovh&type=DNS&status=1 
-2014-10-24 10:00:38 [dns.paris|paris|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.paris&tld=paris&type=DNS&status=1 
-2014-10-24 10:00:38 [dns.bzh|bzh|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.bzh&tld=bzh&type=DNS&status=1 
-2014-10-24 10:00:38 [dns.pm|pm|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.pm&tld=pm&type=DNS&status=1 
-2014-10-24 10:00:38 [dns.re|re|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.re&tld=re&type=DNS&status=1 
-2014-10-24 10:00:38 [dns.alsace|alsace|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.alsace&tld=alsace&type=DNS&status=1 
-2014-10-24 10:00:38 [dns.tf|tf|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.tf&tld=tf&type=DNS&status=1 
-2014-10-24 10:00:38 [dns.frogans|frogans|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.frogans&tld=frogans&type=DNS&status=1 
-2014-10-24 10:00:38 [dns.yt|yt|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.yt&tld=yt&type=DNS&status=1 
-2014-10-24 10:00:38 [dns.wf|wf|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.wf&tld=wf&type=DNS&status=1 
-2014-10-24 10:00:39 [rdds.bzh|bzh|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.bzh&tld=bzh&type=DNS&status=1 
-2014-10-24 10:00:39 [rdds.ovh|ovh|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.ovh&tld=ovh&type=DNS&status=1 
-2014-10-24 10:00:39 [rdds.paris|paris|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.paris&tld=paris&type=DNS&status=1 
-2014-10-24 10:00:39 [rdds.alsace|alsace|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.alsace&tld=alsace&type=DNS&status=1 
-2014-10-24 10:00:39 [rdds.frogans|frogans|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.frogans&tld=frogans&type=DNS&status=1 
-2014-10-24 10:00:48 [dns.fr|fr|DNS] ERROR fr.fryscop.probe.test.dns.DnsProbe - null java.net.SocketTimeoutException: null
-	at org.xbill.DNS.Client.blockUntil(Client.java:43)
-	at org.xbill.DNS.UDPClient.recv(UDPClient.java:124)
-
-2014-10-24 10:00:48 [dns.fr|fr|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.fr&tld=fr&type=DNS&status=1 
-2014-10-24 10:01:49 [main] INFO  fr.fryscop.FrySurvey - * * * * * * * * * * * * * * * * * * 
-2014-10-24 10:01:49 [main] INFO  fr.fryscop.FrySurvey - * * * * * * Démarrage * * * * * * * 
-2014-10-24 10:01:49 [main] INFO  fr.fryscop.FrySurvey - * * * * * * * * * * * * * * * * * * 
-2014-10-24 10:01:49 [main] INFO  f.f.p.configuration.Configuration - load probes-launcher.xml 
-2014-10-24 10:01:49 [main] INFO  fr.fryscop.FrySurvey - ProbeLauncher configured. 
-2014-10-24 10:01:49 [main] INFO  fr.fryscop.probe.test.TestLauncher - Initializing Probes Threads List 
-2014-10-24 10:01:49 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.alsace|alsace|DNS 
-2014-10-24 10:01:49 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.alsace|alsace|DNS 
-2014-10-24 10:01:49 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.bzh|bzh|DNS 
-2014-10-24 10:01:49 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.bzh|bzh|DNS 
-2014-10-24 10:01:49 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.fr|fr|DNS 
-2014-10-24 10:01:49 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.fr|fr|DNS 
-2014-10-24 10:01:49 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.frogans|frogans|DNS 
-2014-10-24 10:01:49 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.frogans|frogans|DNS 
-2014-10-24 10:01:49 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.ovh|ovh|DNS 
-2014-10-24 10:01:49 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.ovh|ovh|DNS 
-2014-10-24 10:01:49 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.paris|paris|DNS 
-2014-10-24 10:01:49 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.paris|paris|DNS 
-2014-10-24 10:01:49 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.pm|pm|DNS 
-2014-10-24 10:01:49 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.pm|pm|DNS 
-2014-10-24 10:01:49 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.re|re|DNS 
-2014-10-24 10:01:49 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.re|re|DNS 
-2014-10-24 10:01:49 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.tf|tf|DNS 
-2014-10-24 10:01:49 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.tf|tf|DNS 
-2014-10-24 10:01:49 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.wf|wf|DNS 
-2014-10-24 10:01:49 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.wf|wf|DNS 
-2014-10-24 10:01:49 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.yt|yt|DNS 
-2014-10-24 10:01:49 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.yt|yt|DNS 
-2014-10-24 10:01:49 [main] INFO  fr.fryscop.FrySurvey - ProbeLauncher is starting probes. 
-2014-10-24 10:01:49 [main] INFO  fr.fryscop.probe.test.TestLauncher - Starting Probes Threads List 
-2014-10-24 10:01:50 [rdds.alsace|alsace|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://frymonitoring.ovh/probe_add.php?name=rdds.alsace&tld=alsace&type=DNS&status=1 
-2014-10-24 10:01:50 [dns.pm|pm|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://frymonitoring.ovh/probe_add.php?name=dns.pm&tld=pm&type=DNS&status=1 
-2014-10-24 10:01:50 [rdds.ovh|ovh|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://frymonitoring.ovh/probe_add.php?name=rdds.ovh&tld=ovh&type=DNS&status=1 
-2014-10-24 10:01:50 [rdds.pm|pm|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://frymonitoring.ovh/probe_add.php?name=rdds.pm&tld=pm&type=DNS&status=1 
-2014-10-24 10:01:50 [dns.fr|fr|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://frymonitoring.ovh/probe_add.php?name=dns.fr&tld=fr&type=DNS&status=1 
-2014-10-24 10:01:50 [dns.alsace|alsace|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://frymonitoring.ovh/probe_add.php?name=dns.alsace&tld=alsace&type=DNS&status=1 
-2014-10-24 10:01:50 [dns.ovh|ovh|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://frymonitoring.ovh/probe_add.php?name=dns.ovh&tld=ovh&type=DNS&status=1 
-2014-10-24 10:01:50 [dns.re|re|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://frymonitoring.ovh/probe_add.php?name=dns.re&tld=re&type=DNS&status=1 
-2014-10-24 10:01:50 [dns.tf|tf|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://frymonitoring.ovh/probe_add.php?name=dns.tf&tld=tf&type=DNS&status=1 
-2014-10-24 10:01:50 [dns.paris|paris|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://frymonitoring.ovh/probe_add.php?name=dns.paris&tld=paris&type=DNS&status=1 
-2014-10-24 10:01:50 [dns.wf|wf|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://frymonitoring.ovh/probe_add.php?name=dns.wf&tld=wf&type=DNS&status=1 
-2014-10-24 10:01:50 [dns.frogans|frogans|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://frymonitoring.ovh/probe_add.php?name=dns.frogans&tld=frogans&type=DNS&status=1 
-2014-10-24 10:01:50 [dns.bzh|bzh|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://frymonitoring.ovh/probe_add.php?name=dns.bzh&tld=bzh&type=DNS&status=1 
-2014-10-24 10:01:50 [rdds.wf|wf|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://frymonitoring.ovh/probe_add.php?name=rdds.wf&tld=wf&type=DNS&status=1 
-2014-10-24 10:01:50 [rdds.re|re|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://frymonitoring.ovh/probe_add.php?name=rdds.re&tld=re&type=DNS&status=1 
-2014-10-24 10:01:50 [rdds.yt|yt|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://frymonitoring.ovh/probe_add.php?name=rdds.yt&tld=yt&type=DNS&status=1 
-2014-10-24 10:01:50 [rdds.tf|tf|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://frymonitoring.ovh/probe_add.php?name=rdds.tf&tld=tf&type=DNS&status=1 
-2014-10-24 10:01:50 [rdds.paris|paris|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://frymonitoring.ovh/probe_add.php?name=rdds.paris&tld=paris&type=DNS&status=1 
-2014-10-24 10:01:50 [rdds.frogans|frogans|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://frymonitoring.ovh/probe_add.php?name=rdds.frogans&tld=frogans&type=DNS&status=1 
-2014-10-24 10:01:50 [rdds.bzh|bzh|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://frymonitoring.ovh/probe_add.php?name=rdds.bzh&tld=bzh&type=DNS&status=1 
-2014-10-24 10:01:50 [rdds.fr|fr|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://frymonitoring.ovh/probe_add.php?name=rdds.fr&tld=fr&type=DNS&status=1 
-2014-10-24 10:01:50 [dns.yt|yt|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://frymonitoring.ovh/probe_add.php?name=dns.yt&tld=yt&type=DNS&status=1 
-2014-10-24 10:01:50 [dns.alsace|alsace|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.alsace&tld=alsace&type=DNS&status=1 
-2014-10-24 10:01:50 [dns.paris|paris|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.paris&tld=paris&type=DNS&status=1 
-2014-10-24 10:01:50 [dns.tf|tf|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.tf&tld=tf&type=DNS&status=1 
-2014-10-24 10:01:50 [dns.yt|yt|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.yt&tld=yt&type=DNS&status=1 
-2014-10-24 10:01:50 [dns.pm|pm|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.pm&tld=pm&type=DNS&status=1 
-2014-10-24 10:01:50 [dns.frogans|frogans|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.frogans&tld=frogans&type=DNS&status=1 
-2014-10-24 10:01:50 [dns.fr|fr|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.fr&tld=fr&type=DNS&status=1 
-2014-10-24 10:01:50 [dns.bzh|bzh|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.bzh&tld=bzh&type=DNS&status=1 
-2014-10-24 10:01:50 [dns.re|re|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.re&tld=re&type=DNS&status=1 
-2014-10-24 10:01:50 [dns.wf|wf|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.wf&tld=wf&type=DNS&status=1 
-2014-10-24 10:01:50 [rdds.pm|pm|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.pm&tld=pm&type=DNS&status=1 
-2014-10-24 10:01:50 [rdds.re|re|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.re&tld=re&type=DNS&status=1 
-2014-10-24 10:01:50 [rdds.yt|yt|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.yt&tld=yt&type=DNS&status=1 
-2014-10-24 10:01:50 [rdds.fr|fr|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.fr&tld=fr&type=DNS&status=1 
-2014-10-24 10:01:50 [rdds.wf|wf|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.wf&tld=wf&type=DNS&status=1 
-2014-10-24 10:01:50 [rdds.tf|tf|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.tf&tld=tf&type=DNS&status=1 
-2014-10-24 10:01:50 [rdds.ovh|ovh|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.ovh&tld=ovh&type=DNS&status=1 
-2014-10-24 10:01:51 [rdds.bzh|bzh|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.bzh&tld=bzh&type=DNS&status=1 
-2014-10-24 10:01:51 [rdds.alsace|alsace|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.alsace&tld=alsace&type=DNS&status=1 
-2014-10-24 10:01:51 [rdds.paris|paris|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.paris&tld=paris&type=DNS&status=1 
-2014-10-24 10:01:51 [rdds.frogans|frogans|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.frogans&tld=frogans&type=DNS&status=1 
-2014-10-24 10:02:00 [dns.ovh|ovh|DNS] ERROR fr.fryscop.probe.test.dns.DnsProbe - null java.net.SocketTimeoutException: null
-	at org.xbill.DNS.Client.blockUntil(Client.java:43)
-	at org.xbill.DNS.UDPClient.recv(UDPClient.java:124)
-
-2014-10-24 10:02:00 [dns.ovh|ovh|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.ovh&tld=ovh&type=DNS&status=1 
-2014-10-24 10:02:50 [dns.alsace|alsace|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.alsace&tld=alsace&type=DNS&status=1 
-2014-10-24 10:02:50 [dns.yt|yt|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.yt&tld=yt&type=DNS&status=1 
-2014-10-24 10:02:50 [dns.wf|wf|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.wf&tld=wf&type=DNS&status=1 
-2014-10-24 10:02:50 [dns.pm|pm|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.pm&tld=pm&type=DNS&status=1 
-2014-10-24 10:02:50 [dns.tf|tf|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.tf&tld=tf&type=DNS&status=1 
-2014-10-24 10:02:50 [dns.fr|fr|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.fr&tld=fr&type=DNS&status=1 
-2014-10-24 10:02:50 [dns.re|re|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.re&tld=re&type=DNS&status=1 
-2014-10-24 10:02:50 [dns.frogans|frogans|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.frogans&tld=frogans&type=DNS&status=1 
-2014-10-24 10:02:50 [dns.bzh|bzh|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.bzh&tld=bzh&type=DNS&status=1 
-2014-10-24 10:02:50 [dns.paris|paris|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.paris&tld=paris&type=DNS&status=1 
-2014-10-24 10:05:43 [main] INFO  fr.fryscop.FrySurvey - * * * * * * * * * * * * * * * * * * 
-2014-10-24 10:05:43 [main] INFO  fr.fryscop.FrySurvey - * * * * * * Démarrage * * * * * * * 
-2014-10-24 10:05:43 [main] INFO  fr.fryscop.FrySurvey - * * * * * * * * * * * * * * * * * * 
-2014-10-24 10:05:43 [main] INFO  f.f.p.configuration.Configuration - load probes-launcher.xml 
-2014-10-24 10:05:43 [main] INFO  fr.fryscop.FrySurvey - ProbeLauncher configured. 
-2014-10-24 10:05:43 [main] INFO  fr.fryscop.probe.test.TestLauncher - Initializing Probes Threads List 
-2014-10-24 10:05:43 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.alsace|alsace|DNS 
-2014-10-24 10:05:43 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.alsace|alsace|DNS 
-2014-10-24 10:05:43 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.bzh|bzh|DNS 
-2014-10-24 10:05:43 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.bzh|bzh|DNS 
-2014-10-24 10:05:43 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.fr|fr|DNS 
-2014-10-24 10:05:43 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.fr|fr|DNS 
-2014-10-24 10:05:43 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.frogans|frogans|DNS 
-2014-10-24 10:05:43 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.frogans|frogans|DNS 
-2014-10-24 10:05:43 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.ovh|ovh|DNS 
-2014-10-24 10:05:43 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.ovh|ovh|DNS 
-2014-10-24 10:05:43 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.paris|paris|DNS 
-2014-10-24 10:05:43 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.paris|paris|DNS 
-2014-10-24 10:05:43 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.pm|pm|DNS 
-2014-10-24 10:05:43 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.pm|pm|DNS 
-2014-10-24 10:05:43 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.re|re|DNS 
-2014-10-24 10:05:43 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.re|re|DNS 
-2014-10-24 10:05:43 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.tf|tf|DNS 
-2014-10-24 10:05:43 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.tf|tf|DNS 
-2014-10-24 10:05:43 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.wf|wf|DNS 
-2014-10-24 10:05:43 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.wf|wf|DNS 
-2014-10-24 10:05:43 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.yt|yt|DNS 
-2014-10-24 10:05:43 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.yt|yt|DNS 
-2014-10-24 10:05:43 [main] INFO  fr.fryscop.FrySurvey - ProbeLauncher is starting probes. 
-2014-10-24 10:05:43 [main] INFO  fr.fryscop.probe.test.TestLauncher - Starting Probes Threads List 
-2014-10-24 10:05:43 [dns.alsace|alsace|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=dns.alsace&tld=alsace&type=DNS&status=1 
-2014-10-24 10:05:43 [rdds.alsace|alsace|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=rdds.alsace&tld=alsace&type=DNS&status=1 
-2014-10-24 10:05:43 [dns.bzh|bzh|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=dns.bzh&tld=bzh&type=DNS&status=1 
-2014-10-24 10:05:43 [dns.frogans|frogans|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=dns.frogans&tld=frogans&type=DNS&status=1 
-2014-10-24 10:05:43 [rdds.fr|fr|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=rdds.fr&tld=fr&type=DNS&status=1 
-2014-10-24 10:05:43 [rdds.ovh|ovh|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=rdds.ovh&tld=ovh&type=DNS&status=1 
-2014-10-24 10:05:43 [rdds.bzh|bzh|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=rdds.bzh&tld=bzh&type=DNS&status=1 
-2014-10-24 10:05:43 [dns.paris|paris|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=dns.paris&tld=paris&type=DNS&status=1 
-2014-10-24 10:05:43 [rdds.paris|paris|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=rdds.paris&tld=paris&type=DNS&status=1 
-2014-10-24 10:05:43 [rdds.frogans|frogans|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=rdds.frogans&tld=frogans&type=DNS&status=1 
-2014-10-24 10:05:43 [dns.pm|pm|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=dns.pm&tld=pm&type=DNS&status=1 
-2014-10-24 10:05:43 [dns.ovh|ovh|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=dns.ovh&tld=ovh&type=DNS&status=1 
-2014-10-24 10:05:43 [dns.fr|fr|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=dns.fr&tld=fr&type=DNS&status=1 
-2014-10-24 10:05:43 [dns.re|re|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=dns.re&tld=re&type=DNS&status=1 
-2014-10-24 10:05:43 [dns.wf|wf|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=dns.wf&tld=wf&type=DNS&status=1 
-2014-10-24 10:05:43 [rdds.pm|pm|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=rdds.pm&tld=pm&type=DNS&status=1 
-2014-10-24 10:05:43 [rdds.tf|tf|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=rdds.tf&tld=tf&type=DNS&status=1 
-2014-10-24 10:05:43 [rdds.yt|yt|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=rdds.yt&tld=yt&type=DNS&status=1 
-2014-10-24 10:05:43 [dns.tf|tf|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=dns.tf&tld=tf&type=DNS&status=1 
-2014-10-24 10:05:43 [dns.yt|yt|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=dns.yt&tld=yt&type=DNS&status=1 
-2014-10-24 10:05:43 [rdds.re|re|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=rdds.re&tld=re&type=DNS&status=1 
-2014-10-24 10:05:43 [rdds.wf|wf|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=rdds.wf&tld=wf&type=DNS&status=1 
-2014-10-24 10:05:44 [rdds.yt|yt|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.yt&tld=yt&type=DNS&status=1 
-2014-10-24 10:05:44 [rdds.tf|tf|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.tf&tld=tf&type=DNS&status=1 
-2014-10-24 10:05:44 [rdds.wf|wf|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.wf&tld=wf&type=DNS&status=1 
-2014-10-24 10:05:44 [dns.paris|paris|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.paris&tld=paris&type=DNS&status=1 
-2014-10-24 10:05:44 [dns.tf|tf|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.tf&tld=tf&type=DNS&status=1 
-2014-10-24 10:05:44 [dns.pm|pm|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.pm&tld=pm&type=DNS&status=1 
-2014-10-24 10:05:44 [dns.alsace|alsace|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.alsace&tld=alsace&type=DNS&status=1 
-2014-10-24 10:05:44 [dns.frogans|frogans|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.frogans&tld=frogans&type=DNS&status=1 
-2014-10-24 10:05:44 [dns.yt|yt|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.yt&tld=yt&type=DNS&status=1 
-2014-10-24 10:05:44 [rdds.re|re|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.re&tld=re&type=DNS&status=1 
-2014-10-24 10:05:44 [dns.wf|wf|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.wf&tld=wf&type=DNS&status=1 
-2014-10-24 10:05:44 [dns.ovh|ovh|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.ovh&tld=ovh&type=DNS&status=1 
-2014-10-24 10:05:44 [dns.re|re|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.re&tld=re&type=DNS&status=1 
-2014-10-24 10:05:44 [dns.bzh|bzh|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.bzh&tld=bzh&type=DNS&status=1 
-2014-10-24 10:05:44 [rdds.fr|fr|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.fr&tld=fr&type=DNS&status=1 
-2014-10-24 10:05:44 [rdds.pm|pm|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.pm&tld=pm&type=DNS&status=1 
-2014-10-24 10:05:45 [rdds.ovh|ovh|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.ovh&tld=ovh&type=DNS&status=1 
-2014-10-24 10:05:45 [rdds.alsace|alsace|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.alsace&tld=alsace&type=DNS&status=1 
-2014-10-24 10:05:45 [rdds.paris|paris|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.paris&tld=paris&type=DNS&status=1 
-2014-10-24 10:05:45 [rdds.bzh|bzh|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.bzh&tld=bzh&type=DNS&status=1 
-2014-10-24 10:05:45 [rdds.frogans|frogans|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.frogans&tld=frogans&type=DNS&status=1 
-2014-10-24 10:05:54 [dns.fr|fr|DNS] ERROR fr.fryscop.probe.test.dns.DnsProbe - null java.net.SocketTimeoutException: null
-	at org.xbill.DNS.Client.blockUntil(Client.java:43)
-	at org.xbill.DNS.UDPClient.recv(UDPClient.java:124)
-
-2014-10-24 10:05:54 [dns.fr|fr|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.fr&tld=fr&type=DNS&status=1 
-2014-10-24 10:08:12 [main] INFO  fr.fryscop.FrySurvey - * * * * * * * * * * * * * * * * * * 
-2014-10-24 10:08:12 [main] INFO  fr.fryscop.FrySurvey - * * * * * * Démarrage * * * * * * * 
-2014-10-24 10:08:12 [main] INFO  fr.fryscop.FrySurvey - * * * * * * * * * * * * * * * * * * 
-2014-10-24 10:08:12 [main] INFO  f.f.p.configuration.Configuration - load probes-launcher.xml 
-2014-10-24 10:08:13 [main] INFO  fr.fryscop.FrySurvey - ProbeLauncher configured. 
-2014-10-24 10:08:13 [main] INFO  fr.fryscop.probe.test.TestLauncher - Initializing Probes Threads List 
-2014-10-24 10:08:13 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.alsace|alsace|DNS 
-2014-10-24 10:08:13 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.alsace|alsace|DNS 
-2014-10-24 10:08:13 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.bzh|bzh|DNS 
-2014-10-24 10:08:13 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.bzh|bzh|DNS 
-2014-10-24 10:08:13 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.fr|fr|DNS 
-2014-10-24 10:08:13 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.fr|fr|DNS 
-2014-10-24 10:08:13 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.frogans|frogans|DNS 
-2014-10-24 10:08:13 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.frogans|frogans|DNS 
-2014-10-24 10:08:13 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.ovh|ovh|DNS 
-2014-10-24 10:08:13 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.ovh|ovh|DNS 
-2014-10-24 10:08:13 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.paris|paris|DNS 
-2014-10-24 10:08:13 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.paris|paris|DNS 
-2014-10-24 10:08:13 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.pm|pm|DNS 
-2014-10-24 10:08:13 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.pm|pm|DNS 
-2014-10-24 10:08:13 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.re|re|DNS 
-2014-10-24 10:08:13 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.re|re|DNS 
-2014-10-24 10:08:13 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.tf|tf|DNS 
-2014-10-24 10:08:13 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.tf|tf|DNS 
-2014-10-24 10:08:13 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.wf|wf|DNS 
-2014-10-24 10:08:13 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.wf|wf|DNS 
-2014-10-24 10:08:13 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.yt|yt|DNS 
-2014-10-24 10:08:13 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.yt|yt|DNS 
-2014-10-24 10:08:13 [main] INFO  fr.fryscop.FrySurvey - ProbeLauncher is starting probes. 
-2014-10-24 10:08:13 [main] INFO  fr.fryscop.probe.test.TestLauncher - Starting Probes Threads List 
-2014-10-24 10:08:13 [dns.alsace|alsace|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=dns.alsace&tld=alsace&type=DNS&status=1 
-2014-10-24 10:08:13 [rdds.pm|pm|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=rdds.pm&tld=pm&type=DNS&status=1 
-2014-10-24 10:08:13 [rdds.ovh|ovh|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=rdds.ovh&tld=ovh&type=DNS&status=1 
-2014-10-24 10:08:13 [rdds.fr|fr|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=rdds.fr&tld=fr&type=DNS&status=1 
-2014-10-24 10:08:13 [rdds.alsace|alsace|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=rdds.alsace&tld=alsace&type=DNS&status=1 
-2014-10-24 10:08:13 [dns.fr|fr|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=dns.fr&tld=fr&type=DNS&status=1 
-2014-10-24 10:08:13 [dns.ovh|ovh|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=dns.ovh&tld=ovh&type=DNS&status=1 
-2014-10-24 10:08:13 [dns.wf|wf|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=dns.wf&tld=wf&type=DNS&status=1 
-2014-10-24 10:08:13 [rdds.wf|wf|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=rdds.wf&tld=wf&type=DNS&status=1 
-2014-10-24 10:08:13 [rdds.re|re|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=rdds.re&tld=re&type=DNS&status=1 
-2014-10-24 10:08:13 [rdds.paris|paris|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=rdds.paris&tld=paris&type=DNS&status=1 
-2014-10-24 10:08:13 [rdds.frogans|frogans|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=rdds.frogans&tld=frogans&type=DNS&status=1 
-2014-10-24 10:08:13 [rdds.bzh|bzh|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=rdds.bzh&tld=bzh&type=DNS&status=1 
-2014-10-24 10:08:13 [dns.re|re|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=dns.re&tld=re&type=DNS&status=1 
-2014-10-24 10:08:13 [dns.paris|paris|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=dns.paris&tld=paris&type=DNS&status=1 
-2014-10-24 10:08:13 [dns.frogans|frogans|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=dns.frogans&tld=frogans&type=DNS&status=1 
-2014-10-24 10:08:13 [dns.bzh|bzh|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=dns.bzh&tld=bzh&type=DNS&status=1 
-2014-10-24 10:08:13 [rdds.tf|tf|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=rdds.tf&tld=tf&type=DNS&status=1 
-2014-10-24 10:08:13 [dns.yt|yt|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=dns.yt&tld=yt&type=DNS&status=1 
-2014-10-24 10:08:13 [dns.tf|tf|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=dns.tf&tld=tf&type=DNS&status=1 
-2014-10-24 10:08:13 [dns.pm|pm|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=dns.pm&tld=pm&type=DNS&status=1 
-2014-10-24 10:08:13 [rdds.yt|yt|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=rdds.yt&tld=yt&type=DNS&status=1 
-2014-10-24 10:08:14 [rdds.fr|fr|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.fr&tld=fr&type=DNS&status=1 
-2014-10-24 10:08:14 [rdds.pm|pm|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.pm&tld=pm&type=DNS&status=1 
-2014-10-24 10:08:14 [rdds.re|re|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.re&tld=re&type=DNS&status=1 
-2014-10-24 10:08:14 [rdds.yt|yt|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.yt&tld=yt&type=DNS&status=1 
-2014-10-24 10:08:14 [rdds.tf|tf|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.tf&tld=tf&type=DNS&status=1 
-2014-10-24 10:08:14 [rdds.wf|wf|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.wf&tld=wf&type=DNS&status=1 
-2014-10-24 10:08:14 [dns.fr|fr|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.fr&tld=fr&type=DNS&status=1 
-2014-10-24 10:08:14 [dns.yt|yt|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.yt&tld=yt&type=DNS&status=1 
-2014-10-24 10:08:14 [dns.tf|tf|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.tf&tld=tf&type=DNS&status=1 
-2014-10-24 10:08:14 [dns.pm|pm|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.pm&tld=pm&type=DNS&status=1 
-2014-10-24 10:08:14 [dns.paris|paris|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.paris&tld=paris&type=DNS&status=1 
-2014-10-24 10:08:14 [dns.alsace|alsace|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.alsace&tld=alsace&type=DNS&status=1 
-2014-10-24 10:08:14 [dns.wf|wf|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.wf&tld=wf&type=DNS&status=1 
-2014-10-24 10:08:14 [dns.re|re|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.re&tld=re&type=DNS&status=1 
-2014-10-24 10:08:14 [dns.bzh|bzh|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.bzh&tld=bzh&type=DNS&status=1 
-2014-10-24 10:08:14 [dns.ovh|ovh|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.ovh&tld=ovh&type=DNS&status=1 
-2014-10-24 10:08:15 [rdds.bzh|bzh|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.bzh&tld=bzh&type=DNS&status=1 
-2014-10-24 10:08:15 [rdds.ovh|ovh|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.ovh&tld=ovh&type=DNS&status=1 
-2014-10-24 10:08:15 [rdds.paris|paris|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.paris&tld=paris&type=DNS&status=1 
-2014-10-24 10:08:15 [rdds.alsace|alsace|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.alsace&tld=alsace&type=DNS&status=1 
-2014-10-24 10:08:16 [rdds.frogans|frogans|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.frogans&tld=frogans&type=DNS&status=1 
-2014-10-24 10:08:24 [dns.frogans|frogans|DNS] ERROR fr.fryscop.probe.test.dns.DnsProbe - null java.net.SocketTimeoutException: null
-	at org.xbill.DNS.Client.blockUntil(Client.java:43)
-	at org.xbill.DNS.UDPClient.recv(UDPClient.java:124)
-
-2014-10-24 10:08:24 [dns.frogans|frogans|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.frogans&tld=frogans&type=DNS&status=1 
-2014-10-24 10:09:14 [dns.paris|paris|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.paris&tld=paris&type=DNS&status=1 
-2014-10-24 10:09:14 [dns.fr|fr|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.fr&tld=fr&type=DNS&status=1 
-2014-10-24 10:09:14 [dns.tf|tf|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.tf&tld=tf&type=DNS&status=1 
-2014-10-24 10:09:14 [dns.yt|yt|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.yt&tld=yt&type=DNS&status=1 
-2014-10-24 10:09:14 [dns.pm|pm|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.pm&tld=pm&type=DNS&status=1 
-2014-10-24 10:09:14 [dns.ovh|ovh|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.ovh&tld=ovh&type=DNS&status=1 
-2014-10-24 10:09:14 [dns.alsace|alsace|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.alsace&tld=alsace&type=DNS&status=1 
-2014-10-24 10:09:14 [dns.bzh|bzh|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.bzh&tld=bzh&type=DNS&status=1 
-2014-10-24 10:09:14 [dns.wf|wf|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.wf&tld=wf&type=DNS&status=1 
-2014-10-24 10:09:14 [dns.re|re|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.re&tld=re&type=DNS&status=1 
-2014-10-24 10:09:24 [dns.frogans|frogans|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.frogans&tld=frogans&type=DNS&status=1 
-2014-10-24 10:09:24 [dns.frogans|frogans|DNS] DEBUG fr.fryscop.probe.test.dns.DnsProbe - dnsNameServerAvailability|f.ext.nic.fr.getUnavaibilityDuration(): 60026 
-2014-10-24 10:09:32 [main] INFO  fr.fryscop.FrySurvey - * * * * * * * * * * * * * * * * * * 
-2014-10-24 10:09:32 [main] INFO  fr.fryscop.FrySurvey - * * * * * * Démarrage * * * * * * * 
-2014-10-24 10:09:32 [main] INFO  fr.fryscop.FrySurvey - * * * * * * * * * * * * * * * * * * 
-2014-10-24 10:09:32 [main] INFO  f.f.p.configuration.Configuration - load probes-launcher.xml 
-2014-10-24 10:09:33 [main] INFO  fr.fryscop.FrySurvey - ProbeLauncher configured. 
-2014-10-24 10:09:33 [main] INFO  fr.fryscop.probe.test.TestLauncher - Initializing Probes Threads List 
-2014-10-24 10:09:33 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.alsace|alsace|DNS 
-2014-10-24 10:09:33 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.alsace|alsace|DNS 
-2014-10-24 10:09:33 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.bzh|bzh|DNS 
-2014-10-24 10:09:33 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.bzh|bzh|DNS 
-2014-10-24 10:09:33 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.fr|fr|DNS 
-2014-10-24 10:09:33 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.fr|fr|DNS 
-2014-10-24 10:09:33 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.frogans|frogans|DNS 
-2014-10-24 10:09:33 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.frogans|frogans|DNS 
-2014-10-24 10:09:33 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.ovh|ovh|DNS 
-2014-10-24 10:09:33 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.ovh|ovh|DNS 
-2014-10-24 10:09:33 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.paris|paris|DNS 
-2014-10-24 10:09:33 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.paris|paris|DNS 
-2014-10-24 10:09:33 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.pm|pm|DNS 
-2014-10-24 10:09:33 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.pm|pm|DNS 
-2014-10-24 10:09:33 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.re|re|DNS 
-2014-10-24 10:09:33 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.re|re|DNS 
-2014-10-24 10:09:33 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.tf|tf|DNS 
-2014-10-24 10:09:33 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.tf|tf|DNS 
-2014-10-24 10:09:33 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.wf|wf|DNS 
-2014-10-24 10:09:33 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.wf|wf|DNS 
-2014-10-24 10:09:33 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.yt|yt|DNS 
-2014-10-24 10:09:33 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.yt|yt|DNS 
-2014-10-24 10:09:33 [main] INFO  fr.fryscop.FrySurvey - ProbeLauncher is starting probes. 
-2014-10-24 10:09:33 [main] INFO  fr.fryscop.probe.test.TestLauncher - Starting Probes Threads List 
-2014-10-24 10:09:33 [rdds.alsace|alsace|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=rdds.alsace&tld=alsace&type=DNS&status=1 
-2014-10-24 10:09:34 [rdds.fr|fr|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=rdds.fr&tld=fr&type=DNS&status=1 
-2014-10-24 10:09:35 [rdds.ovh|ovh|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=rdds.ovh&tld=ovh&type=DNS&status=1 
-2014-10-24 10:09:35 [rdds.alsace|alsace|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.alsace&tld=alsace&type=DNS&status=1 
-2014-10-24 10:09:35 [rdds.fr|fr|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.fr&tld=fr&type=DNS&status=1 
-2014-10-24 10:09:36 [rdds.pm|pm|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=rdds.pm&tld=pm&type=DNS&status=1 
-2014-10-24 10:09:37 [rdds.tf|tf|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=rdds.tf&tld=tf&type=DNS&status=1 
-2014-10-24 10:09:37 [rdds.pm|pm|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.pm&tld=pm&type=DNS&status=1 
-2014-10-24 10:09:37 [rdds.ovh|ovh|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.ovh&tld=ovh&type=DNS&status=1 
-2014-10-24 10:09:38 [rdds.yt|yt|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=rdds.yt&tld=yt&type=DNS&status=1 
-2014-10-24 10:09:38 [rdds.tf|tf|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.tf&tld=tf&type=DNS&status=1 
-2014-10-24 10:09:39 [rdds.paris|paris|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=rdds.paris&tld=paris&type=DNS&status=1 
-2014-10-24 10:09:39 [rdds.yt|yt|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.yt&tld=yt&type=DNS&status=1 
-2014-10-24 10:09:40 [rdds.re|re|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=rdds.re&tld=re&type=DNS&status=1 
-2014-10-24 10:09:41 [rdds.wf|wf|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=rdds.wf&tld=wf&type=DNS&status=1 
-2014-10-24 10:09:41 [rdds.paris|paris|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.paris&tld=paris&type=DNS&status=1 
-2014-10-24 10:09:41 [rdds.re|re|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.re&tld=re&type=DNS&status=1 
-2014-10-24 10:09:42 [dns.alsace|alsace|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=dns.alsace&tld=alsace&type=DNS&status=1 
-2014-10-24 10:09:42 [rdds.wf|wf|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.wf&tld=wf&type=DNS&status=1 
-2014-10-24 10:09:43 [dns.fr|fr|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=dns.fr&tld=fr&type=DNS&status=1 
-2014-10-24 10:09:43 [dns.alsace|alsace|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.alsace&tld=alsace&type=DNS&status=1 
-2014-10-24 10:09:44 [dns.ovh|ovh|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=dns.ovh&tld=ovh&type=DNS&status=1 
-2014-10-24 10:09:44 [dns.fr|fr|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.fr&tld=fr&type=DNS&status=1 
-2014-10-24 10:09:45 [dns.pm|pm|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=dns.pm&tld=pm&type=DNS&status=1 
-2014-10-24 10:09:45 [dns.ovh|ovh|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.ovh&tld=ovh&type=DNS&status=1 
-2014-10-24 10:09:46 [dns.yt|yt|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=dns.yt&tld=yt&type=DNS&status=1 
-2014-10-24 10:09:46 [dns.pm|pm|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.pm&tld=pm&type=DNS&status=1 
-2014-10-24 10:09:47 [dns.tf|tf|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=dns.tf&tld=tf&type=DNS&status=1 
-2014-10-24 10:09:47 [dns.yt|yt|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.yt&tld=yt&type=DNS&status=1 
-2014-10-24 10:09:48 [rdds.frogans|frogans|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=rdds.frogans&tld=frogans&type=DNS&status=1 
-2014-10-24 10:09:48 [dns.tf|tf|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.tf&tld=tf&type=DNS&status=1 
-2014-10-24 10:09:49 [rdds.bzh|bzh|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=rdds.bzh&tld=bzh&type=DNS&status=1 
-2014-10-24 10:09:50 [dns.wf|wf|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=dns.wf&tld=wf&type=DNS&status=1 
-2014-10-24 10:09:51 [rdds.frogans|frogans|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.frogans&tld=frogans&type=DNS&status=1 
-2014-10-24 10:09:51 [dns.re|re|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=dns.re&tld=re&type=DNS&status=1 
-2014-10-24 10:09:51 [dns.wf|wf|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.wf&tld=wf&type=DNS&status=1 
-2014-10-24 10:09:51 [rdds.bzh|bzh|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.bzh&tld=bzh&type=DNS&status=1 
-2014-10-24 10:09:52 [dns.paris|paris|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=dns.paris&tld=paris&type=DNS&status=1 
-2014-10-24 10:09:52 [dns.re|re|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.re&tld=re&type=DNS&status=1 
-2014-10-24 10:09:53 [dns.frogans|frogans|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=dns.frogans&tld=frogans&type=DNS&status=1 
-2014-10-24 10:09:53 [dns.paris|paris|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.paris&tld=paris&type=DNS&status=1 
-2014-10-24 10:09:54 [dns.bzh|bzh|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=dns.bzh&tld=bzh&type=DNS&status=1 
-2014-10-24 10:09:54 [dns.frogans|frogans|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.frogans&tld=frogans&type=DNS&status=1 
-2014-10-24 10:09:55 [dns.bzh|bzh|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.bzh&tld=bzh&type=DNS&status=1 
-2014-10-24 10:10:43 [dns.alsace|alsace|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.alsace&tld=alsace&type=DNS&status=1 
-2014-10-24 10:10:44 [dns.fr|fr|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.fr&tld=fr&type=DNS&status=1 
-2014-10-24 10:10:45 [dns.ovh|ovh|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.ovh&tld=ovh&type=DNS&status=1 
-2014-10-24 10:10:46 [dns.pm|pm|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.pm&tld=pm&type=DNS&status=1 
-2014-10-24 10:10:47 [dns.yt|yt|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.yt&tld=yt&type=DNS&status=1 
-2014-10-24 10:10:51 [dns.wf|wf|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.wf&tld=wf&type=DNS&status=1 
-2014-10-24 10:10:52 [dns.re|re|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.re&tld=re&type=DNS&status=1 
-2014-10-24 10:10:53 [dns.paris|paris|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.paris&tld=paris&type=DNS&status=1 
-2014-10-24 10:10:54 [dns.frogans|frogans|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.frogans&tld=frogans&type=DNS&status=1 
-2014-10-24 10:10:55 [dns.bzh|bzh|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.bzh&tld=bzh&type=DNS&status=1 
-2014-10-24 10:10:58 [dns.tf|tf|DNS] ERROR fr.fryscop.probe.test.dns.DnsProbe - null java.net.SocketTimeoutException: null
-	at org.xbill.DNS.Client.blockUntil(Client.java:43)
-	at org.xbill.DNS.UDPClient.recv(UDPClient.java:124)
-
-2014-10-24 10:10:58 [dns.tf|tf|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.tf&tld=tf&type=DNS&status=1 
+2014-10-27 07:49:43 [main] INFO  fr.fryscop.FrySurvey - * * * * * * * * * * * * * * * * * * 
+2014-10-27 07:49:43 [main] INFO  fr.fryscop.FrySurvey - * * * * * * Démarrage * * * * * * * 
+2014-10-27 07:49:43 [main] INFO  fr.fryscop.FrySurvey - * * * * * * * * * * * * * * * * * * 
+2014-10-27 07:49:43 [main] INFO  f.f.p.configuration.Configuration - load probes-launcher.xml 
+2014-10-27 07:49:44 [main] INFO  fr.fryscop.FrySurvey - ProbeLauncher configured. 
+2014-10-27 07:49:44 [main] INFO  fr.fryscop.probe.test.TestLauncher - Initializing Probes Threads List 
+2014-10-27 07:49:44 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.alsace|alsace|DNS 
+2014-10-27 07:49:44 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.alsace|alsace|DNS 
+2014-10-27 07:49:44 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.bzh|bzh|DNS 
+2014-10-27 07:49:44 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.bzh|bzh|DNS 
+2014-10-27 07:49:44 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.fr|fr|DNS 
+2014-10-27 07:49:44 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.fr|fr|DNS 
+2014-10-27 07:49:44 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.frogans|frogans|DNS 
+2014-10-27 07:49:44 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.frogans|frogans|DNS 
+2014-10-27 07:49:44 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.ovh|ovh|DNS 
+2014-10-27 07:49:44 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.ovh|ovh|DNS 
+2014-10-27 07:49:44 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.paris|paris|DNS 
+2014-10-27 07:49:44 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.paris|paris|DNS 
+2014-10-27 07:49:44 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.pm|pm|DNS 
+2014-10-27 07:49:44 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.pm|pm|DNS 
+2014-10-27 07:49:44 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.re|re|DNS 
+2014-10-27 07:49:44 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.re|re|DNS 
+2014-10-27 07:49:44 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.tf|tf|DNS 
+2014-10-27 07:49:44 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.tf|tf|DNS 
+2014-10-27 07:49:44 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.wf|wf|DNS 
+2014-10-27 07:49:44 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.wf|wf|DNS 
+2014-10-27 07:49:44 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():dns.yt|yt|DNS 
+2014-10-27 07:49:44 [main] DEBUG fr.fryscop.probe.test.TestLauncher - initProbeList- probe.toString():rdds.yt|yt|DNS 
+2014-10-27 07:49:44 [main] INFO  fr.fryscop.FrySurvey - ProbeLauncher is starting probes. 
+2014-10-27 07:49:44 [main] INFO  fr.fryscop.probe.test.TestLauncher - Starting Probes Threads List 
+2014-10-27 07:49:44 [dns.frogans|frogans|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=dns.frogans&tld=frogans&type=DNS&status=1 
+2014-10-27 07:49:44 [main] INFO  fr.fryscop.tools.FolderSpyWorker - Start FolderSpy on:archive-log-probe/ 
+2014-10-27 07:49:46 [rdds.yt|yt|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=rdds.yt&tld=yt&type=DNS&status=1 
+2014-10-27 07:49:46 [Thread-22] INFO  fr.fryscop.tools.FolderSpyWorker - new file create probe-log-file.20141024.log.zip 
+2014-10-27 07:49:46 [dns.frogans|frogans|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.frogans&tld=frogans&type=DNS&status=1 
+2014-10-27 07:49:46 [Thread-22] INFO  fr.fryscop.tools.FtpSync - Connected to ftp.frysurvey.fr. 
+2014-10-27 07:49:46 [Thread-22] INFO  fr.fryscop.tools.FtpSync - 230-User frysurvewg has group access to:  users     
+230 OK. Current restricted directory is /
+ 
+2014-10-27 07:49:46 [Thread-22] INFO  fr.fryscop.tools.FtpSync - Remote system is UNIX Type: L8 
+2014-10-27 07:49:46 [Thread-22] INFO  fr.fryscop.tools.FolderSpyWorker - probe-log-file.20141024.log.zip has been modified 
+2014-10-27 07:49:46 [Thread-22] INFO  fr.fryscop.tools.FolderSpyWorker - probe-log-file.20141024.log.zip has been deleted 
+2014-10-27 07:49:46 [Thread-22] INFO  fr.fryscop.tools.FolderSpyWorker - backup has been modified 
+2014-10-27 07:49:47 [rdds.tf|tf|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=rdds.tf&tld=tf&type=DNS&status=1 
+2014-10-27 07:49:47 [rdds.yt|yt|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.yt&tld=yt&type=DNS&status=1 
+2014-10-27 07:49:48 [rdds.pm|pm|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=rdds.pm&tld=pm&type=DNS&status=1 
+2014-10-27 07:49:48 [rdds.tf|tf|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.tf&tld=tf&type=DNS&status=1 
+2014-10-27 07:49:49 [rdds.ovh|ovh|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=rdds.ovh&tld=ovh&type=DNS&status=1 
+2014-10-27 07:49:49 [rdds.pm|pm|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.pm&tld=pm&type=DNS&status=1 
+2014-10-27 07:49:50 [rdds.fr|fr|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=rdds.fr&tld=fr&type=DNS&status=1 
+2014-10-27 07:49:51 [rdds.alsace|alsace|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=rdds.alsace&tld=alsace&type=DNS&status=1 
+2014-10-27 07:49:51 [rdds.ovh|ovh|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.ovh&tld=ovh&type=DNS&status=1 
+2014-10-27 07:49:52 [rdds.fr|fr|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.fr&tld=fr&type=DNS&status=1 
+2014-10-27 07:49:52 [dns.wf|wf|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=dns.wf&tld=wf&type=DNS&status=1 
+2014-10-27 07:49:53 [dns.yt|yt|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=dns.yt&tld=yt&type=DNS&status=1 
+2014-10-27 07:49:53 [rdds.alsace|alsace|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.alsace&tld=alsace&type=DNS&status=1 
+2014-10-27 07:49:53 [dns.wf|wf|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.wf&tld=wf&type=DNS&status=1 
+2014-10-27 07:49:54 [dns.re|re|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=dns.re&tld=re&type=DNS&status=1 
+2014-10-27 07:49:54 [dns.yt|yt|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.yt&tld=yt&type=DNS&status=1 
+2014-10-27 07:49:55 [rdds.wf|wf|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=rdds.wf&tld=wf&type=DNS&status=1 
+2014-10-27 07:49:55 [dns.re|re|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.re&tld=re&type=DNS&status=1 
+2014-10-27 07:49:56 [dns.paris|paris|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=dns.paris&tld=paris&type=DNS&status=1 
+2014-10-27 07:49:57 [rdds.wf|wf|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.wf&tld=wf&type=DNS&status=1 
+2014-10-27 07:49:57 [dns.alsace|alsace|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=dns.alsace&tld=alsace&type=DNS&status=1 
+2014-10-27 07:49:57 [dns.paris|paris|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.paris&tld=paris&type=DNS&status=1 
+2014-10-27 07:49:58 [dns.tf|tf|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=dns.tf&tld=tf&type=DNS&status=1 
+2014-10-27 07:49:58 [dns.alsace|alsace|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.alsace&tld=alsace&type=DNS&status=1 
+2014-10-27 07:49:59 [rdds.re|re|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=rdds.re&tld=re&type=DNS&status=1 
+2014-10-27 07:49:59 [dns.tf|tf|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.tf&tld=tf&type=DNS&status=1 
+2014-10-27 07:50:00 [dns.bzh|bzh|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=dns.bzh&tld=bzh&type=DNS&status=1 
+2014-10-27 07:50:01 [rdds.re|re|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.re&tld=re&type=DNS&status=1 
+2014-10-27 07:50:01 [dns.pm|pm|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=dns.pm&tld=pm&type=DNS&status=1 
+2014-10-27 07:50:01 [dns.bzh|bzh|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.bzh&tld=bzh&type=DNS&status=1 
+2014-10-27 07:50:02 [rdds.paris|paris|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=rdds.paris&tld=paris&type=DNS&status=1 
+2014-10-27 07:50:02 [dns.pm|pm|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.pm&tld=pm&type=DNS&status=1 
+2014-10-27 07:50:03 [dns.fr|fr|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=dns.fr&tld=fr&type=DNS&status=1 
+2014-10-27 07:50:05 [dns.ovh|ovh|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=dns.ovh&tld=ovh&type=DNS&status=1 
+2014-10-27 07:50:05 [dns.fr|fr|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.fr&tld=fr&type=DNS&status=1 
+2014-10-27 07:50:05 [rdds.paris|paris|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.paris&tld=paris&type=DNS&status=1 
+2014-10-27 07:50:06 [rdds.bzh|bzh|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=rdds.bzh&tld=bzh&type=DNS&status=1 
+2014-10-27 07:50:06 [dns.ovh|ovh|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.ovh&tld=ovh&type=DNS&status=1 
+2014-10-27 07:50:07 [rdds.frogans|frogans|DNS] DEBUG f.f.probe.monitoring.ProbeListener - createProbeListener() http://www.frysurvey.fr/monitoring/probes/probe_add.php?name=rdds.frogans&tld=frogans&type=DNS&status=1 
+2014-10-27 07:50:08 [rdds.bzh|bzh|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.bzh&tld=bzh&type=DNS&status=1 
+2014-10-27 07:50:09 [rdds.frogans|frogans|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=rdds.frogans&tld=frogans&type=DNS&status=1 
+2014-10-27 07:50:46 [dns.frogans|frogans|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.frogans&tld=frogans&type=DNS&status=1 
+2014-10-27 07:50:53 [dns.wf|wf|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.wf&tld=wf&type=DNS&status=1 
+2014-10-27 07:50:54 [dns.yt|yt|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.yt&tld=yt&type=DNS&status=1 
+2014-10-27 07:50:55 [dns.re|re|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.re&tld=re&type=DNS&status=1 
+2014-10-27 07:50:57 [dns.paris|paris|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.paris&tld=paris&type=DNS&status=1 
+2014-10-27 07:50:58 [dns.alsace|alsace|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.alsace&tld=alsace&type=DNS&status=1 
+2014-10-27 07:50:59 [dns.tf|tf|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.tf&tld=tf&type=DNS&status=1 
+2014-10-27 07:51:01 [dns.bzh|bzh|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.bzh&tld=bzh&type=DNS&status=1 
+2014-10-27 07:51:02 [dns.pm|pm|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.pm&tld=pm&type=DNS&status=1 
+2014-10-27 07:51:05 [dns.fr|fr|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.fr&tld=fr&type=DNS&status=1 
+2014-10-27 07:51:06 [dns.ovh|ovh|DNS] DEBUG f.fryscop.probe.monitoring.HeartBeat - sendBeat() http://www.frysurvey.fr/monitoring/probes/beat.php?name=dns.ovh&tld=ovh&type=DNS&status=1 

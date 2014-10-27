@@ -24,7 +24,7 @@
 		<property name="name" value="rdds.re" />
 		<property name="tld" value="re" />
 		<property name="whoisNdd" value="nic.re" />
-		<property name="type" value="Dns" />
+		<property name="type" value="Rdds" />
 		<property name="status" value="Ok" />
 	</bean>
 
