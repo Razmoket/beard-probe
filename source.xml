@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="afnic_source" default="default">
+
+	<property environment="env" />
+	<property environment="schema" />
+	<property file="./conf/${schema.name}.${env.AFNIC_MODE}.properties" />
+	
+	<property name="lib.dir" value = "./lib/" />
+	<property name="source.dir" value = "./source/${schema.name}/" />
+	<property name="working.dir" value = "./deploy/${schema.name}/${env.AFNIC_MODE}/" />
+	
+    <property name="sqlplus.binary" value="sqlplus64" />
+	
+	<property name="lib.tns_admin.value" value="/etc/oracle"/>
+	<property name="lib.ld_library_path.value" value="/usr/lib/oracle/11.2/client64/lib"/>
+	
+
+	<!-- script locate in next_bdd/deploy/
+		library locate in next-bdd/lib/
+	-->
+	<taskdef resource="net/sf/antcontrib/antcontrib.properties">
+		<classpath>
+			<pathelement location="${lib.dir}ant-contrib.jar"/>
+		</classpath>
+	</taskdef>
+
+    <path id="afnic-task.classpath">
+        <!-- include the afnic-task and dependencies -->
+        <fileset dir="${lib.dir}">
+            <include name="afnic-task.jar"/>
+            <include name="ant.jar"/>
+            <include name="commons-io-1.4.jar"/>
+            <include name="afnic-commons-utils.jar"/>
+        </fileset>
+    </path>
+
+    <taskdef name="filterOnTld" classname="fr.afnic.commons.ant.task.FilterOnTldForSourceTask" classpathref="afnic-task.classpath"/>
+	
+	<target name="info">
+		<echo>Target Schema: ${schema.name}</echo>
+        <echo>AFNIC Mode: ${env.AFNIC_MODE}</echo>
+		<echo>JDBC URL: ${jdbc.url}</echo>
+        <echo>JDBC Driver: ${jdbc.driver}}</echo>
+        <echo>JDBC User: ${jdbc.user}</echo>
+		<echo>source directory: ${source.dir}</echo>
+	</target>
+    <target name="default" depends="info, build-sql-source"/>
+	
+	
+	<target name="build-sql-source" >
+		<ant antfile="getlastchangecurrent.xml" inheritAll="false">
+			<property name="schema" value="${schema}"/>
+			<property name="env" value="${env}"/>
+		</ant>
+		<property file="${source.dir}lastChangeToApply.properties" />
+		<filterOnTld  param="sql-source-file" target="compile_source_on_database" afnicMode="${env.AFNIC_MODE}" maxChangeDeploy="${lastchangetoapply}">
+			<path>
+				<fileset dir="${source.dir}" >
+					<include name="**/*.sql"/>
+				</fileset>
+			</path>
+		</filterOnTld>
+	</target>
+	
+	<target name="compile_source_on_database" description="execute le script sur la base de donnees" >
+
+		<echo>Compiling on database ${db.host}/${db.sid} source file ${sql-source-file}</echo>
+        <delete file="racine.sql"/>
+		<echo file="racine.sql">SET ECHO ON;
+@'${sql-source-file}'
+		</echo>
+        <!-- now apply the changescript to the database -->
+		<exec executable="${sqlplus.binary}">
+			<env key="TNS_ADMIN" path="${lib.tns_admin.value}"/>
+			<env key="LD_LIBRARY_PATH" path="${lib.ld_library_path.value}"/>
+			<env key="http_proxy" path=""/>
+			<env key="no_proxy" path=""/>
+			<env key="NLS_LANG" value="French_France.AL32UTF8"/>
+			<arg line="${jdbc.user}/${jdbc.password}@//${db.host}/${db.sid} @racine.sql"/>
+		</exec>
+    </target>
+
+</project>
